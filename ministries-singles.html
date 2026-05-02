@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Singles Ministry | Church of Christ, Lawanson</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" href="ministries-singles.css">
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="logo-link">
+          <img
+            src="assets/svgs/complete-logo-1.svg"
+            alt="Church of Christ, Lawanson Logo"
+            class="nav-logo"
+          />
+        </a>
+        <button
+          class="nav-toggle" id="navToggle"
+          aria-label="Toggle navigation"
+          onclick="toggleNav()"
+        >
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item dropdown" onclick="toggleDropdown(this)">
+            <div class="nav-link dropdown-toggle">About Us<img src="assets/svgs/icons/chevron-down.svg" class="dropdown-toggle-icon"></div>
+            <div class="dropdown-menu">
+              <a href="about-who-we-are.html" class="dropdown-item"
+                >Who We Are</a
+              >
+              <a href="about-history.html" class="dropdown-item">Our History</a>
+              <a href="about-beliefs.html" class="dropdown-item">Our Beliefs</a>
+              <a href="about-minister.html" class="dropdown-item"
+                >Meet Our Minister</a
+              >
+              <a href="about-leaders.html" class="dropdown-item"
+                >Church Leaders</a
+              >
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="worship.html" class="nav-link">Worship & Services</a>
+          </li>
+          <li class="nav-item dropdown" onclick="toggleDropdown(this)">
+            <div class="nav-link dropdown-toggle active">Ministries<img src="assets/svgs/icons/chevron-down.svg" class="dropdown-toggle-icon active"></div>
+            <div class="dropdown-menu">
+              <a href="ministries-all.html" class="dropdown-item">All Ministries</a>
+              <a href="ministries-secretariat.html" class="dropdown-item"
+                >Secretariat</a
+              >
+              <a href="ministries-finance.html" class="dropdown-item"
+                >Finance</a
+              >
+              <a href="ministries-infrastructure.html" class="dropdown-item"
+                >Infrastructure</a
+              >
+              <a href="ministries-evangelism.html" class="dropdown-item"
+                >Evangelism</a
+              >
+              <a href="ministries-health.html" class="dropdown-item">Health</a>
+              <a href="ministries-publicity.html" class="dropdown-item"
+                >Publicity</a
+              >
+              <a href="ministries-sisters.html" class="dropdown-item"
+                >Sisters</a
+              >
+              <a href="ministries-youth.html" class="dropdown-item">Youth</a>
+              <a href="ministries-children.html" class="dropdown-item"
+                >Children</a
+              >
+              <a href="ministries-singles.html" class="dropdown-item active"
+                >Singles</a
+              >
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="announcements.html" class="nav-link">Announcements</a>
+          </li>
+          <li class="nav-item">
+            <a href="resources.html" class="nav-link">Resources</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+          <div class="nav-btn">
+            <a
+              href="give.html"
+              class="btn btn-light"
+              onclick="event.stopPropagation()"
+              >Give Now</a
+            >
+          </div>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <img src="assets/Images/singles.png" class="page-hero-image">
+      <div class="page-hero-content">
+        <h1>Singles Ministry</h1>
+        <p class="page-tagline">
+          A community for single adults to grow, connect, and serve together.
+        </p>
+      </div>
+    </section>
+
+    <!-- Ministry Overview -->
+    <section class="section">
+      <div class="container">
+        <div class="singles-activity-schedule">
+          <div class="ministry-overview">
+            <div class="section-title-span">
+              <h2>Singles Ministry</h2>
+              <p class="section-subtitle-span">
+                Our Singles Ministry offers fellowship, mentorship, and
+                Bible-centered support for adults navigating faith, work, and
+                relationships.
+              </p>
+            </div>
+          </div>
+
+          <div class="summaries-grid">
+            <div class="summary-card summary-card-class1">
+              <div class="summary-card-content">
+                <h3>Bible Study</h3>
+                <p>
+                  Deep and honest conversations about scripture, personal growth,
+                  and living with integrity as a single adult.
+                </p>
+              </div>
+            </div>
+            <div class="summary-card summary-card-class2">
+              <div class="summary-card-content">
+                <h3>Friendship & Fellowship</h3>
+                <p>
+                  Meaningful community gatherings, socials, and small groups built
+                  around prayer, encouragement, and fun.
+                </p>
+              </div>
+            </div>
+            <div class="summary-card summary-card-class3">
+              <div class="summary-card-content">
+                <h3>Mentorship & Care</h3>
+                <p>
+                  One-on-one mentoring, career guidance, and spiritual support to
+                  help you thrive in every season.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Events Section -->
+    <section class="section">
+      <div class="container">
+        <div class="ministry-section">
+          <div class="ministry-header">
+            <h2>What to Expect</h2>
+            <p>
+              Practical faith, strategic connections, and real support for
+              single adults ready to impact their world.
+            </p>
+          </div>
+
+          <div class="ministry-body">
+            <div class="summary-card summary-card-class4">
+              <div class="ministry-photo-section">
+                <img
+                  src="assets/Images/singles-meeting.png"
+                  class="ministry-photo"
+                  alt="Singles gathering"
+                />
+              </div>
+              <div class="singles-card-content">
+                <div class="brief-ministry-info">
+                  <h2>Monthly Meeting</h2>
+                  <p>
+                    A moment of fellowship, open discussion, and connection where
+                    single adults find belonging and encouragement.
+                  </p>
+                </div>
+                <div class="connect-btn">
+                  <a
+                    href="#join"
+                    class="btn btn-light"
+                    onclick="event.stopPropagation()">
+                    Get more info
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="summary-card summary-card-class5">
+              <div class="ministry-photo-section">
+                <img
+                  src="assets/Images/singles-events.png"
+                  class="ministry-photo"
+                  alt="Service planning"
+                />
+              </div>
+              <div class="singles-card-content">
+                <div class="brief-ministry-info">
+                  <h2>Events & Meetups</h2>
+                  <p>
+                    Attend upcoming singles events aimed at
+                    promoting marraiges within the Churches of Christ.
+                  </p>
+                </div>
+                <div class="connect-btn">
+                  <a
+                    href="contact.html"
+                    class="btn btn-accent"
+                    onclick="event.stopPropagation()">
+                    Get more info
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Youth Coordinators -->
+    <section class="section">
+      <div class="container">
+        <div class="ministry-members">
+          <div class="ministry-members-header">
+            <h2 class="section-title">Meet Our Coordinators</h2>
+            <p class="section-subtitle">
+              Dynamic young leaders mentoring the next generation with faith,
+              fun, and purpose.
+            </p>
+          </div>
+
+          <div class="ministry-members-list">
+            <!-- Head of Ministry -->
+            <div class="ministry-member-top">
+              <div class="ministry-head">
+                <div class="ministry-leader-photo">
+                  <img
+                    src="assets/Images/leader1.png"
+                    alt="Bro. Youth Director"
+                    class="ministry-head-photo"
+                  />
+                </div>
+                <div class="ministry-head-info">
+                  <h3>Bro. Singles Director</h3>
+                  <p>Singles Cordinator</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="ministry-members-grid">
+              <!-- Leader 1 -->
+              <div class="ministry-member-card">
+                <div class="ministry-members-photo">
+                  <img
+                    src="assets/Images/leader2.png"
+                    alt="Sis. Youth Coordinator"
+                    class="members-photo"
+                  />
+                </div>
+                <div class="leader-info">
+                  <h3>Sis. A Coordinator</h3>
+                  <p>Singles Coordinator</p>
+                </div>
+              </div>
+
+              <!-- Leader 2 -->
+              <div class="ministry-member-card">
+                <div class="ministry-members-photo">
+                  <img
+                    src="assets/Images/leader3.png"
+                    alt="Bro. Worship Leader"
+                    class="members-photo"
+                  />
+                </div>
+                <div class="leader-info">
+                  <h3>Bro. B Coordinator</h3>
+                  <p>Singles Coordinator</p>
+                </div>
+              </div>
+
+              <!-- Leader 3 -->
+              <div class="ministry-member-card">
+                <div class="ministry-members-photo">
+                  <img
+                    src="assets/Images/leader4.png"
+                    alt="Sis. Discipleship Leader"
+                    class="members-photo"
+                  />
+                </div>
+                <div class="leader-info">
+                  <h3>Sis. Singles Leader</h3>
+                  <p>Singles Coordinator</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="section">
+      <div class="container">
+        <div class="gallery-section">
+          <div class="gallery-header">
+            <h2 class="section-title">Singles Gallery</h2>
+          </div>
+
+          <div class="gallery">
+            <div class="gallery-card">
+              <img
+                src="assets/Images/a-capella.png"
+                alt="image of evangelism activity"
+                class="gallery-image"
+              />
+            </div>
+            <div class="gallery-card">
+              <img
+                src="assets/Images/a-capella.png"
+                alt="image of evangelism activity"
+                class="gallery-image"
+              />
+            </div>
+            <div class="gallery-card">
+              <img
+                src="assets/Images/a-capella.png"
+                alt="image of evangelism activity"
+                class="gallery-image"
+              />
+            </div>
+          </div>
+          <div class="connect-btn">
+            <a href="https://goldtechsolutions.pixieset.com/coclawnsonyouthweek2025/" class="btn btn-light"
+              >See More</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Connect CTA -->
+    <section class="section">
+      <div class="container">
+        <div class="connect">
+          <div class="connect-info">
+            <h2>Connect With Singles Coordinators</h2>
+            <p>
+              Have questions about our activities? Want to get involved? Reach out
+              to our singles coordinators.
+            </p>
+          </div>
+          <div class="connect-btn">
+            <a href="#" class="btn btn-light"
+              >Contact Youth Leader</a>
+            <a
+              href="#"
+              target="_blank"
+              class="btn btn-accent"
+              >Join Group</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <img src="assets/Images/footer.png" class="footer-image" />
+      <div class="footer-container">
+        <div class="container">
+          <div class="footer-grid">
+            <div class="footer-brand">
+              <img
+                src="assets/svgs/complete-logo-h-2.svg"
+                alt="Church Logo"
+                class="footer-logo"
+              />
+              <p class="footer-motto">
+                The Ground and Pillar of Truth – 1 Timothy 3:15
+              </p>
+            </div>
+            <div class="footer-contact">
+              <h4>Contact Us</h4>
+              <p>9/11 Odubiyi Street, Ikate, Surulere<br />Lagos, Nigeria</p>
+              <p>Email: coclawanson@yahoo.com</p>
+              <p>Phone: 08069553181 | 08121133361 | 07049172845</p>
+            </div>
+            <div class="footer-links">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="about-who-we-are.html">About Us</a></li>
+                <li><a href="worship.html">Worship Times</a></li>
+                <li><a href="announcements.html">Announcements</a></li>
+                <li><a href="give.html">Give Online</a></li>
+              </ul>
+            </div>
+            <div class="footer-stream">
+              <h4>Watch Live</h4>
+              <p>Join us every Sunday for live streaming</p>
+              <a
+                href="https://www.youtube.com/@coclawanson"
+                target="_blank"
+                class="btn btn-accent"
+                >YouTube Channel</a
+              >
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>&copy; 2026 Church of Christ, Lawanson. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function toggleNav() {
+        document.getElementById("navMenu").classList.toggle("active");
+      }
+
+      function toggleDropdown(element) {
+        if (window.innerWidth <= 768) {
+          element.classList.toggle("active");
+        }
+      }
+      const navToggle = document.getElementById ('navToggle')
+      navToggle.addEventListener('click', () =>{
+        navToggle.classList.toggle ('active');
+      })
+    </script>
+  </body>
+</html>
+

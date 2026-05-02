@@ -1,0 +1,607 @@
+<!-- ============================================ -->
+<!-- MINISTRIES-HEALTH.HTML -->
+<!-- ============================================ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Health Ministry | Church of Christ, Lawanson</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" href="ministries-health.css">
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="logo-link">
+          <img src="assets/svgs/complete-logo-1.svg" alt="Church of Christ, Lawanson Logo" class="nav-logo"/>
+        </a>
+        <button
+          class="nav-toggle" id="navToggle"
+          aria-label="Toggle navigation"
+          onclick="toggleNav()"
+        >
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item dropdown" onclick="toggleDropdown(this)">
+            <div class="nav-link dropdown-toggle">About Us<img src="assets/svgs/icons/chevron-down.svg" class="dropdown-toggle-icon"></div>
+            <div class="dropdown-menu">
+              <a href="about-who-we-are.html" class="dropdown-item">Who We Are</a>
+              <a href="about-history.html" class="dropdown-item">Our History</a>
+              <a href="about-beliefs.html" class="dropdown-item">Our Beliefs</a>
+              <a href="about-minister.html" class="dropdown-item">Meet Our Minister</a>
+              <a href="about-leaders.html" class="dropdown-item">Church Leaders</a>
+            </div>
+          </li>
+          <li class="nav-item"><a href="worship.html" class="nav-link">Worship & Services</a></li>
+          <li class="nav-item dropdown" onclick="toggleDropdown(this)">
+            <div class="nav-link dropdown-toggle active">Ministries<img src="assets/svgs/icons/chevron-down.svg" class="dropdown-toggle-icon active"></div>
+            <div class="dropdown-menu">
+              <a href="ministries-all.html" class="dropdown-item">All Ministries</a>
+              <div class="dropdown-item" onclick="this.close('nav-toggle')">Secretariat</div>
+              <a href="ministries-finance.html" class="dropdown-item">Finance</a>
+              <a href="ministries-infrastructure.html" class="dropdown-item">Infrastructure</a>
+              <a href="ministries-evangelism.html" class="dropdown-item">Evangelism</a>
+              <a href="ministries-health.html" class="dropdown-item active">Health</a>
+              <a href="ministries-publicity.html" class="dropdown-item">Publicity</a>
+              <a href="ministries-sisters.html" class="dropdown-item">Sisters</a>
+              <a href="ministries-youth.html" class="dropdown-item">Youth</a>
+              <a href="ministries-children.html" class="dropdown-item">Children</a>
+              <a href="ministries-singles.html" class="dropdown-item">Singles</a>
+            </div>
+          </li>
+          <li class="nav-item"><a href="announcements.html" class="nav-link">Announcements</a></li>
+          <li class="nav-item"><a href="resources.html" class="nav-link">Resources</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <div class="nav-btn"><a href="give.html" class="btn btn-light" onclick="event.stopPropagation()">Give Now</a></div>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <img src="assets/Images/health.png" class="page-hero-image">
+      <div class="page-hero-content">
+        <h1>Health Ministry</h1>
+        <p class="page-tagline">
+          Nurturing your body, mind, and spirit through a holistic approach to
+          health, rooted in the teachings of the Church of Christ Lawanson.
+        </p>
+      </div>
+    </section>
+
+    <!-- Health Ministry Schedule -->
+    <section class="section">
+      <div class="container">
+        <div class="health-schedule">
+          <div class="ministry-overview">
+            <div class="section-title-span">
+              <h2>Health Ministry Schedule</h2>
+              <p class="section-subtitle-span">The Health Ministry promotes
+                wellness and provides health education to our congregation.
+              </p>
+            </div>
+            <div class="year-schedule">
+              <h3>Year 2026</h3>
+              <div class="schedule">
+                9:00 PM - 9:45 AM
+              </div>
+            </div>
+          </div>
+
+          <div class="summaries-grid">
+              <!-- Week 1 -->
+              <div class="summary-card summary-card-class1">
+                <div class="summary-card-content">
+                  <h3>Week 1</h3>
+                  <span class="summary-age-label class-1">1st March 2026</span>
+                  <div class="summary-detail-list">
+                    <div class="activity-track">
+                      <div class="mini-header">
+                        <h4>Activity:</h4>
+                        <p>Health Talk</p>
+                      </div>
+
+                      <div class="mini-header">
+                        <h4>Topic:</h4>
+                        <p>Lifestyle and Preventive Health</p>
+                        <h4>Speaker:</h4>
+                        <p>Sis. Nsisong Ema</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Week 2 -->
+              <div class="summary-card summary-card-class2">
+                <div class="summary-card-content">
+                  <h3>Week 2</h3>
+                  <span class="summary-age-label class-2">8th March 2026</span>
+                  <div class="summary-detail-list">
+                    <div class="activity-track">
+                      <div class="mini-header">
+                        <h4>Activity:</h4>
+                        <p>Health Talk</p>
+                      </div>
+
+                      <div class="mini-header">
+                        <h4>Topic:</h4>
+                        <p>Lifestyle and Preventive Health</p>
+                        <h4>Speaker:</h4>
+                        <p>Sis. Nsisong Ema</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Week 3 -->
+              <div class="summary-card summary-card-class3">
+                <div class="summary-card-content">
+                  <h3>Week 3</h3>
+                  <span class="summary-age-label class-3">15th March 2026</span>
+                  <div class="summary-detail-list">
+                    <div class="activity-track">
+                      <div class="mini-header">
+                        <h4>Activity:</h4>
+                        <p>Health Talk</p>
+                      </div>
+
+                      <div class="mini-header">
+                        <h4>Topic:</h4>
+                        <p>Lifestyle and Preventive Health</p>
+                        <h4>Speaker:</h4>
+                        <p>Sis. Nsisong Ema</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Week 4 -->
+              <div class="summary-card summary-card-class4">
+                <div class="summary-card-content">
+                  <h3>Week 4</h3>
+                  <span class="summary-age-label class-4">22nd March 2026</span>
+                  <div class="summary-detail-list">
+                    <div class="activity-track">
+                      <div class="mini-header">
+                        <h4>Activity:</h4>
+                        <p>Health Talk</p>
+                      </div>
+
+                      <div class="mini-header">
+                        <h4>Topic:</h4>
+                        <p>Lifestyle and Preventive Health</p>
+                        <h4>Speaker:</h4>
+                        <p>Sis. Nsisong Ema</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Week 5 -->
+              <div class="summary-card summary-card-class4">
+                <div class="summary-card-content">
+                  <h3>Week 5</h3>
+                  <span class="summary-age-label class-4">29th March 2026</span>
+                  <div class="summary-detail-list">
+                    <div class="activity-track">
+                      <div class="mini-header">
+                        <h4>Activity:</h4>
+                        <p>Health Talk</p>
+                      </div>
+
+                      <div class="mini-header">
+                        <h4>Topic:</h4>
+                        <p>Lifestyle and Preventive Health</p>
+                        <h4>Speaker:</h4>
+                        <p>Sis. Nsisong Ema</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Youth Meeting -->
+              <div class="summary-card summary-card-class-constant">
+                <div class="summary-card-content">
+                  <h3>Upcoming Health Screening</h3>
+                  <span class="summary-age-label class-constant">29th August, 2026</span>
+                  <div class="summary-detail-list">
+                    <div class="activity-track">
+                      <div class="mini-header">
+                        <h4>Time:</h4>
+                        <p>2:00 PM - 3:00 PM</p>
+                      </div>
+
+                      <div class="mini-header">
+                        <p>Come check your vitals and receive health consultations all for free.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pillars of Wholeness -->
+    <section class="section">
+      <div class="container">
+        <div class="wholeness-pillars">
+          <div class="ministry-overview">
+            <div class="section-title-span">
+              <h2>Pillars of Wholeness</h2>
+              <p class="section-subtitle-span">
+                Our ministry focuses on three essential pillars to ensure a balanced
+                and godly lifestyle.
+              </p>
+            </div>
+          </div>
+
+          <div class="summaries-grid">
+            <!-- Mental Wholeness -->
+            <div class="summary-card mental-wholeness">
+              <img
+                    src="assets/Images/mental-wholeness.png"
+                    alt="Counseling Session"
+                    class="summary-card-image"
+                  />
+              <div class="summary-card-content">
+                <div>
+                  <h3>Mental Wholeness</h3>
+                  <p>
+                    Find peace that surpasses understanding. We provide spiritual
+                    counseling, support groups, and resources for mental clarity
+                    and emotional resilience.
+                  </p>
+
+                  <ul class="feature-list">
+                    <li class="feature-item">
+                      <img src="assets/svgs/icons/check.svg" class="ministry-icons-primary"/>
+                      <span class="feature-text-textlight">Christian Counseling</span>
+                    </li>
+                    <li class="feature-item">
+                      <img src="assets/svgs/icons/check.svg" class="ministry-icons-primary"/>
+                      <span class="feature-text-textlight"
+                        >Stress Management Workshops</span
+                      >
+                    </li>
+                    <li class="feature-item">
+                      <img src="assets/svgs/icons/check.svg" class="ministry-icons-primary"/>
+                      <span class="feature-text-textlight">Support Communities</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Divine Nutrition -->
+            <div class="summary-card summary-card--primary">
+              <img
+                src="assets/Images/divine-nutrition.png"
+                alt="Divine Nutrition"
+                class="summary-card-image"
+              />
+              <div class="summary-card-content">
+                <div>
+                  <h3 class="summary-card-title--white">Divine Nutrition</h3>
+                  <p class="summary-card-description--white">
+                    Treating your body as a temple. Learn about biblical diet
+                    principles and modern nutrition for sustained energy.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sacred Rest -->
+            <div class="summary-card">
+              <div class="summary-card-content">
+                <h3>Sacred Rest</h3>
+                <p>
+                  Understanding the power of the Sabbath. Techniques for deep
+                  sleep and spiritual recharging through silence.
+                </p>
+              </div>
+            </div>
+
+            <!-- Professional Guidance CTA -->
+            <div class="summary-card summary-card--accent summary-card--wide">
+              <div
+                class="summary-card-content summary-card-content--flex-between"
+              >
+                <div>
+                  <h3 class="summary-card-subtitle">
+                    Need Professional Guidance?
+                  </h3>
+                  <p class="summary-card-description--dark">
+                    Our licensed professionals are available for private
+                    consultations on health and wellness.
+                  </p>
+                </div>
+                <a href="#consultation" class="btn btn-primary btn--white"
+                  >Request Appointment</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Health Ministry Memebers -->
+    <section class="section">
+      <div class="container">
+        <div class="ministry-members">
+          
+          <div class="ministry-members-header">
+            <h2 class="section-title">Meet Our Members</h2>
+            <p class="section-subtitle">
+              Compassionate caregivers providing holistic healing through
+              medical expertise and spiritual support.
+            </p>
+          </div>
+
+          <div class="ministry-members-list">
+            <!-- Head of Ministry -->
+            <div class="ministry-member-top">
+              <div class="ministry-head">
+                <div class="ministry-leader-photo">
+                  <img
+                    src="assets/Images/leader1.png"
+                    alt="Dr. Health Director"
+                    class="ministry-head-photo"
+                  />
+                </div>
+                <div class="ministry-head-info">
+                  <h3>Dr. Health Director</h3>
+                  <p>Health Ministry Director</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="ministry-members-grid">
+              <!-- Leader 1 -->
+              <div class="ministry-member-card">
+                <div class="ministry-members-photo">
+                  <img
+                    src="assets/Images/leader2.png"
+                    alt="Sis. Nurse Coordinator"
+                    class="members-photo"
+                  />
+                </div>
+                <div class="leader-info">
+                  <h3>Bro. Health Member</h3>
+                  <p>Nursing Coordinator</p>
+                </div>
+              </div>
+
+              <!-- Leader 2 -->
+              <div class="ministry-member-card">
+                <div class="ministry-members-photo">
+                  <img
+                    src="assets/Images/leader3.png"
+                    alt="Bro. Medical Officer"
+                    class="members-photo"
+                  />
+                </div>
+                <div class="leader-info">
+                  <h3>Bro. Health Member</h3>
+                  <p>Medical Officer</p>
+                </div>
+              </div>
+
+              <!-- Leader 3 -->
+              <div class="ministry-member-card">
+                <div class="ministry-members-photo">
+                  <img
+                    src="assets/Images/leader4.png"
+                    alt="Sis. Counseling Lead"
+                    class="members-photo"
+                  />
+                </div>
+                <div class="leader-info">
+                  <h3>Bro. Health Member</h3>
+                  <p>Counseling Coordinator</p>
+                </div>
+              </div>
+
+              <!-- Leader 4 -->
+              <div class="ministry-member-card">
+                <div class="ministry-members-photo">
+                  <img
+                    src="assets/Images/leader5.png"
+                    alt="Bro. Health Educator"
+                    class="members-photo"
+                  />
+                </div>
+                <div class="leader-info">
+                  <h3>Bro. Health Member</h3>
+                  <p>Health Educator</p>
+                </div>
+              </div>
+
+              <!-- Leader 5 -->
+              <div class="ministry-member-card">
+                <div class="ministry-members-photo">
+                  <img
+                    src="assets/Images/leader6.png"
+                    alt="Sis. Wellness Coordinator"
+                    class="members-photo"
+                  />
+                </div>
+                <div class="leader-info">
+                  <h3>Bro. Health Member</h3>
+                  <p>Wellness Coordinator</p>
+                </div>
+              </div>
+
+              <!-- Leader 6 -->
+              <div class="ministry-member-card">
+                <div class="ministry-members-photo">
+                  <img
+                    src="assets/Images/leader7.png"
+                    alt="Bro. Health Team Member"
+                    class="members-photo"
+                  />
+                </div>
+                <div class="leader-info">
+                  <h3>Bro. Health Member</h3>
+                  <p>Team Member</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Consultation Form -->
+    <section class="section">
+      <div class="container">
+        <div class="consultation">
+          <div class="consultation-form-container">
+            <div class="form-header">
+              <h2 class="section-title">Request a Confidential Consultation</h2>
+              <p class="section-subtitle section-subtitle--no-margin">
+                Members are encouraged to discuss all medical issues with the
+                church health ministry who are available to provide guidance and support.
+                Fill out the form below and a member of our health team will
+                contact you within 48 hours. Your privacy is our priority.
+              </p>
+            </div>
+
+            <form class="consultation-form">
+              <div class="form-row">
+                <div class="form-group form-group--no-margin">
+                  <label>Full Name</label>
+                  <input
+                    type="text"
+                    placeholder="Enter your full name"
+                    class="form-input"
+                  />
+                </div>
+                <div class="form-group form-group--no-margin">
+                  <label>Phone Number</label>
+                  <input
+                    type="tel"
+                    placeholder="0800 000 0000"
+                    class="form-input"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group form-group--no-margin">
+                <label>Area of Concern</label>
+                <select class="form-select">
+                  <option>Select an option</option>
+                  <option>Mental Wholeness & Counseling</option>
+                  <option>Nutrition & Diet Planning</option>
+                  <option>General Physical Health</option>
+                  <option>Spiritual Wellness Liaison</option>
+                </select>
+              </div>
+
+              <div class="form-group form-group--no-margin">
+                <label>Message (Optional)</label>
+                <textarea
+                  rows="4"
+                  placeholder="Briefly describe how we can assist you..."
+                  class="form-textarea"
+                ></textarea>
+              </div>
+
+              <div class="checkbox-row">
+                <input type="checkbox" id="emergency" class="primary-checkbox" />
+                <label for="emergency" class="checkbox-label"
+                  >I understand that this consultation is not a replacement for
+                  emergency medical care. In case of emergency, please visit the
+                  nearest hospital.</label
+                >
+              </div>
+
+              <button type="submit" class="submit-btn btn btn-accent btn-full">
+                Submit Request
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <img src="assets/Images/footer.png" class="footer-image">
+      <div class="footer-container">
+        <div class="container">
+          <div class="footer-grid">
+            <div class="footer-brand">
+              <img
+                src="assets/svgs/complete-logo-h-2.svg"
+                alt="Church Logo"
+                class="footer-logo"
+              />
+              <p class="footer-motto">
+                The Ground and Pillar of Truth – 1 Timothy 3:15
+              </p>
+            </div>
+            <div class="footer-contact">
+              <h4>Contact Us</h4>
+              <p>9/11 Odubiyi Street, Ikate, Surulere<br />Lagos, Nigeria</p>
+              <p>Email: coclawanson@yahoo.com</p>
+              <p>Phone: 08069553181 | 08121133361 | 07049172845</p>
+            </div>
+            <div class="footer-links">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="about-who-we-are.html">About Us</a></li>
+                <li><a href="worship.html">Worship Times</a></li>
+                <li><a href="announcements.html">Announcements</a></li>
+                <li><a href="give.html">Give Online</a></li>
+              </ul>
+            </div>
+            <div class="footer-stream">
+              <h4>Watch Live</h4>
+              <p>Join us every Sunday for live streaming</p>
+              <a
+                href="https://www.youtube.com/@coclawanson"
+                target="_blank"
+                class="btn btn-accent"
+                >YouTube Channel</a
+              >
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>&copy; 2026 Church of Christ, Lawanson. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function toggleNav() {
+        document.getElementById("navMenu").classList.toggle("active");
+      }
+      
+      function toggleDropdown(element) {
+        if (window.innerWidth <= 768) {
+          element.classList.toggle("active");
+        }
+      }
+      const navToggle = document.getElementById ('navToggle')
+      navToggle.addEventListener('click', () =>{
+        navToggle.classList.toggle ('active');
+      })
+    </script>
+  </body>
+</html>
+

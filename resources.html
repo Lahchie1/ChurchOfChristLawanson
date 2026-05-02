@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resources | Church of Christ, Lawanson</title>
+      <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" href="resources.css">
+</head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="logo-link">
+          <img
+            src="assets/svgs/complete-logo-1.svg"
+            alt="Church of Christ, Lawanson Logo"
+            class="nav-logo"
+          />
+        </a>
+        <button
+          class="nav-toggle" id="navToggle"
+          aria-label="Toggle navigation"
+          onclick="toggleNav()"
+        >
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item dropdown" onclick="toggleDropdown(this)">
+            <div class="nav-link dropdown-toggle">About Us<img src="assets/svgs/icons/chevron-down.svg" class="dropdown-toggle-icon"></div>
+            <div class="dropdown-menu">
+              <a href="about-who-we-are.html" class="dropdown-item"
+                >Who We Are</a
+              >
+              <a href="about-history.html" class="dropdown-item">Our History</a>
+              <a href="about-beliefs.html" class="dropdown-item">Our Beliefs</a>
+              <a href="about-minister.html" class="dropdown-item"
+                >Meet Our Minister</a
+              >
+              <a href="about-leaders.html" class="dropdown-item"
+                >Church Leaders</a
+              >
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="worship.html" class="nav-link">Worship & Services</a>
+          </li>
+          <li class="nav-item dropdown" onclick="toggleDropdown(this)">
+            <div class="nav-link dropdown-toggle">Ministries<img src="assets/svgs/icons/chevron-down.svg" class="dropdown-toggle-icon"></div>
+            <div class="dropdown-menu">
+              <a href="ministries-all.html" class="dropdown-item"
+                >All Ministries</a
+              >
+              <a href="ministries-secretariat.html" class="dropdown-item"
+                >Secretariat</a
+              >
+              <a href="ministries-finance.html" class="dropdown-item"
+                >Finance</a
+              >
+              <a href="ministries-infrastructure.html" class="dropdown-item"
+                >Infrastructure</a
+              >
+              <a href="ministries-evangelism.html" class="dropdown-item"
+                >Evangelism</a
+              >
+              <a href="ministries-health.html" class="dropdown-item">Health</a>
+              <a href="ministries-publicity.html" class="dropdown-item"
+                >Publicity</a
+              >
+              <a href="ministries-sisters.html" class="dropdown-item"
+                >Sisters</a
+              >
+              <a href="ministries-youth.html" class="dropdown-item">Youth</a>
+              <a href="ministries-children.html" class="dropdown-item"
+                >Children</a
+              >
+              <a href="ministries-singles.html" class="dropdown-item"
+                >Singles</a
+              >
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="announcements.html" class="nav-link">Announcements</a>
+          </li>
+          <li class="nav-item">
+            <a href="resources.html" class="nav-link active">Resources</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+          <div class="nav-btn">
+            <a
+              href="give.html"
+              class="btn btn-light"
+              onclick="event.stopPropagation()"
+              >Give Now</a
+            >
+          </div>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <img src="assets/Images/resources.png" class="page-hero-image" />
+      <div class="page-hero-content">
+        <h1>Sermons & Teachings</h1>
+        <p class="page-tagline">
+          Deepen your faith with teachings, sermons, and study materials for
+          your daily walk with Christ
+        </p>
+      </div>
+    </section>
+
+    <!-- Hero Split Section -->
+    <section class="section">
+      <div class="container">
+        <div class="hero-split">
+          <div class="resources-hero-split">
+            <img src="assets/Images/grow-in-knowledge.png" alt="Church Resources" class="resources-image"/>
+            <div class="hero-content-box">
+              <h2>Grow in Faith & Knowledge</h2>
+              <p>
+                Access our library of sermons, Bible study materials, and
+                spiritual growth resources designed to help you walk in divine
+                alignment with God's purpose for your life.
+              </p>
+              <div class="hero-actions">
+                <a href="#sermons" class="btn btn-light">Explore Sermons</a>
+                <a href="#study-guides" class="btn btn-accent">Study Guides</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2026 Theme Banner -->
+    <section class="section">
+      <div class="container">
+        <div class="sermon-schedule">
+          <div class="theme-banner-box">
+            <img src="assets/Images/theme.png" alt="Church Resources" class="resources-image"/>
+            <div class="theme-content">
+              <div class="theme-text">
+                <h2>2026 Theme: Divine Alignment</h2>
+                <p>
+                  Join us this year as we explore what it means to live in perfect
+                  alignment with God's will and purpose for our lives.
+                </p>
+              </div>
+              <a href="#" class="btn btn-accent">Get the Study Guide</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sermon Schedule Table -->
+    <section class="section">
+      <div class="container">
+        <div class="sermon-schedule">
+          <div class="schedule-section">
+            <div class="section-header">
+              <h2>Upcoming Sermon Schedule</h2>
+            </div>
+            <div class="schedule-table-wrapper">
+              <table class="schedule-table">
+                <thead>
+                  <tr>
+                    <th class="tr-date">Date</th>
+                    <th>Sermon Title</th>
+                    <th>Speaker</th>
+                    <th class="tr-scrpture">Scripture</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="date-cell">Apr 12, 2026</td>
+                    <td class="title-cell">Living the Great Commandment</td>
+                    <td>Bro. Ogbu Otola</td>
+                    <td class="scripture">Matthew 22:36-40</td>
+                  </tr>
+                  <tr>
+                    <td class="date-cell">Apr 19, 2026</td>
+                    <td class="title-cell">Fruit of the Spirit: Peace</td>
+                    <td>Bro. Ogbu Otola</td>
+                    <td class="scripture">Galatians 5:22-23</td>
+                  </tr>
+                  <tr>
+                    <td class="date-cell">Apr 26, 2026</td>
+                    <td class="title-cell">The Power of Forgiveness</td>
+                    <td>Bro. Ogbu Otola</td>
+                    <td class="scripture">Ephesians 4:31-32</td>
+                  </tr>
+                  <tr>
+                    <td class="date-cell">May 3, 2026</td>
+                    <td class="title-cell">Modern Discipleship</td>
+                    <td>Guest Speaker</td>
+                    <td class="scripture">Luke 9:23-24</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Teaching Schedule Table -->
+    <section class="section">
+      <div class="container">
+        <div class="teaching-schedule">
+          <div class="schedule-section">
+            <div class="section-header">
+              <h2>Upcoming Teaching Schedule</h2>
+            </div>
+            <div class="schedule-table-wrapper">
+              <table class="schedule-table">
+                <thead>
+                  <tr>
+                    <th class="tr-date">Date</th>
+                    <th>Sermon Title</th>
+                    <th>Speaker</th>
+                    <th class="tr-scrpture">Scripture</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="date-cell">Apr 12, 2026</td>
+                    <td class="title-cell">Living the Great Commandment</td>
+                    <td>Bro. Ogbu Otola</td>
+                    <td class="scripture">Matthew 22:36-40</td>
+                  </tr>
+                  <tr>
+                    <td class="date-cell">Apr 19, 2026</td>
+                    <td class="title-cell">Fruit of the Spirit: Peace</td>
+                    <td>Bro. Ogbu Otola</td>
+                    <td class="scripture">Galatians 5:22-23</td>
+                  </tr>
+                  <tr>
+                    <td class="date-cell">Apr 26, 2026</td>
+                    <td class="title-cell">The Power of Forgiveness</td>
+                    <td>Bro. Ogbu Otola</td>
+                    <td class="scripture">Ephesians 4:31-32</td>
+                  </tr>
+                  <tr>
+                    <td class="date-cell">May 3, 2026</td>
+                    <td class="title-cell">Modern Discipleship</td>
+                    <td>Guest Speaker</td>
+                    <td class="scripture">Luke 9:23-24</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Study Categories -->
+    <section class="section">
+      <div class="container">
+        <div class="study-categories">
+          <div class="categories-section" id="study-guides">
+            <h2>Study Categories</h2>
+            <div class="categories-grid">
+              <a href="#" class="category-card">
+                <img src="assets/Images/sola-scriptura.png" alt="Church Resources" class="summary-card-image--small"/>
+                <span class="cat-name">Bible Studies</span>
+              </a>
+              <a href="#" class="category-card">
+                <img src="assets/Images/audio-sermon.png" alt="Church Resources" class="summary-card-image--small"/>
+                <span class="cat-name">Audio Sermons</span>
+              </a>
+              <a href="#" class="category-card">
+                <img src="assets/Images/article.png" alt="Church Resources" class="summary-card-image--small"/>
+                <span class="cat-name">Articles</span>
+              </a>
+              <a href="#" class="category-card">
+                <img src="assets/Images/children.png" alt="Church Resources" class="summary-card-image--small"/>
+                <span class="cat-name">Children</span>
+              </a>
+              <a href="#" class="category-card">
+                <img src="assets/Images/family.png" alt="Church Resources" class="summary-card-image--small"/>
+                <span class="cat-name">Family</span>
+              </a>
+              <a href="#" class="category-card">
+                <img src="assets/Images/newly-baptised.png" alt="Church Resources" class="summary-card-image--small"/>
+                <span class="cat-name">New Converts</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Connect CTA -->
+    <section class="section">
+      <div class="container">
+        <div class="connect">
+          <div class="connect-info">
+            <h2>Contact the Preacher</h2>
+            <p>
+              Our teachings and admonishing are deeply
+              rooted in the doctrine of Christ. Do you have any questions
+              or have a grey area you feel is left out in the course of
+              your studies?
+            </p>
+          </div>
+          <div class="connect-btn">
+            <a
+              href="#"
+              target="_blank"
+              class="btn btn-accent"
+              >Contact Preacher</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <img src="assets/Images/footer.png" class="footer-image" />
+      <div class="footer-container">
+        <div class="container">
+          <div class="footer-grid">
+            <div class="footer-brand">
+              <img
+                src="assets/svgs/complete-logo-h-2.svg"
+                alt="Church Logo"
+                class="footer-logo"
+              />
+              <p class="footer-motto">
+                The Ground and Pillar of Truth – 1 Timothy 3:15
+              </p>
+            </div>
+            <div class="footer-contact">
+              <h4>Contact Us</h4>
+              <p>9/11 Odubiyi Street, Ikate, Surulere<br />Lagos, Nigeria</p>
+              <p>Email: coclawanson@yahoo.com</p>
+              <p>Phone: 08069553181 | 08121133361 | 07049172845</p>
+            </div>
+            <div class="footer-links">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="about-who-we-are.html">About Us</a></li>
+                <li><a href="worship.html">Worship Times</a></li>
+                <li><a href="announcements.html">Announcements</a></li>
+                <li><a href="give.html">Give Online</a></li>
+              </ul>
+            </div>
+            <div class="footer-stream">
+              <h4>Watch Live</h4>
+              <p>Join us every Sunday for live streaming</p>
+              <a
+                href="https://www.youtube.com/@coclawanson"
+                target="_blank"
+                class="btn btn-accent"
+                >YouTube Channel</a
+              >
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>&copy; 2026 Church of Christ, Lawanson. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function toggleNav() {
+        document.getElementById("navMenu").classList.toggle("active");
+      }
+
+      function toggleDropdown(element) {
+        if (window.innerWidth <= 768) {
+          element.classList.toggle("active");
+        }
+      }
+      const navToggle = document.getElementById ('navToggle')
+      navToggle.addEventListener('click', () =>{
+        navToggle.classList.toggle ('active');
+      })
+    </script>
+  </body>
+</html>
+

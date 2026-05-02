@@ -1,0 +1,555 @@
+<!-- ============================================ -->
+<!-- ABOUT-HISTORY.HTML - OUR HISTORY PAGE -->
+<!-- ============================================ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our History | Church of Christ, Lawanson</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="about-history.css">
+  </head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="logo-link">
+          <img src="assets/svgs/complete-logo-1.svg" alt="Church of Christ, Lawanson Logo" class="nav-logo"/>
+        </a>
+        <button
+          class="nav-toggle" id="navToggle"
+          aria-label="Toggle navigation"
+          onclick="toggleNav()"
+        >
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item dropdown" onclick="toggleDropdown(this)">
+            <div class="nav-link dropdown-toggle active"
+              >About Us<img
+                src="assets/svgs/icons/chevron-down.svg"
+                class="dropdown-toggle-icon active"
+              />
+            </div>
+            <div class="dropdown-menu">
+              <a href="about-who-we-are.html" class="dropdown-item">Who We Are</a>
+              <a href="about-history.html" class="dropdown-item active">Our History</a>
+              <a href="about-beliefs.html" class="dropdown-item">Our Beliefs</a>
+              <a href="about-minister.html" class="dropdown-item">Meet Our Minister</a>
+              <a href="about-leaders.html" class="dropdown-item">Church Leaders</a>
+            </div>
+          </li>
+          <li class="nav-item"><a href="worship.html" class="nav-link">Worship & Services</a></li>
+          <li class="nav-item dropdown" onclick="toggleDropdown(this)">
+            <div class="nav-link dropdown-toggle">Ministries<img src="assets/svgs/icons/chevron-down.svg" class="dropdown-toggle-icon"></div>
+            <div class="dropdown-menu">
+              <a href="ministries-all.html" class="dropdown-item">All Ministries</a>
+              <a href="ministries-secretariat.html" class="dropdown-item">Secretariat</a>
+              <a href="ministries-finance.html" class="dropdown-item">Finance</a>
+              <a href="ministries-infrastructure.html" class="dropdown-item">Infrastructure</a>
+              <a href="ministries-evangelism.html" class="dropdown-item">Evangelism</a>
+              <a href="ministries-health.html" class="dropdown-item">Health</a>
+              <a href="ministries-publicity.html" class="dropdown-item">Publicity</a>
+              <a href="ministries-sisters.html" class="dropdown-item">Sisters</a>
+              <a href="ministries-youth.html" class="dropdown-item">Youth</a>
+              <a href="ministries-children.html" class="dropdown-item">Children</a>
+              <a href="ministries-singles.html" class="dropdown-item">Singles</a>
+            </div>
+          </li>
+          <li class="nav-item"><a href="announcements.html" class="nav-link">Announcements</a></li>
+          <li class="nav-item"><a href="resources.html" class="nav-link">Resources</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <div class="nav-btn"><a href="give.html" class="btn btn-light" onclick="event.stopPropagation()">Give Now</a></div>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <img src="assets/Images/local-autonomy.png" class="page-hero-image">
+      <div class="page-hero-content">
+        <h1>Our History</h1>
+        <p class="page-tagline">For over five decades, Church of Christ, Lawanson has been a beacon of light, growing from a small gathering ito a vibrant community of believers dedicated to the Gospel.</p>
+      </div>
+    </section>
+
+    <!-- Mission Vision Summary -->
+    <section class="section">
+      <div class="container">
+        <div class="mission-vison-summary">
+          <div class="left-content">
+            <div class="mission-content">
+              <h2>Built on a Solid Foundation</h2>
+              <p>Our mission is simple: to restore the New Testament church in its purity,
+              simplicity, and doctrine. We envision a community where every soul finds grace,
+              every heart finds a home, and every life is transformed by the Word of God.</p>
+            </div>
+            <div class="vision-content">
+              <img src="assets/svgs/icons/megaphone.svg" alt="Church Logo" class="vision-content-logo"/>
+              <div>
+                <h4>Our Vision</h4>
+                <p>To be a Christ-centered family impacting Lawanson and beyond.</p>
+              </div>
+            </div>
+          </div>
+          <div class="right-content">
+            <div class="images-right">
+              <div class="image-holder">
+                <img src="assets/Images/cross.png" alt="Image 1" class="image-1"/>
+                <div class="empty-space"></div>
+              </div>
+              <div class="image-holder">
+                <div class="empty-space"></div>
+                <img src="assets/Images/sola-scriptura.png" alt="Image 2" class="image-2"/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- History Timeline -->  
+    <Section class="section">
+      <div class="container">
+        <div class="history-timeline">
+          <div class="timeline-header">
+            <h2 class="timeline-header-title">Timeline</h2>
+            <p class="timeline-header-subtitle">Following God's lead through the years</p>
+          </div>
+          <div class="timeline-content" id="timelineContent">
+            <div class="timeline-line"></div>
+            <div class="content-container-left" data-year="1970"
+              data-title="The Humble Beginning"
+              data-template="detail-1970">
+              <div class="timeline-info">
+                <h3>1970</h3>
+                <h4>The Humble Beginning</h4>
+                <p>The first gathering of dedicated believers in a small living room, marking the birth of the Church of Christ, Lawanson.</p>
+                <div class="timeline-btn-left">
+                  <button class="history-btn">Learn More<img src="assets/svgs/icons/chevron-right.svg" class="icons"></button>
+                </div>
+              </div>
+              <div class="timeline-icon-box">
+                <img src="assets/svgs/icons/church.svg" class="timeline-icon">
+              </div>
+            </div>
+
+            <div class="timeline-line"></div>
+            <div class="content-container-right" data-year="1970"
+              data-title="The Humble Beginning"
+              data-template="detail-1978">
+              <div class="timeline-icon-box">
+                <img src="assets/svgs/icons/church.svg" class="timeline-icon">
+              </div>
+              <div class="timeline-info">
+                <h3>1978</h3>
+                <h4>First Permanent Location</h4>
+                <p>The congregation moved from house to house meetings into its first rented facility, signifying steady growth and commitment.</p>
+                <div class="timeline-btn-right">
+                  <button class="history-btn">Learn More<img src="assets/svgs/icons/chevron-right.svg" class="icons"></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-line"></div>
+            <div class="content-container-left" data-year="1970"
+              data-title="The Humble Beginning"
+              data-template="detail-1985">
+              <div class="timeline-info">
+                <h3>1985</h3>
+                <h4>Establishment of Leadership</h4>
+                <p>The appointment of the first set of elders and deacons, bringing biblical structure and oversight to the growing congregation.</p>
+                <div class="timeline-btn-left">
+                  <button class="history-btn">Learn More<img src="assets/svgs/icons/chevron-right.svg" class="icons"></button>
+                </div>
+              </div>
+              <div class="timeline-icon-box">
+                <img src="assets/svgs/icons/church.svg" class="timeline-icon">
+              </div>
+            </div>
+
+            <div class="timeline-line"></div>
+            <div class="content-container-right" data-year="1970"
+              data-title="The Humble Beginning"
+              data-template="detail-1998">
+              <div class="timeline-icon-box">
+                <img src="assets/svgs/icons/church.svg" class="timeline-icon">
+              </div>
+              <div class="timeline-info">
+                <h3>1998</h3>
+                <h4>Our Own Church Building</h4>
+                <p>The congregation acquired and dedicated its own permanent worship hall at Ikate, Surulere — a dream fulfilled through sacrifice and faith.</p>
+                <div class="timeline-btn-right">
+                  <button class="history-btn">Learn More<img src="assets/svgs/icons/chevron-right.svg" class="icons"></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-line"></div>
+            <div class="content-container-left" data-year="1970"
+              data-title="The Humble Beginning"
+              data-template="detail-2018">
+              <div class="timeline-info">
+                <h3>2018</h3>
+                <h4>Ministry & Evangelism Expansion</h4>
+                <p>Bro. Ogbu Otola began his work as the full-time preacher, leading to renewed focus on evangelism and spiritual growth.</p>
+                <div class="timeline-btn-left">
+                  <button class="history-btn">Learn More<img src="assets/svgs/icons/chevron-right.svg" class="icons"></button>
+                </div>
+              </div>
+              <div class="timeline-icon-box">
+                <img src="assets/svgs/icons/church.svg" class="timeline-icon">
+              </div>
+            </div>
+
+            <div class="timeline-line"></div>
+            <div class="content-container-right" data-year="1970"
+              data-title="The Humble Beginning"
+              data-template="detail-2026">
+              <div class="timeline-icon-box">
+                <img src="assets/svgs/icons/church.svg" class="timeline-icon">
+              </div>
+              <div class="timeline-info">
+                <h3>2026</h3>
+                <h4>Divine Alignment</h4>
+                <p>The church enters a new season with the theme “Divine Alignment,” trusting God for greater impact and spiritual maturity.</p>
+                <div class="timeline-btn-right">
+                  <button class="history-btn">Learn More<img src="assets/svgs/icons/chevron-right.svg" class="icons"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="timeline-overlay" id="timelineOverlay">
+      <div class="overlay-modal" id="overlayModal">
+        <div class="year-close">
+          <span class="dialogue-tag" id="overlayYear"></span>
+          <button class="close-x" id="overlayClose"><img src="assets/svgs/icons/x.svg" class="close-icon"></button>
+        </div>
+        <h4 id="overlayTitle"></h4>
+        <p id="overlayDetail"></p>
+      </div>
+    </div>
+
+    <template id="detail-1970">
+      <p>In 1970, a small group of sincere believers in Surulere, Lagos,
+        began meeting in a modest living room. Driven by a deep conviction
+        to restore New Testament Christianity, they committed themselves to
+        following the Bible alone without any denominational creeds or
+        traditions. These early gatherings were marked by simple a cappella
+        singing, fervent prayers, and earnest Bible study.</p>
+      <p>The first brethren faced many challenges, including limited
+        resources and occasional opposition, yet they remained steadfast in
+        their faith. What started as a handful of souls meeting in a private
+        home would eventually grow into a vibrant congregation. Their
+        unwavering desire was to be known simply as Christians, members of
+        the Church of Christ.</p>
+      <p>From these humble beginnings, the foundation of the Church of Christ,
+        Lawanson was firmly laid. The emphasis was placed on the authority of
+        Scripture, the plan of salvation, and pure worship according to the
+        New Testament pattern. This small living room became the birthplace of
+        a work that continues to impact lives decades later.</p>
+      <p>The pioneers of this congregation demonstrated remarkable faith and
+        sacrifice. Many walked long distances to attend meetings and gave
+        generously despite having little. Their dedication and love for the
+        truth set the spiritual tone that the church still upholds today.</p>
+      <p>Today, we look back at 1970 with deep gratitude. What began in
+        obscurity has become a beacon of truth in Surulere, fulfilling the
+        mission to be “the ground and pillar of the truth” as recorded in 1
+        Timothy 3:15.</p>
+    </template>
+
+    <template id="detail-1978">
+      <p>In 1970, a small group of sincere believers in Surulere, Lagos,
+        began meeting in a modest living room. Driven by a deep conviction
+        to restore New Testament Christianity, they committed themselves to
+        following the Bible alone without any denominational creeds or
+        traditions. These early gatherings were marked by simple a cappella
+        singing, fervent prayers, and earnest Bible study.</p>
+      <p>The first brethren faced many challenges, including limited
+        resources and occasional opposition, yet they remained steadfast in
+        their faith. What started as a handful of souls meeting in a private
+        home would eventually grow into a vibrant congregation. Their
+        unwavering desire was to be known simply as Christians, members of
+        the Church of Christ.</p>
+      <p>From these humble beginnings, the foundation of the Church of Christ,
+        Lawanson was firmly laid. The emphasis was placed on the authority of
+        Scripture, the plan of salvation, and pure worship according to the
+        New Testament pattern. This small living room became the birthplace of
+        a work that continues to impact lives decades later.</p>
+      <p>The pioneers of this congregation demonstrated remarkable faith and
+        sacrifice. Many walked long distances to attend meetings and gave
+        generously despite having little. Their dedication and love for the
+        truth set the spiritual tone that the church still upholds today.</p>
+      <p>Today, we look back at 1970 with deep gratitude. What began in
+        obscurity has become a beacon of truth in Surulere, fulfilling the
+        mission to be “the ground and pillar of the truth” as recorded in 1
+        Timothy 3:15.</p>
+    </template>
+
+    <template id="detail-1985">
+      <p>In 1970, a small group of sincere believers in Surulere, Lagos,
+        began meeting in a modest living room. Driven by a deep conviction
+        to restore New Testament Christianity, they committed themselves to
+        following the Bible alone without any denominational creeds or
+        traditions. These early gatherings were marked by simple a cappella
+        singing, fervent prayers, and earnest Bible study.</p>
+      <p>The first brethren faced many challenges, including limited
+        resources and occasional opposition, yet they remained steadfast in
+        their faith. What started as a handful of souls meeting in a private
+        home would eventually grow into a vibrant congregation. Their
+        unwavering desire was to be known simply as Christians, members of
+        the Church of Christ.</p>
+      <p>From these humble beginnings, the foundation of the Church of Christ,
+        Lawanson was firmly laid. The emphasis was placed on the authority of
+        Scripture, the plan of salvation, and pure worship according to the
+        New Testament pattern. This small living room became the birthplace of
+        a work that continues to impact lives decades later.</p>
+      <p>The pioneers of this congregation demonstrated remarkable faith and
+        sacrifice. Many walked long distances to attend meetings and gave
+        generously despite having little. Their dedication and love for the
+        truth set the spiritual tone that the church still upholds today.</p>
+      <p>Today, we look back at 1970 with deep gratitude. What began in
+        obscurity has become a beacon of truth in Surulere, fulfilling the
+        mission to be “the ground and pillar of the truth” as recorded in 1
+        Timothy 3:15.</p>
+    </template>
+
+    <template id="detail-1998">
+      <p>In 1970, a small group of sincere believers in Surulere, Lagos,
+        began meeting in a modest living room. Driven by a deep conviction
+        to restore New Testament Christianity, they committed themselves to
+        following the Bible alone without any denominational creeds or
+        traditions. These early gatherings were marked by simple a cappella
+        singing, fervent prayers, and earnest Bible study.</p>
+      <p>The first brethren faced many challenges, including limited
+        resources and occasional opposition, yet they remained steadfast in
+        their faith. What started as a handful of souls meeting in a private
+        home would eventually grow into a vibrant congregation. Their
+        unwavering desire was to be known simply as Christians, members of
+        the Church of Christ.</p>
+      <p>From these humble beginnings, the foundation of the Church of Christ,
+        Lawanson was firmly laid. The emphasis was placed on the authority of
+        Scripture, the plan of salvation, and pure worship according to the
+        New Testament pattern. This small living room became the birthplace of
+        a work that continues to impact lives decades later.</p>
+      <p>The pioneers of this congregation demonstrated remarkable faith and
+        sacrifice. Many walked long distances to attend meetings and gave
+        generously despite having little. Their dedication and love for the
+        truth set the spiritual tone that the church still upholds today.</p>
+      <p>Today, we look back at 1970 with deep gratitude. What began in
+        obscurity has become a beacon of truth in Surulere, fulfilling the
+        mission to be “the ground and pillar of the truth” as recorded in 1
+        Timothy 3:15.</p>
+    </template>
+
+    <template id="detail-2018">
+      <p>In 1970, a small group of sincere believers in Surulere, Lagos,
+        began meeting in a modest living room. Driven by a deep conviction
+        to restore New Testament Christianity, they committed themselves to
+        following the Bible alone without any denominational creeds or
+        traditions. These early gatherings were marked by simple a cappella
+        singing, fervent prayers, and earnest Bible study.</p>
+      <p>The first brethren faced many challenges, including limited
+        resources and occasional opposition, yet they remained steadfast in
+        their faith. What started as a handful of souls meeting in a private
+        home would eventually grow into a vibrant congregation. Their
+        unwavering desire was to be known simply as Christians, members of
+        the Church of Christ.</p>
+      <p>From these humble beginnings, the foundation of the Church of Christ,
+        Lawanson was firmly laid. The emphasis was placed on the authority of
+        Scripture, the plan of salvation, and pure worship according to the
+        New Testament pattern. This small living room became the birthplace of
+        a work that continues to impact lives decades later.</p>
+      <p>The pioneers of this congregation demonstrated remarkable faith and
+        sacrifice. Many walked long distances to attend meetings and gave
+        generously despite having little. Their dedication and love for the
+        truth set the spiritual tone that the church still upholds today.</p>
+      <p>Today, we look back at 1970 with deep gratitude. What began in
+        obscurity has become a beacon of truth in Surulere, fulfilling the
+        mission to be “the ground and pillar of the truth” as recorded in 1
+        Timothy 3:15.</p>
+    </template>
+
+    <template id="detail-2026">
+      <p>In 1970, a small group of sincere believers in Surulere, Lagos,
+        began meeting in a modest living room. Driven by a deep conviction
+        to restore New Testament Christianity, they committed themselves to
+        following the Bible alone without any denominational creeds or
+        traditions. These early gatherings were marked by simple a cappella
+        singing, fervent prayers, and earnest Bible study.</p>
+      <p>The first brethren faced many challenges, including limited
+        resources and occasional opposition, yet they remained steadfast in
+        their faith. What started as a handful of souls meeting in a private
+        home would eventually grow into a vibrant congregation. Their
+        unwavering desire was to be known simply as Christians, members of
+        the Church of Christ.</p>
+      <p>From these humble beginnings, the foundation of the Church of Christ,
+        Lawanson was firmly laid. The emphasis was placed on the authority of
+        Scripture, the plan of salvation, and pure worship according to the
+        New Testament pattern. This small living room became the birthplace of
+        a work that continues to impact lives decades later.</p>
+      <p>The pioneers of this congregation demonstrated remarkable faith and
+        sacrifice. Many walked long distances to attend meetings and gave
+        generously despite having little. Their dedication and love for the
+        truth set the spiritual tone that the church still upholds today.</p>
+      <p>Today, we look back at 1970 with deep gratitude. What began in
+        obscurity has become a beacon of truth in Surulere, fulfilling the
+        mission to be “the ground and pillar of the truth” as recorded in 1
+        Timothy 3:15.</p>
+    </template>
+
+    <!-- Future Story -->
+    <Section class="section">
+      <div class="container">
+        <div class="connect">
+          <div class="connect-info">
+            <h2>Be Part of Our Future Story</h2>
+            <p>Our history is still being written, and there is a place for you in our community. Join us this Sunday as we continue this journey together.</p>
+          </div>
+          <div class="connect-btn">
+            <a href="worship.html" class="btn btn-light" onclick="event.stopPropagation()">Visit Us on Sunday</a>
+            <a href="https://wa.me/2348066726631" class="btn btn-accent" onclick="event.stopPropagation()">Contact the Minister</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <img src="assets/Images/footer.png" class="footer-image">
+      <div class="footer-container">
+        <div class="container">
+          <div class="footer-grid">
+            <div class="footer-brand">
+              <img
+                src="assets/svgs/complete-logo-h-2.svg"
+                alt="Church Logo"
+                class="footer-logo"
+              />
+              <p class="footer-motto">
+                The Ground and Pillar of Truth – 1 Timothy 3:15
+              </p>
+            </div>
+            <div class="footer-contact">
+              <h4>Contact Us</h4>
+              <p>9/11 Odubiyi Street, Ikate, Surulere<br />Lagos, Nigeria</p>
+              <p>Email: coclawanson@yahoo.com</p>
+              <p>Phone: 08069553181 | 08121133361 | 07049172845</p>
+            </div>
+            <div class="footer-links">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="about-who-we-are.html">About Us</a></li>
+                <li><a href="worship.html">Worship Times</a></li>
+                <li><a href="announcements.html">Announcements</a></li>
+                <li><a href="give.html">Give Online</a></li>
+              </ul>
+            </div>
+            <div class="footer-stream">
+              <h4>Watch Live</h4>
+              <p>Join us every Sunday for live streaming</p>
+              <a
+                href="https://www.youtube.com/@coclawanson"
+                target="_blank"
+                class="btn btn-accent"
+                >YouTube Channel</a
+              >
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>&copy; 2026 Church of Christ, Lawanson. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+        function toggleNav() {
+        document.getElementById("navMenu").classList.toggle("active");
+      }
+
+      function toggleDropdown(element) {
+        if (window.innerWidth <= 768) {
+          element.classList.toggle("active");
+        }
+      }
+      const navToggle = document.getElementById ('navToggle')
+      navToggle.addEventListener('click', () =>{
+        navToggle.classList.toggle ('active');
+      })
+      const timelineContent = document.getElementById('timelineContent');
+      const timelineOverlay = document.getElementById('timelineOverlay');
+
+      function isMobile() { return window.innerWidth <= 768; }
+
+      function closeTimeline() {
+        timelineContent.classList.remove('has-active');
+        document.querySelectorAll('.timeline-dialogue').forEach(d => d.remove());
+        timelineOverlay.classList.remove('open');
+      }
+
+      document.querySelectorAll('.history-btn').forEach(btn => {
+        btn.addEventListener('click', e => {
+          e.stopPropagation();
+          const container = btn.closest('.content-container-left, .content-container-right');
+          const isAlreadyActive = container.classList.contains('active');
+          closeTimeline();
+          if (isAlreadyActive) return;
+
+          const year     = container.dataset.year;
+          const title    = container.dataset.title;
+          const templateContent = document.getElementById(container.dataset.template).innerHTML;
+          const isLeft   = container.classList.contains('content-container-left');
+
+          container.classList.add('active');
+          timelineContent.classList.add('has-active');
+
+          if (isMobile()) {
+            document.getElementById('overlayYear').textContent  = year;
+            document.getElementById('overlayTitle').textContent = title;
+            document.getElementById('overlayDetail').innerHTML  = templateContent;
+            timelineOverlay.classList.add('open');
+          } else {
+            const dialogue = document.createElement('div');
+            dialogue.className = 'timeline-dialogue ' + (isLeft ? 'dialogue-for-left' : 'dialogue-for-right');
+            dialogue.innerHTML = `
+              <h3>${year}</h3>
+              <h4>${title}</h4>
+              <div class="dialogue-body">${templateContent}</div>
+              <button class="close-inline">Close</button>`;
+            dialogue.querySelector('.close-inline').addEventListener('click', e => {
+              e.stopPropagation(); closeTimeline();
+            });
+            dialogue.style.top = container.offsetTop + 'px';
+            timelineContent.appendChild(dialogue);
+            dialogue.classList.add('open');
+          }
+        });
+      });
+
+      function closeTimeline() {
+        timelineContent.classList.remove('has-active');
+        document.querySelectorAll('.content-container-left, .content-container-right').forEach(c => {
+          c.classList.remove('active');
+        });
+        document.querySelectorAll('.timeline-dialogue').forEach(d => d.remove());
+        timelineOverlay.classList.remove('open');
+      }
+
+      document.getElementById('overlayClose').addEventListener('click', closeTimeline);
+      timelineOverlay.addEventListener('click', e => { if (e.target === timelineOverlay) closeTimeline(); });
+      document.addEventListener('keydown', e => { if (e.key === 'Escape') closeTimeline(); });
+      document.addEventListener('click', e => {
+        if (!e.target.closest('.content-container-left, .content-container-right') &&
+            !e.target.closest('.timeline-overlay')) closeTimeline();
+      });
+    </script>
+</body>
+</html>

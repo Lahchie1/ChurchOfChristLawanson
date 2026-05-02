@@ -1,0 +1,500 @@
+<!-- ============================================ -->
+<!-- MINISTRIES-EVANGELISM.HTML -->
+<!-- ============================================ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evangelism Ministry | Church of Christ, Lawanson</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" href="ministries-evangelism.css">
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="logo-link">
+          <img
+            src="assets/svgs/complete-logo-1.svg"
+            alt="Church of Christ, Lawanson Logo"
+            class="nav-logo"
+          />
+        </a>
+        <button
+          class="nav-toggle" id="navToggle"
+          aria-label="Toggle navigation"
+          onclick="toggleNav()"
+        >
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item dropdown" onclick="toggleDropdown(this)">
+            <div class="nav-link dropdown-toggle">About Us<img src="assets/svgs/icons/chevron-down.svg" class="dropdown-toggle-icon"></div>
+            <div class="dropdown-menu">
+              <a href="about-who-we-are.html" class="dropdown-item"
+                >Who We Are</a
+              >
+              <a href="about-history.html" class="dropdown-item">Our History</a>
+              <a href="about-beliefs.html" class="dropdown-item">Our Beliefs</a>
+              <a href="about-minister.html" class="dropdown-item"
+                >Meet Our Minister</a
+              >
+              <a href="about-leaders.html" class="dropdown-item"
+                >Church Leaders</a
+              >
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="worship.html" class="nav-link">Worship & Services</a>
+          </li>
+          <li class="nav-item dropdown" onclick="toggleDropdown(this)">
+            <div class="nav-link dropdown-toggle active">Ministries<img src="assets/svgs/icons/chevron-down.svg" class="dropdown-toggle-icon active"></div>
+            <div class="dropdown-menu">
+              <a href="ministries-all.html" class="dropdown-item">All Ministries</a>
+              <a href="ministries-secretariat.html" class="dropdown-item"
+                >Secretariat</a
+              >
+              <a href="ministries-finance.html" class="dropdown-item"
+                >Finance</a
+              >
+              <a href="ministries-infrastructure.html" class="dropdown-item"
+                >Infrastructure</a
+              >
+              <a href="ministries-evangelism.html" class="dropdown-item active"
+                >Evangelism</a
+              >
+              <a href="ministries-health.html" class="dropdown-item">Health</a>
+              <a href="ministries-publicity.html" class="dropdown-item"
+                >Publicity</a
+              >
+              <a href="ministries-sisters.html" class="dropdown-item"
+                >Sisters</a
+              >
+              <a href="ministries-youth.html" class="dropdown-item">Youth</a>
+              <a href="ministries-children.html" class="dropdown-item"
+                >Children</a
+              >
+              <a href="ministries-singles.html" class="dropdown-item">Singles</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="announcements.html" class="nav-link">Announcements</a>
+          </li>
+          <li class="nav-item">
+            <a href="resources.html" class="nav-link">Resources</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+          <div class="nav-btn">
+            <a
+              href="give.html"
+              class="btn btn-light"
+              onclick="event.stopPropagation()"
+              >Give Now</a
+            >
+          </div>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <img src="assets/Images/evangelism.png" class="page-hero-image">
+      <div class="page-hero-content">
+        <h1>Evangelism Ministry</h1>
+        <p class="page-tagline">
+          We are a community driven by the Great Commission, dedicated to
+          sharing the transformative message of hope, love, and salvation from
+          Lawanson to the ends of the earth.
+        </p>
+      </div>
+    </section>
+
+    <!-- Vision Without Borders -->
+    <section class="section">
+      <div class="container">
+        <div class="evangelism-activity-schedule">
+          <div class="ministry-overview">
+            <div class="section-title-span">
+              <h2>A Vision Without Borders</h2>
+            </div>
+            <div class="description-schedule">
+              <p class="section-subtitle-span">Our evangelism efforts are focused on three core pillars of
+                impact, ensuring no one is left behind in the dark.
+              </p>
+            </div>
+          </div>
+
+          <div class="summaries-grid">
+            <!-- Street Ministries -->
+            <div class="summary-card monthly-focus">
+              <img
+                src="assets/Images/abl.png"
+                alt="Street Ministry"
+                class="evangelism-card-image"
+              />
+              <div class="summary-card-content">
+                <h3>Annual Bible Lectures & Indoor Evangelism</h3>
+                <p>
+                  Every Saturday, our teams hit the streets of Lawanson and
+                  Surulere, bringing physical aid and spiritual nourishment to our
+                  direct neighbors.
+                </p>
+              </div>
+            </div>
+
+            <!-- Global Missions -->
+            <div class="summary-card summary-card--primary">
+              <div class="summary-card-content evangelism-global-content">
+                <div>
+                  <h3>Global Impact</h3>
+                  
+                  <p>
+                    Extending our reach beyond Nigeria through social media
+                    and supported mission points across the world.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Community Support -->
+            <div class="summary-card">
+              <div class="summary-card-content">
+                <div>
+                  <h3>Community Support</h3>
+                </div>
+                <p>
+                  Holistic care programs including food drives, medical outreach,
+                  and literacy support.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="section">
+      <div class="container">
+        <div class="evangelism-stats-grid">
+          <div class="evangelism-stat-item">
+            <div class="evangelism-stat-number">500+</div>
+            <div class="evangelism-stat-label">Lives Impacted Monthly</div>
+          </div>
+          <div class="evangelism-stat-item">
+            <div class="evangelism-stat-number">24/7</div>
+            <div class="evangelism-stat-label">Prayer Support</div>
+          </div>
+          <div class="evangelism-stat-item">
+            <div class="evangelism-stat-number">15+</div>
+            <div class="evangelism-stat-label">Active Zones</div>
+          </div>
+          <div class="evangelism-stat-item">
+            <div class="evangelism-stat-number">100%</div>
+            <div class="evangelism-stat-label">Gospel Centered</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="section">
+      <div class="container">
+        <div class="gallery-section">
+          <div class="gallery-header">
+            <h2 class="section-title">Evangelism Highlights</h2>
+          </div>
+
+          <div class="gallery">
+            <div class="gallery-card">
+              <img
+                src="assets/Images/a-capella.png"
+                alt="image of evangelism activity"
+                class="gallery-image"
+              />
+            </div>
+            <div class="gallery-card">
+              <img
+                src="assets/Images/a-capella.png"
+                alt="image of evangelism activity"
+                class="gallery-image"
+              />
+            </div>
+            <div class="gallery-card">
+              <img
+                src="assets/Images/a-capella.png"
+                alt="image of evangelism activity"
+                class="gallery-image"
+              />
+            </div>
+          </div>
+          <div class="connect-btn">
+            <a href="https://goldtechsolutions.pixieset.com/coclawnsonyouthweek2025/" class="btn btn-light"
+              >See More</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Join the Team CTA -->
+    <section class="section" id="join">
+      <div class="container">
+        <div class="evangelism-join-cta">
+          <div class="evangelism-join-bg"></div>
+
+          <div class="evangelism-join-content">
+            <div class="evangelism-join-text">
+              <h2 class="evangelism-join-title">
+                Ready to shine
+                <span class="evangelism-join-highlight">The Light?</span>
+              </h2>
+              <p class="evangelism-join-description">
+                Whether you are a gifted speaker, a quiet servant, there is a
+                place for you on the team.
+              </p>
+            </div>
+
+            <div class="evangelism-join-form-container">
+              <h3 class="evangelism-join-form-title">Join the Team</h3>
+              <form class="evangelism-join-form">
+                <input
+                  type="text"
+                  placeholder="Full Name"
+                  class="evangelism-join-input"
+                />
+                <input
+                  type="email"
+                  placeholder="Email Address"
+                  class="evangelism-join-input"
+                />
+                <button
+                  type="submit"
+                  class="btn btn-accent evangelism-join-button"
+                >
+                  Submit Application
+                </button>
+              </form>
+              <p class="evangelism-join-note">We'll respond within 48 hours</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="ministry-members">
+          <div class="ministry-members-header">
+            <h2 class="section-title">Meet Our Members</h2>
+            <p class="section-subtitle">
+              Passionate soul-winners carrying the light of Christ to every
+              corner of our community.
+            </p>
+          </div>
+
+          <div class="ministry-members-list">
+            <!-- Head of Ministry -->
+            <div class="ministry-member-top">
+              <div class="ministry-head">
+                <div class="ministry-leader-photo">
+                  <img
+                    src="assets/Images/minister.png"
+                    alt="Bro. Evangelism Head"
+                    class="ministry-head-photo"
+                  />
+                </div>
+                <div class="ministry-head-info">
+                  <h3>Bro. Ogbu Otola</h3>
+                  <p>Evangelism Director</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="ministry-members-grid">
+              <!-- Leader 1 -->
+              <div class="ministry-member-card">
+                <div class="ministry-members-photo">
+                  <img
+                    src="assets/Images/leader2.png"
+                    alt="Sis. Outreach Coordinator"
+                    class="members-photo"
+                  />
+                </div>
+                <div class="leader-info">
+                  <h3>Bro. Member 1</h3>
+                  <p>Outreach Coordinator</p>
+                </div>
+              </div>
+
+              <!-- Leader 2 -->
+              <div class="ministry-member-card">
+                <div class="ministry-members-photo">
+                  <img
+                    src="assets/Images/leader3.png"
+                    alt="Bro. Mission Leader"
+                    class="members-photo"
+                  />
+                </div>
+                <div class="leader-info">
+                  <h3>Bro. Member 2</h3>
+                  <p>Missions Coordinator</p>
+                </div>
+              </div>
+
+              <!-- Leader 3 -->
+              <div class="ministry-member-card">
+                <div class="ministry-members-photo">
+                  <img
+                    src="assets/Images/leader4.png"
+                    alt="Sis. Discipleship Leader"
+                    class="members-photo"
+                  />
+                </div>
+                <div class="leader-info">
+                  <h3>Bro. Member 3</h3>
+                  <p>Discipleship Coordinator</p>
+                </div>
+              </div>
+
+              <!-- Leader 4 -->
+              <div class="ministry-member-card">
+                <div class="ministry-members-photo">
+                  <img
+                    src="assets/Images/leader5.png"
+                    alt="Bro. Community Outreach"
+                    class="members-photo"
+                  />
+                </div>
+                <div class="leader-info">
+                  <h3>Bro. Member 4</h3>
+                  <p>Community Outreach</p>
+                </div>
+              </div>
+
+              <!-- Leader 5 -->
+              <div class="ministry-member-card">
+                <div class="ministry-members-photo">
+                  <img
+                    src="assets/Images/leader6.png"
+                    alt="Sis. Evangelism Member"
+                    class="members-photo"
+                  />
+                </div>
+                <div class="leader-info">
+                  <h3>Bro. Member 5</h3>
+                  <p>Team Member</p>
+                </div>
+              </div>
+
+              <!-- Leader 6 -->
+              <div class="ministry-member-card">
+                <div class="ministry-members-photo">
+                  <img
+                    src="assets/Images/leader7.png"
+                    alt="Bro. Evangelism Member 2"
+                    class="members-photo"
+                  />
+                </div>
+                <div class="leader-info">
+                  <h3>Bro. Member 6</h3>
+                  <p>Team Member</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Connect CTA -->
+    <section class="section">
+      <div class="container">
+        <div class="connect">
+          <div class="connect-info">
+            <h2>Be a Light Bearer</h2>
+            <p>
+              The harvest is plentiful, but the laborers are few. Join us in
+            fulfilling the Great Commission—sharing the gospel from Lawanson to
+            the ends of the earth. Support us to spread the Gospel far and wide.
+            </p>
+            <div class="connect-btn">
+              <a href="give.html" class="btn btn-accent">Support Us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <img src="assets/Images/footer.png" class="footer-image">
+      <div class="footer-container">
+        <div class="container">
+          <div class="footer-grid">
+            <div class="footer-brand">
+              <img
+                src="assets/svgs/complete-logo-h-2.svg"
+                alt="Church Logo"
+                class="footer-logo"
+              />
+              <p class="footer-motto">
+                The Ground and Pillar of Truth – 1 Timothy 3:15
+              </p>
+            </div>
+            <div class="footer-contact">
+              <h4>Contact Us</h4>
+              <p>9/11 Odubiyi Street, Ikate, Surulere<br />Lagos, Nigeria</p>
+              <p>Email: coclawanson@yahoo.com</p>
+              <p>Phone: 08069553181 | 08121133361 | 07049172845</p>
+            </div>
+            <div class="footer-links">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="about-who-we-are.html">About Us</a></li>
+                <li><a href="worship.html">Worship Times</a></li>
+                <li><a href="announcements.html">Announcements</a></li>
+                <li><a href="give.html">Give Online</a></li>
+              </ul>
+            </div>
+            <div class="footer-stream">
+              <h4>Watch Live</h4>
+              <p>Join us every Sunday for live streaming</p>
+              <a
+                href="https://www.youtube.com/@coclawanson"
+                target="_blank"
+                class="btn btn-accent"
+                >YouTube Channel</a
+              >
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>&copy; 2026 Church of Christ, Lawanson. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function toggleNav() {
+        document.getElementById("navMenu").classList.toggle("active");
+      }
+
+      function toggleDropdown(element) {
+        if (window.innerWidth <= 768) {
+          element.classList.toggle("active");
+        }
+      }
+      const navToggle = document.getElementById ('navToggle')
+      navToggle.addEventListener('click', () =>{
+        navToggle.classList.toggle ('active');
+      })
+    </script>
+  </body>
+</html>
+

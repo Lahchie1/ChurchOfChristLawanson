@@ -1,0 +1,422 @@
+<!-- ============================================ -->
+<!-- WORSHIP.HTML - WORSHIP & SERVICES PAGE -->
+<!-- ============================================ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worship & Services | Church of Christ, Lawanson</title>
+     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="worship.css">
+  </head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="logo-link">
+          <img src="assets/svgs/complete-logo-1.svg" alt="Church of Christ, Lawanson Logo" class="nav-logo"/>
+        </a>
+        <button
+          class="nav-toggle" id="navToggle"
+          aria-label="Toggle navigation"
+          onclick="toggleNav()"
+        >
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item dropdown" onclick="toggleDropdown(this)">
+            <div class="nav-link dropdown-toggle">About Us<img src="assets/svgs/icons/chevron-down.svg" class="dropdown-toggle-icon"></div>
+            <div class="dropdown-menu">
+              <a href="about-who-we-are.html" class="dropdown-item">Who We Are</a>
+              <a href="about-history.html" class="dropdown-item">Our History</a>
+              <a href="about-beliefs.html" class="dropdown-item">Our Beliefs</a>
+              <a href="about-minister.html" class="dropdown-item">Meet Our Minister</a>
+              <a href="about-leaders.html" class="dropdown-item">Church Leaders</a>
+            </div>
+          </li>
+          <li class="nav-item"><a href="worship.html" class="nav-link">Worship & Services</a></li>
+          <li class="nav-item dropdown" onclick="toggleDropdown(this)">
+            <div class="nav-link dropdown-toggle">Ministries<img src="assets/svgs/icons/chevron-down.svg" class="dropdown-toggle-icon"></div>
+            <div class="dropdown-menu">
+              <a href="ministries-all.html" class="dropdown-item">All Ministries</a>
+              <a href="ministries-secretariat.html" class="dropdown-item">Secretariat</a>
+              <a href="ministries-finance.html" class="dropdown-item">Finance</a>
+              <a href="ministries-infrastructure.html" class="dropdown-item">Infrastructure</a>
+              <a href="ministries-evangelism.html" class="dropdown-item">Evangelism</a>
+              <a href="ministries-health.html" class="dropdown-item">Health</a>
+              <a href="ministries-publicity.html" class="dropdown-item">Publicity</a>
+              <a href="ministries-sisters.html" class="dropdown-item">Sisters</a>
+              <a href="ministries-youth.html" class="dropdown-item">Youth</a>
+              <a href="ministries-children.html" class="dropdown-item">Children</a>
+              <a href="ministries-singles.html" class="dropdown-item">Singles</a>
+            </div>
+          </li>
+          <li class="nav-item"><a href="announcements.html" class="nav-link">Announcements</a></li>
+          <li class="nav-item"><a href="resources.html" class="nav-link">Resources</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <div class="nav-btn"><a href="give.html" class="btn btn-light" onclick="event.stopPropagation()">Give Now</a></div>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Page Hero -->
+     <section class="page-hero">
+      <img src="assets/Images/worship.png" class="page-hero-image" />
+      <div class="page-hero-content">
+        <h1>Worship & Services</h1>
+        <p class="page-tagline">
+          Join us in fellowship as we praise God and study His word
+          together. Experience spiritual growth and community.
+        </p>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="section">
+      <div class="container">
+        <div class="worship-section">
+          <div class="worship-header">
+            <h2 class="section-title">Our Weekly Schedules</h2>
+            <p class="section-subtitle">Regular opportunities for worship, Bible study, and collective prayer throughout the week.</p>
+          </div>
+          
+          <div class="sunday-services">
+              <div class="worship-period-title">
+                <img src="assets/svgs/icons/sunday-service.svg" class="worship-icons">
+                <h3>Sunday Service</h3>
+              </div>
+
+              <div class="worship-period">
+                  <div class="service-info">
+                      <div class="time-icon">
+                        <p>8:45 AM - 10:00 AM</p>
+                        <img src="assets/svgs/icons/holy-bible.svg" class="service-info-icon">
+                      </div>
+                      <div class="service-info-content">
+                        <h3>Sunday School</h3>
+                        <p>Learn from indepth exploration of bible teachings, music classes, health talks and other teachings that need to be exposed.</p>
+                      </div>
+                  </div>
+
+                  <div class="service-info">
+                      <div class="time-icon">
+                        <p>10:15 AM - 12:00 PM</p>
+                        <img src="assets/svgs/icons/holy-bible.svg" class="service-info-icon">
+                      </div>
+                      <div class="service-info-content">
+                        <h3>Morning Worship</h3>
+                        <p>Worship activities featuring the five (5) acts which are congregational singing, prayer, Lord's supper, giving and sermon.</p>
+                      </div>
+                  </div>
+
+                  <div class="service-info">
+                      <div class="time-icon">
+                        <p>6:00 PM - 7:00 PM</p>
+                        <img src="assets/svgs/icons/holy-bible.svg" class="service-info-icon">
+                      </div>
+                      <div class="service-info-content">
+                        <h3>Evening Worship</h3>
+                        <p>A repeat of worship activities for brethren who were unable to attend morning worship and desire to worship.</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          
+          <div class="midweek-services">
+            <div class="worship-period-title">
+              <img src="assets/svgs/icons/date-time.svg" class="worship-icons">
+              <h3>Mid-Week Activities</h3>
+            </div>
+
+            <div class="midweek-worship-period">
+              <div class="midweek-service-info">
+                <div class="day-time">
+                  <h5>Tuesday</h5>
+                  <h4>7:00 PM - 8:00 PM</h4>
+                </div>
+                <div class="midweek-service-info-content">
+                  <h3>Sister's Class</h3>
+                  <p>Learn from the wealth of knowledge gathered by sisters from both experiences and bible studying.</p>
+                </div>
+              </div>
+
+              <div class="midweek-service-info">
+                <div class="day-time">
+                  <h5>Wednesday</h5>
+                  <h4>6:30 PM - 8:00 PM</h4>
+                </div>
+                <div class="midweek-service-info-content">
+                  <h3>Bible Study</h3>
+                  <p>Study the bible and learn more about God's mind and how He expects us to live in this world.</p>
+                </div>
+              </div>
+
+              <div class="midweek-service-info">
+                <div class="day-time">
+                  <h5>Thursday</h5>
+                  <h4>7:00 PM - 8:00 PM</h4>
+                </div>
+                <div class="midweek-service-info-content">
+                  <h3>Prayer Meeting</h3>
+                  <p>Fellowship as a zone (based on your location), share and solve problems, pray with love and unity.</p>
+                </div>
+              </div>
+
+              <div class="midweek-service-info">
+                <div class="day-time">
+                  <h5>Friday</h5>
+                  <h4>7:00 PM - 8:30 PM</h4>
+                </div>
+                <div class="midweek-service-info-content">
+                  <h3>Youth Class</h3>
+                  <p>Fellowship and equip with God's Word as youths in other to overcome the distractions of this world.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="monthly-fellowship">
+              <div class="worship-period-title">
+                <img src="assets/svgs/icons/date-time.svg" class="worship-icons">
+                <h3>Monthly Activities</h3>
+              </div>
+
+            <div class="monthly-activities">
+              <div class="monthly-activites-info">
+                <img src="assets/svgs/icons/users.svg" class="worship-icons-mini">
+                  
+                <div class="monthly-activites-info-content">
+                  <h4>1st Sunday</h4>
+                  <p>Church meeting</p>
+                </div>
+              </div>
+
+              <div class="monthly-activites-info">
+                <img src="assets/svgs/icons/prayer.svg" class="worship-icons-mini">
+                
+                <div class="monthly-activites-info-content">
+                  <h4>2nd Saturday</h4>
+                  <p>Fasting and Prayer</p>
+                </div>
+              </div>
+
+              <div class="monthly-activites-info">
+                <img src="assets/svgs/icons/users.svg" class="worship-icons-mini">
+                
+                <div class="monthly-activites-info-content">
+                  <h4>Last Sunday</h4>
+                  <p>Youth Meeting</p>
+                </div>
+              </div>
+
+              <div class="monthly-activites-info">
+                <img src="assets/svgs/icons/prayer.svg" class="worship-icons-mini">
+
+                <div class="monthly-activites-info-content">
+                  <h4>Last Thursday</h4>
+                  <p>General Prayer Meeting</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Future Story -->
+    <Section class="section">
+      <div class="container">
+        <div class="connect">
+          <div class="connect-info">
+            <h2>First time visiting?</h2>
+            <p>We are a welcoming community of believers following the new testament pattern of worship. We would love to have your presence in our midst.</p>
+          </div>
+          <div class="connect-btn">
+            <a href="about-minister.html" class="btn btn-light" onclick="event.stopPropagation()">Get Directions</a>
+            <a href="about-who-we-are.html" class="btn btn-accent" onclick="event.stopPropagation()">Contact Preacher</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <img src="assets/Images/footer.png" class="footer-image">
+      <div class="footer-container">
+        <div class="container">
+          <div class="footer-grid">
+            <div class="footer-brand">
+              <img
+                src="assets/svgs/complete-logo-h-2.svg"
+                alt="Church Logo"
+                class="footer-logo"
+              />
+              <p class="footer-motto">
+                The Ground and Pillar of Truth – 1 Timothy 3:15
+              </p>
+            </div>
+            <div class="footer-contact">
+              <h4>Contact Us</h4>
+              <p>9/11 Odubiyi Street, Ikate, Surulere<br />Lagos, Nigeria</p>
+              <p>Email: coclawanson@yahoo.com</p>
+              <p>Phone: 08069553181 | 08121133361 | 07049172845</p>
+            </div>
+            <div class="footer-links">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="about-who-we-are.html">About Us</a></li>
+                <li><a href="worship.html">Worship Times</a></li>
+                <li><a href="announcements.html">Announcements</a></li>
+                <li><a href="give.html">Give Online</a></li>
+              </ul>
+            </div>
+            <div class="footer-stream">
+              <h4>Watch Live</h4>
+              <p>Join us every Sunday for live streaming</p>
+              <a
+                href="https://www.youtube.com/@coclawanson"
+                target="_blank"
+                class="btn btn-accent"
+                >YouTube Channel</a
+              >
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>&copy; 2026 Church of Christ, Lawanson. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function toggleNav() {
+        document.getElementById("navMenu").classList.toggle("active");
+      }
+
+      function toggleDropdown(element) {
+        if (window.innerWidth <= 768) {
+          element.classList.toggle("active");
+        }
+      }
+
+      function setActiveNav() {
+        const path = window.location.pathname;
+        const filename = path.split("/").pop();
+        const navLinks = document.querySelectorAll(".nav-link");
+        navLinks.forEach((link) => {
+          if (link.getAttribute("href") === filename) {
+            link.classList.add("active");
+          }
+        });
+        // Special handling for dropdown parents
+        if (path.includes("/about-")) {
+          const aboutLink = document.querySelector(".nav-link.dropdown-toggle");
+          if (aboutLink && aboutLink.textContent.includes("About Us")) {
+            aboutLink.classList.add("active");
+          }
+        }
+        if (path.includes("/ministries-")) {
+          const ministriesLink = document.querySelectorAll(
+            ".nav-link.dropdown-toggle",
+          )[1];
+          if (
+            ministriesLink &&
+            ministriesLink.textContent.includes("Ministries")
+          ) {
+            ministriesLink.classList.add("active");
+          }
+        }
+      }
+
+      setActiveNav();
+
+      // Simplified Livestream Implementation - Direct iframe approach
+      let currentVideoId = 'VPQEq919Tw4'; // Default fallback
+      let configCheckInterval;
+
+      function initializeLivestream() {
+        console.log('Initializing livestream with video ID:', currentVideoId);
+        const container = document.getElementById('youtube-player-container');
+        if (!container) {
+          console.error('YouTube container not found');
+          return;
+        }
+
+        // Clear loading content and show the video directly
+        container.innerHTML = `
+          <iframe
+            src="https://www.youtube.com/embed/${currentVideoId}?autoplay=1&mute=1&rel=0&modestbranding=1&showinfo=0&iv_load_policy=3"
+            frameborder="0"
+            allow="autoplay; encrypted-media; fullscreen"
+            allowfullscreen
+            style="width: 100%; height: 100%; position: absolute; top: 0; left: 0;">
+          </iframe>
+        `;
+
+        console.log('Livestream iframe created');
+      }
+
+      function checkConfigFile() {
+        fetch('livestream-config.json', { cache: 'no-cache' })
+          .then(response => response.json())
+          .then(config => {
+            if (config.currentVideoId && config.currentVideoId !== currentVideoId) {
+              console.log('New video ID found in config:', config.currentVideoId);
+              currentVideoId = config.currentVideoId;
+              initializeLivestream(); // Reload with new video
+            }
+          })
+          .catch(error => {
+            console.log('Config check failed:', error);
+          });
+      }
+
+      function showFallback() {
+        const container = document.getElementById('youtube-player-container');
+        if (container) {
+          container.innerHTML = `
+            <div class="livestream-fallback-content">
+              <h3>🔴 Live Worship Service</h3>
+              <p>Join us for live worship and fellowship</p>
+              <p class="livestream-note">Click below to watch our current service</p>
+              <a href="https://www.youtube.com/watch?v=${currentVideoId}" target="_blank" class="btn btn-primary btn-large">Watch Live on YouTube</a>
+              <p class="livestream-fallback"><small>Services are streamed every Sunday</small></p>
+            </div>
+          `;
+        }
+      }
+
+      // Function to update video ID (can be called to change livestream)
+      function updateLiveStream(videoId) {
+        console.log('Manually updating livestream to:', videoId);
+        currentVideoId = videoId;
+        initializeLivestream();
+      }
+
+      // Initialize when page loads
+      window.onload = function() {
+        console.log('Page loaded, initializing livestream...');
+
+        setActiveNav();
+
+        // Load config first, then initialize
+        checkConfigFile();
+
+        // Initialize livestream after a short delay to ensure DOM is ready
+        setTimeout(() => {
+          initializeLivestream();
+        }, 100);
+
+        // Check for config updates every 30 seconds
+        configCheckInterval = setInterval(checkConfigFile, 30000);
+      };
+      const navToggle = document.getElementById ('navToggle')
+      navToggle.addEventListener('click', () =>{
+        navToggle.classList.toggle ('active');
+      })
+    </script>
+</body>
+</html>

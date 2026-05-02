@@ -1,0 +1,254 @@
+<!-- ============================================ -->
+<!-- ABOUT-BELIEFS.HTML - OUR BELIEFS PAGE -->
+<!-- ============================================ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Beliefs | Church of Christ, Lawanson</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="about-beliefs.css">
+  </head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="logo-link">
+          <img src="assets/svgs/complete-logo-1.svg" alt="Church of Christ, Lawanson Logo" class="nav-logo"/>
+        </a>
+        <button
+          class="nav-toggle" id="navToggle"
+          aria-label="Toggle navigation"
+          onclick="toggleNav()"
+        >
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item dropdown" onclick="toggleDropdown(this)">
+            <div class="nav-link dropdown-toggle active">About Us<img src="assets/svgs/icons/chevron-down.svg" class="dropdown-toggle-icon active"></div>
+            <div class="dropdown-menu">
+              <a href="about-who-we-are.html" class="dropdown-item">Who We Are</a>
+              <a href="about-history.html" class="dropdown-item">Our History</a>
+              <a href="about-beliefs.html" class="dropdown-item active">Our Beliefs</a>
+              <a href="about-minister.html" class="dropdown-item">Meet Our Minister</a>
+              <a href="about-leaders.html" class="dropdown-item">Church Leaders</a>
+            </div>
+          </li>
+          <li class="nav-item"><a href="worship.html" class="nav-link">Worship & Services</a></li>
+          <li class="nav-item dropdown" onclick="toggleDropdown(this)">
+            <div class="nav-link dropdown-toggle">Ministries<img src="assets/svgs/icons/chevron-down.svg" class="dropdown-toggle-icon"></div>
+            <div class="dropdown-menu">
+              <a href="ministries-all.html" class="dropdown-item">All Ministries</a>
+              <a href="ministries-secretariat.html" class="dropdown-item">Secretariat</a>
+              <a href="ministries-finance.html" class="dropdown-item">Finance</a>
+              <a href="ministries-infrastructure.html" class="dropdown-item">Infrastructure</a>
+              <a href="ministries-evangelism.html" class="dropdown-item">Evangelism</a>
+              <a href="ministries-health.html" class="dropdown-item">Health</a>
+              <a href="ministries-publicity.html" class="dropdown-item">Publicity</a>
+              <a href="ministries-sisters.html" class="dropdown-item">Sisters</a>
+              <a href="ministries-youth.html" class="dropdown-item">Youth</a>
+              <a href="ministries-children.html" class="dropdown-item">Children</a>
+              <a href="ministries-singles.html" class="dropdown-item">Singles</a>
+            </div>
+          </li>
+          <li class="nav-item"><a href="announcements.html" class="nav-link">Announcements</a></li>
+          <li class="nav-item"><a href="resources.html" class="nav-link">Resources</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <div class="nav-btn"><a href="give.html" class="btn btn-light" onclick="event.stopPropagation()">Give Now</a></div>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <img src="assets/Images/sola-scriptura.png" class="page-hero-image">
+      <div class="page-hero-content">
+        <h1>What We Believe</h1>
+        <p class="page-tagline">At Church of Christ, Lawanson, our faith is built on the foundation of the aposteles, with Christ being the Chief conerstone. We emphasize a return to the simplicity and purity of the first-century church.</p>
+      </div>
+    </section>
+    
+
+    <!-- Main Content -->
+    <section class="section">
+        <div class="container">
+          <div class="beliefs-grid">
+            <div class="belief-card">
+              <img src="assets/Images/sola-scriptura.png" class="belief-card-image">
+              <div class="belief-card-content">
+                <div class="belief-card-content-header">
+                  <img src="assets/svgs/icons/holy-bible.svg" class="belief-card-icon">
+                  <h3>Sola Scriptura</h3>
+                </div>
+                <h4>The Bible Alone</h4>
+                <p>The Bible is our only authority in all matters of faith and practice. We reject human creeds and denominational traditions, holding firmly to the inspired Word of God.</p>
+              </div>
+            </div>
+            <div class="belief-card">
+              <img src="assets/Images/salvation.png" class="belief-card-image">
+              <div class="belief-card-content">
+                <div class="belief-card-content-header">
+                  <img src="assets/svgs/icons/cross.svg" class="belief-card-icon">
+                  <h3>Plan of Salvation</h3>
+                </div>
+                <h4>Hear, Believe, Repent, Confess & Baptism</h4>
+                <p>We teach the biblical plan of salvation: Hear the Word, Believe in Jesus Christ, Repent of sins, Confess faith in Christ, and be Baptized for the remission of sins.</p>
+              </div>
+            </div>
+            <div class="belief-card">
+              <img src="assets/Images/a-capella.png" class="belief-card-image">
+              <div class="belief-card-content">
+                <div class="belief-card-content-header">
+                  <img src="assets/svgs/icons/music.svg" class="belief-card-icon">
+                  <h3>A Cappella Singing</h3>
+                </div>
+                <h4>Your Voice Alone</h4>
+                <p>Our worship features vocal music only, without instrumental accompaniment, following the New Testament pattern of singing praises to God.</p>
+              </div>
+            </div>
+            <div class="belief-card">
+              <img src="assets/Images/lords-supper.png" class="belief-card-image">
+              <div class="belief-card-content">
+                <div class="belief-card-content-header">
+                  <img src="assets/svgs/icons/communion.svg" class="belief-card-icon">
+                  <h3>Lord's Supper</h3>
+                </div>
+                <h4>Upon the First Day of the week</h4>
+                <p>We observe the Lord's Supper every Sunday, commemorating the death and resurrection of our Lord Jesus Christ.</p>
+              </div>
+            </div>
+            <div class="belief-card">
+              <img src="assets/Images/local-autonomy.png" class="belief-card-image">
+              <div class="belief-card-content">
+                <div class="belief-card-content-header">
+                  <img src="assets/svgs/icons/church.svg" class="belief-card-icon">
+                  <h3>Local Autonomy</h3>
+                </div>
+                <h4>Self-Governing</h4>
+                <p>Each congregation is self-governing under the oversight of its own elders, with no central earthly headquarters other than Christ Himself.</p>
+              </div>
+            </div>
+            <div class="belief-card">
+              <img src="assets/Images/restoration.png" class="belief-card-image">
+              <div class="belief-card-content">
+                <div class="belief-card-content-header">
+                  <img src="assets/svgs/icons/restoration.svg" class="belief-card-icon">
+                  <h3>Restoration Plea</h3>
+                </div>
+                <h4>Original Pattern of Worship</h4>
+                <p>We seek to restore the simple Christianity of the New Testament, being Christians only and the church of Christ only.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- Questions About Our Faith -->
+    <Section class="section">
+      <div class="container">
+        <div class="connect">
+          <div class="connect-info">
+            <h2>Have Questions About Our Faith?</h2>
+            <p>We would love to sit down and study the Bible with you. Whether you're curious about a specific topic or want to learn more about our community.</p>
+          </div>
+          <div class="connect-btn">
+            <a href="contact.html" class="btn btn-light" onclick="event.stopPropagation()">Contact Us Today</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <img src="assets/Images/footer.png" class="footer-image"/>
+      <div class="footer-container">
+        <div class="container">
+          <div class="footer-grid">
+            <div class="footer-brand">
+              <img
+                src="assets/svgs/complete-logo-h-2.svg"
+                alt="Church Logo"
+                class="footer-logo"
+              />
+              <p class="footer-motto">
+                The Ground and Pillar of Truth – 1 Timothy 3:15
+              </p>
+            </div>
+            <div class="footer-contact">
+              <h4>Contact Us</h4>
+              <p>9/11 Odubiyi Street, Ikate, Surulere Lagos, Nigeria</p>
+              <p>Email: coclawanson@yahoo.com</p>
+              <p>Phone: 08069553181 | 08121133361 | 07049172845</p>
+            </div>
+            <div class="footer-links">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="about-who-we-are.html">About Us</a></li>
+                <li><a href="worship.html">Worship Times</a></li>
+                <li><a href="announcements.html">Announcements</a></li>
+                <li><a href="give.html">Give Online</a></li>
+              </ul>
+            </div>
+            <div class="footer-stream">
+              <h4>Watch Live</h4>
+              <p>Join us every Sunday for live streaming</p>
+              <a
+                href="https://www.youtube.com/@coclawanson"
+                target="_blank"
+                class="btn btn-accent"
+                >YouTube Channel</a
+              >
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>&copy; 2026 Church of Christ, Lawanson. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+        function toggleNav() {
+        document.getElementById("navMenu").classList.toggle("active");
+      }
+
+      function toggleDropdown(element) {
+        if (window.innerWidth <= 768) {
+          element.classList.toggle("active");
+        }
+      }
+
+      function setActiveNav() {
+        const path = window.location.pathname;
+        const filename = path.split('/').pop();
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+          if (link.getAttribute('href') === filename) {
+            link.classList.add('active');
+          }
+        });
+        // Special handling for dropdown parents
+        if (path.includes('/about-')) {
+          const aboutLink = document.querySelector('.nav-link.dropdown-toggle');
+          if (aboutLink && aboutLink.textContent.includes('About Us')) {
+            aboutLink.classList.add('active');
+          }
+        }
+        if (path.includes('/ministries-')) {
+          const ministriesLink = document.querySelectorAll('.nav-link.dropdown-toggle')[1];
+          if (ministriesLink && ministriesLink.textContent.includes('Ministries')) {
+            ministriesLink.classList.add('active');
+          }
+        }
+      }
+
+      setActiveNav();
+      const navToggle = document.getElementById ('navToggle')
+      navToggle.addEventListener('click', () =>{
+        navToggle.classList.toggle ('active');
+      })
+    </script>
+</body>
+</html>

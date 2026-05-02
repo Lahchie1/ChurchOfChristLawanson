@@ -1,0 +1,353 @@
+<!-- ============================================ -->
+<!-- ABOUT-WHO-WE-ARE.HTML - WHO WE ARE PAGE -->
+<!-- ============================================ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Who We Are | Church of Christ, Lawanson</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" href="about-who-we-are.css">
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="logo-link">
+          <img
+            src="assets/svgs/complete-logo-1.svg"
+            alt="Church of Christ, Lawanson Logo"
+            class="nav-logo"
+          />
+        </a>
+        <button
+          class="nav-toggle" id="navToggle"
+          aria-label="Toggle navigation"
+          onclick="toggleNav()"
+        >
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item dropdown" onclick="toggleDropdown(this)">
+            <div class="nav-link dropdown-toggle active"
+              >About Us<img
+                src="assets/svgs/icons/chevron-down.svg"
+                class="dropdown-toggle-icon active"
+              />
+            </div>
+            <div class="dropdown-menu">
+              <a href="about-who-we-are.html" class="dropdown-item active"
+                >Who We Are</a
+              >
+              <a href="about-history.html" class="dropdown-item">Our History</a>
+              <a href="about-beliefs.html" class="dropdown-item">Our Beliefs</a>
+              <a href="about-minister.html" class="dropdown-item"
+                >Meet Our Minister</a
+              >
+              <a href="about-leaders.html" class="dropdown-item"
+                >Church Leaders</a
+              >
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="worship.html" class="nav-link">Worship & Services</a>
+          </li>
+          <li class="nav-item dropdown" onclick="toggleDropdown(this)">
+            <div class="nav-link dropdown-toggle">Ministries<img src="assets/svgs/icons/chevron-down.svg" class="dropdown-toggle-icon"></div>
+            <div class="dropdown-menu">
+              <a href="ministries-all.html" class="dropdown-item">All Ministries</a>
+              <a href="ministries-secretariat.html" class="dropdown-item"
+                >Secretariat</a
+              >
+              <a href="ministries-finance.html" class="dropdown-item"
+                >Finance</a
+              >
+              <a href="ministries-infrastructure.html" class="dropdown-item"
+                >Infrastructure</a
+              >
+              <a href="ministries-evangelism.html" class="dropdown-item"
+                >Evangelism</a
+              >
+              <a href="ministries-health.html" class="dropdown-item">Health</a>
+              <a href="ministries-publicity.html" class="dropdown-item"
+                >Publicity</a
+              >
+              <a href="ministries-sisters.html" class="dropdown-item"
+                >Sisters</a
+              >
+              <a href="ministries-youth.html" class="dropdown-item">Youth</a>
+              <a href="ministries-children.html" class="dropdown-item"
+                >Children</a
+              >
+              <a href="ministries-singles.html" class="dropdown-item"
+                >Singles</a
+              >
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="announcements.html" class="nav-link">Announcements</a>
+          </li>
+          <li class="nav-item">
+            <a href="resources.html" class="nav-link">Resources</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+          <div class="nav-btn">
+            <a
+              href="give.html"
+              class="btn btn-light"
+              onclick="event.stopPropagation()"
+              >Give Now</a
+            >
+          </div>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <img src="assets/Images/about-us.png" class="page-hero-image" />
+      <div class="page-hero-content" about-us>
+        <h1>Who We Are</h1>
+        <p class="page-tagline">
+          The Ground and Pillar of Truth – 1 Timothy 3:15
+        </p>
+      </div>
+    </section>
+
+    <!--Identity Section-->
+    <section class="section">
+      <div class="container">
+        <div class="identity-box">
+          <div class="identity-item-1">
+            <p>Our Motto</p>
+            <h2>"The Ground and Pillar of Truth"</h2>
+            <h4 class="verses">1 Timothy 3:15</h4>
+          </div>
+          <div class="identity-item-2">
+            <p>2026 Theme</p>
+            <h2><strong>DIVINE ALIGNMENT</strong></h2>
+            <h4>Proverbs 3:5-6 | Psalms 37:23 | Romans 8:14</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="section">
+      <div class="container">
+        <div class="about-card">
+          <div class="about-left">
+            <img src="assets/Images/slide1.png" class="about-image" />
+          </div>
+          <div class="mission-statement">
+            <div class="mission-statement-major-info">
+              <h2>Who We Are</h2>
+              <p>
+                We are Christians only, striving to restore simple New Testament
+                Christianity without denominational creeds. We teach the plan of
+                salvation (hear, believe, repent, confess, be baptized for the
+                remission of sins) and worship according to the New Testament
+                pattern.
+              </p>
+              <p>
+                Our congregation is committed to following the Bible as our only
+                authority in all matters of faith and practice. We seek to be
+                nothing more and nothing less than the church described in the
+                New Testament.
+              </p>
+            </div>
+            <div class="additional-info">
+              <div class="info-content">
+                <img
+                  src="assets/svgs/icons/church.svg"
+                  class="info-content-image"
+                />
+                <h4>Non-Denominational</h4>
+                <p>
+                  Wearing no other name but Christ, seeking unity through the
+                  Word rather than traditions.
+                </p>
+              </div>
+
+              <div class="info-content">
+                <img
+                  src="assets/svgs/icons/church.svg"
+                  class="info-content-image"
+                />
+                <h4>Our Mission</h4>
+                <p>
+                  To preach the gospel, edify the body of Christ and serve our
+                  community in Surulere and beyond.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Enquiry Section -->
+    <section class="enquiry-section" id="enquiry">
+      <div class="enquiry-wrapper">
+        <div class="enquiry-info">
+          <h2>Visit Us</h2>
+          <p class="enquiry-subtitle">
+            We would love to welcome you to any of our services. Come and
+            experience true fellowship and worship in spirit and truth.
+          </p>
+
+          <div class="contact-details">
+            <div class="contact-item">
+              <span class="contact-icon"
+                ><img
+                  src="assets/svgs/icons/location-pin.svg"
+                  alt="location"
+                  class="icons"
+              /></span>
+              <div>
+                <h4>Visit Us</h4>
+                <p>9/11 Odubiyi Street, Ikate<br />Surulere, Lagos, Nigeria</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon"
+                ><img
+                  src="assets/svgs/icons/phone.svg"
+                  alt="call"
+                  class="icons"
+              /></span>
+              <div>
+                <h4>Service Times</h4>
+                <div>
+                  <h5>Sunday Service:</h5>
+                  <p>8:45 AM - 12:00 AM</p>
+                </div>
+                <div>
+                  <h5>Wednesday Bible Class:</h5>
+                  <p>6:30 PM - 8:00 PM</p>
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="submit-btn">
+              <span class="btn-text">Get Directions</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps?q=9/11%20Odubiyi%20Street%20Ikate%20Surulere%20Lagos&output=embed"
+            width="100%"
+            height="100%"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          >
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <img src="assets/Images/footer.png" class="footer-image"/>
+      <div class="footer-container">
+        <div class="container">
+          <div class="footer-grid">
+            <div class="footer-brand">
+              <img
+                src="assets/svgs/complete-logo-h-2.svg"
+                alt="Church Logo"
+                class="footer-logo"
+              />
+              <p class="footer-motto">
+                The Ground and Pillar of Truth – 1 Timothy 3:15
+              </p>
+            </div>
+            <div class="footer-contact">
+              <h4>Contact Us</h4>
+              <p>9/11 Odubiyi Street, Ikate, Surulere Lagos, Nigeria</p>
+              <p>Email: coclawanson@yahoo.com</p>
+              <p>Phone: 08069553181 | 08121133361 | 07049172845</p>
+            </div>
+            <div class="footer-links">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="about-who-we-are.html">About Us</a></li>
+                <li><a href="worship.html">Worship Times</a></li>
+                <li><a href="announcements.html">Announcements</a></li>
+                <li><a href="give.html">Give Online</a></li>
+              </ul>
+            </div>
+            <div class="footer-stream">
+              <h4>Watch Live</h4>
+              <p>Join us every Sunday for live streaming</p>
+              <a
+                href="https://www.youtube.com/@coclawanson"
+                target="_blank"
+                class="btn btn-accent"
+                >YouTube Channel</a
+              >
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>&copy; 2026 Church of Christ, Lawanson. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function toggleNav() {
+        document.getElementById("navMenu").classList.toggle("active");
+      }
+
+      function toggleDropdown(element) {
+        if (window.innerWidth <= 768) {
+          element.classList.toggle("active");
+        }
+      }
+
+      function setActiveNav() {
+        const path = window.location.pathname;
+        const filename = path.split("/").pop();
+        const navLinks = document.querySelectorAll(".nav-link");
+        navLinks.forEach((link) => {
+          if (link.getAttribute("href") === filename) {
+            link.classList.add("active");
+          }
+        });
+        // Special handling for dropdown parents
+        if (path.includes("/about-")) {
+          const aboutLink = document.querySelector(".nav-link.dropdown-toggle");
+          if (aboutLink && aboutLink.textContent.includes("About Us")) {
+            aboutLink.classList.add("active");
+          }
+        }
+        if (path.includes("/ministries-")) {
+          const ministriesLink = document.querySelectorAll(
+            ".nav-link.dropdown-toggle",
+          )[1];
+          if (
+            ministriesLink &&
+            ministriesLink.textContent.includes("Ministries")
+          ) {
+            ministriesLink.classList.add("active");
+          }
+        }
+      }
+
+      setActiveNav();
+      const navToggle = document.getElementById ('navToggle')
+      navToggle.addEventListener('click', () =>{
+        navToggle.classList.toggle ('active');
+      })
+    </script>
+  </body>
+</html>
+

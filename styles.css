@@ -1,0 +1,2759 @@
+* {
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+
+  --primary: #1a237e;
+  --primary-dark: #0d1642;
+  --primary-light: #3949ab;
+  --accent: #d4af37;
+  --accent-dark: #a67c00;
+  --accent-light: #ffdb80;
+  --accent-very-light: #fff2cc;
+  --Success: #2e7d32;
+  --Error: #c62828;
+  --light-blue: #e8eaf6;
+  --white: #ffffff;
+  --text: #212121;
+  --text-light: #616161;
+  --border: #c5cae9;
+  --filterprimary: brightness(0) saturate(100%) invert(17%) sepia(16%)
+    saturate(7418%) hue-rotate(221deg) brightness(95%) contrast(111%);
+  --filteraccent: brightness(0) saturate(100%) invert(82%) sepia(17%)
+    saturate(746%) hue-rotate(1deg) brightness(95%) contrast(90%);
+  --filtertext: brightness(0) saturate(100%) invert(13%) sepia(0%) saturate(0%)
+    hue-rotate(336deg) brightness(95%) contrast(90%);
+  --filtertextlight: filter: brightness(0) saturate(100%) invert(39%)
+    sepia(0%) saturate(45%) hue-rotate(173deg) brightness(91%) contrast(83%);
+  --filterlight-blue: brightness(0) saturate(100%) invert(92%) sepia(0%)
+    saturate(0%) hue-rotate(336deg) brightness(95%) contrast(90%);
+  --filterwhite: brightness(0) saturate(100%) invert(99%) sepia(16%) saturate(2%)
+    hue-rotate(121deg) brightness(103%) contrast(101%);
+}
+body {
+
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--light-blue);
+}
+img {
+
+  object-fit: cover;
+}
+/* Navigation */
+.navbar {
+
+  background: var(--white);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.nav-container {
+
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 0rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo-link {
+
+  display: flex;
+  align-items: center;
+}
+.nav-logo {
+
+  height: 40px;
+  width: auto;
+  transition: transform 0.3s;
+}
+.nav-logo:hover {
+
+  transform: scale(1.05);
+}
+.nav-menu {
+
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  align-items: center;
+}
+.nav-item {
+
+  position: relative;
+}
+.nav-link {
+
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.5rem 0;
+  display: flex;
+  transition: color 0.3s;
+  gap: 12px;
+  align-items: center;
+}
+.nav-link:hover {
+
+  color: var(--primary);
+}
+.nav-link.active {
+
+  color: var(--primary);
+  border-bottom: 2px solid var(--primary);
+}
+/* Dropdown */
+.dropdown {
+
+  position: relative;
+}
+.dropdown-toggle-icon {
+
+  height: 16px;
+}
+.dropdown-toggle-icon.active {
+
+  filter: var(--filterprimary);
+}
+.dropdown-toggle::after {
+
+  font-size: 0.7rem;
+}
+.dropdown-menu:focus-within {
+
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--white);
+  min-width: 220px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s;
+  z-index: 1001;
+  padding: 0.5rem 0;
+}
+.dropdown:hover .dropdown-menu {
+
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.dropdown-item {
+
+  display: block;
+  padding: 0.8rem 1.5rem;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s;
+  border-left: 3px solid transparent;
+}
+.dropdown-item:hover {
+
+  background: var(--light-blue);
+  color: var(--primary);
+}
+.dropdown-item.active {
+
+  background: var(--light-blue);
+  color: var(--primary);
+  border-left-color: var(--primary);
+}
+.nav-toggle {
+
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+.nav-toggle div {
+
+  width: 25px;
+  height: 3px;
+  background: var(--primary);
+  margin: 3px 0;
+  transition: 0.3s;
+}
+.nav-toggle.active .line1 {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav-toggle.active .line2 {
+  opacity: 0;
+}
+.nav-toggle.active .line3 {
+  transform: translateY(-11px) rotate(-45deg);
+}
+.icons {
+
+  height: 20px;
+  width: auto;
+  transition: transform 0.3s;
+}
+.icons-accent {
+
+  height: 20px;
+  width: auto;
+  transition: transform 0.3s;
+  filter: var(--filteraccent);
+}
+.info-icons {
+
+  height: 40px;
+  width: auto;
+  transition: transform 0.3s;
+}
+.slide.active {
+
+  opacity: 1;
+}
+.dot.active {
+
+  background: var(--white);
+}
+/* Buttons */
+.btn {
+
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  border-radius: 15px;
+  text-decoration: none;
+  width: 100%;
+  font-weight: 600;
+  transition: all 0.3s;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.btn-primary {
+
+  display: flex;
+  background: var(--white);
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--primary);
+}
+.btn-primary:hover {
+
+  background: var(--light-blue);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.btn-accent {
+
+  display: flex;
+  background: var(--accent);
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--primary-dark);
+  border: 2px solid var(--accent);
+}
+.btn-accent:hover {
+
+  background: var(--white);
+  color: var(--accent);
+  border: 2px solid var(--accent);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.btn-light {
+
+  display: flex;
+  background: var(--primary);
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--white);
+  border: 2px solid var(--primary);
+}
+.btn-light:hover {
+
+  background: var(--white);
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.btn-outline {
+
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2.5rem;
+  border-radius: 15px;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s;
+  background: transparent;
+}
+.btn-outline:hover {
+
+  background: var(--primary);
+  color: var(--white);
+}
+.btn-small {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0.5rem 1.5rem;
+  font-size: 0.9rem;
+}
+.btn-large {
+
+  padding: 1.2rem 3rem;
+  font-size: 1.1rem;
+}
+.summaries-grid {
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+.summary-card {
+
+  background: var(--white);
+  border: 2px solid var(--white);
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+.summary-card:hover {
+
+  border: 2px solid var(--primary);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+.summary-card-content {
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  height: 100%;
+}
+.summary-card-image {
+
+  height: 200px;
+  object-fit: cover;
+  border-radius: 16px;
+  width: 100%;
+  transition: transform 0.3s;
+}
+.summary-card h3 {
+
+  font-size: 1.4rem;
+}
+.summary-card p {
+
+  line-height: 1.8;
+}
+/* Page Hero */
+.page-hero {
+
+  position: relative;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--white);
+  overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    var(--primary-dark) 0%,
+    var(--primary) 100%
+  );
+  margin: 2rem;
+  border-radius: 16px;
+}
+.page-hero-image {
+
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 1920px;
+  height: 100%;
+  opacity: 20%;
+}
+.page-hero-content {
+
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+  width: 900px;
+  opacity: 80;
+}
+.children-hero-buttons .btn-light {
+
+  margin-left: 1rem;
+}
+.summary-card-class1 {
+
+  border-bottom: 4px solid #ff9800;
+}
+.summary-card-class2 {
+
+  border-bottom: 4px solid #2196f3;
+}
+.summary-card-class3 {
+
+  border-bottom: 4px solid #9c27b0;
+}
+.summary-card-class4 {
+
+  border-bottom: 4px solid #4caf50;
+}
+.summary-card-class1:hover {
+
+  background: #fff3e0;
+  border-color: #ff9800;
+}
+.summary-card-class2:hover {
+
+  background: #e3f2fd;
+  border-color: #2196f3;
+}
+.summary-card-class3:hover {
+
+  background: #f3e5f5;
+  border-color: #9c27b0;
+}
+.summary-card-class4:hover {
+
+  background: #e8f5e9;
+  border-color: #4caf50;
+}
+.section-left {
+
+  text-align: left;
+}
+.section-header-row .section-left {
+
+  margin-bottom: 0;
+}
+.page-hero h1 {
+
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.page-tagline {
+
+  font-size: 1.3rem;
+  font-style: italic;
+  opacity: 0.95;
+}
+/* Section Styles */
+.section {
+
+  padding: 0rem 4rem 0rem 4rem;
+  background: var(--light-blue);
+  margin-top: 4rem;
+}
+.container {
+
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.section-subtitle {
+
+  text-align: center;
+  color: var(--text-light);
+}
+.section-intro {
+
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.section-title-span {
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.section-subtitle-span {
+
+  max-width: 720px;
+  text-align: start;
+  color: var(--text-light);
+}
+.section-header-row {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+.section-header-left {
+
+  max-width: 600px;
+}
+.section-white {
+
+  background: var(--white);
+}
+.section-bottom {
+
+  padding-bottom: 4rem;
+}
+.btn-full {
+
+  width: 100%;
+  justify-content: center;
+}
+.section-header-row .accent-line {
+
+  margin-bottom: 0;
+}
+.btn-white {
+
+  background: var(--white);
+  color: var(--primary);
+}
+.summary-card-center .summary-card-content {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.summary-card-center .btn {
+
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.connect .connect-btn {
+
+  justify-content: center;
+}
+.connect-btn:hover .ministry-icons {
+
+  filter: var(--filterprimary);
+}
+/* Active Tab */
+.leaders-tab-btn.active {
+
+  background-color: var(--primary);
+  color: var(--white);
+  font-weight: 600;
+  padding: 16px;
+}
+.leaders-tab-btn.active::after {
+
+  width: 100%;
+}
+.leaders-tab-content.active {
+
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.leaders-nav-link.active {
+
+  background-color: var(--accent);
+  color: var(--white);
+}
+.leader-info {
+
+  padding: 1.5rem;
+}
+.leader-info h3 {
+
+  color: var(--primary);
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+.leader-info p {
+
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+.connect {
+
+  background: var(--white);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 2rem 18rem;
+  border-radius: 16px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+.connect-info {
+
+  display: grid;
+  max-width: 600px;
+  text-align: center;
+}
+.connect-info h2 {
+
+  color: var(--primary);
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.connect-info p {
+
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+.connect-btn {
+
+  display: flex;
+  width: 100%;
+  gap: 8px;
+}
+.connect-icons-white {
+
+  height: 20px;
+  width: auto;
+  filter: var(--filterwhite);
+  transition: transform 0.3s;
+}
+.connect-icons-primary {
+
+  height: 20px;
+  width: auto;
+  filter: var(--filterprimary);
+  transition: transform 0.3s;
+}
+.ministry-overview {
+
+  margin-bottom: 2rem;
+}
+.header-icons {
+
+  width: auto;
+  height: 80%;
+  filter: var(--filterprimary);
+}
+.ministry-icons {
+
+  height: 16px;
+  width: auto;
+  transition: transform 0.3s;
+  filter: var(--filterwhite);
+}
+.ministry-icons-primary {
+
+  height: 16px;
+  width: auto;
+  transition: transform 0.3s;
+  filter: var(--filterprimary)
+}
+.ministry-members {
+
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 16px;
+}
+.ministry-members-header {
+
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.ministry-members-list {
+
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+.ministry-head {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 400px;
+  height: fit-content;
+  background-color: var(--primary);
+  border-radius: 16px;
+  padding: 1rem;
+}
+.ministry-leader-photo {
+
+  width: 100%;
+  height: fit-content;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ministry-head-photo {
+
+  width: 100%;
+  height: 360px;
+  border-radius: 8px;
+}
+.ministry-head-info {
+
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  align-items: center;
+}
+.ministry-head-info h3 {
+
+  color: var(--accent);
+  font-size: 1.6rem;
+  margin-bottom: 0.3rem;
+}
+.ministry-head-info p {
+
+  color: var(--white);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.ministry-members-grid {
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 900px;
+  padding-left: 0.8rem;
+}
+.ministry-member-card {
+
+  background: var(--light-blue);
+  height: 260px;
+  padding: 0.5rem;
+  border-radius: 16px;
+  overflow: hidden;
+  text-align: center;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+.ministry-members-photo {
+
+  width: 100%;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  color: var(--white);
+}
+.members-photo {
+
+  width: 100%;
+  height: 160px;
+  border-radius: 8px;
+}
+.description-schedule {
+
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.summary-card-content:hover .actioned {
+
+  background-color: var(--primary);
+  color: var(--white);
+}
+/* Footer */
+.footer {
+
+  background: var(--primary-dark);
+  color: var(--white);
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+.footer-container {
+  position: relative;
+  padding: 4rem 2rem 1rem;
+  z-index: 1;
+}
+.footer-image {
+
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 20%;
+}
+.footer-grid {
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+.footer-logo {
+
+  width: 200px;
+  height: auto;
+  margin-bottom: 1rem;
+  padding: 5px;
+}
+.footer-motto {
+
+  font-style: italic;
+  opacity: 0.9;
+  font-size: 0.95rem;
+}
+.footer h4 {
+
+  margin-bottom: 1.5rem;
+  color: var(--light-blue);
+  font-size: 1.2rem;
+}
+.footer p,
+.footer a {
+
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  line-height: 1.8;
+  margin-bottom: 0.5rem;
+}
+.footer-stream {
+
+  gap: 10px;
+}
+.footer-links a:hover {
+
+  color: var(--white);
+}
+.footer-links ul {
+
+  list-style: none;
+}
+.footer-links li {
+
+  margin-bottom: 0.5rem;
+}
+.footer-bottom {
+
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
+/* ============================================
+   ADDITIONAL STYLES FOR NEW PAGES
+   ============================================ */
+
+/* Page Hero Variations */
+.page-hero-content {
+
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+  max-width: 900px;
+  text-align: center;
+  opacity: 80%;
+}
+/* Badges */
+.badge {
+
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  width: fit-content;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.badge-primary {
+
+  background: var(--primary);
+  color: var(--white);
+}
+.badge-success {
+
+  background: var(--Success);
+  color: var(--white);
+}
+.badge-accent {
+
+  background: var(--accent);
+  color: var(--primary-dark);
+}
+.section-header {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.section-header h2 {
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary);
+  font-size: 1.8rem;
+}
+.section-header h2 span {
+
+  color: var(--accent);
+}
+.section-label {
+
+  display: inline-block;
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+.section-header-center {
+
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.section-header-center h2 {
+
+  color: var(--primary);
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+.accent-line {
+
+  width: 60px;
+  height: 4px;
+  background: var(--accent);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+.tab-btn.active {
+
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+}
+.nav-link {
+
+    padding: 1rem 2rem;
+  }
+.nav-link:hover {
+
+    color: var(--primary);
+  }
+
+.dropdown-toggle {
+
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+.dropdown-toggle::after {
+
+    font-size: 0.8rem;
+    transition: transform 0.3s;
+  }
+.dropdown.active .dropdown-toggle-icon::after {
+
+    transform: rotate(180deg);
+  }
+.dropdown-item:last-child {
+
+    border-bottom: none;
+  }
+.page-hero h1 {
+
+    font-size: 2.2rem;
+  }
+
+.accent-line {
+
+  width: 60px;
+  height: 4px;
+  background: var(--accent);
+  border-radius: 2px;
+  margin-bottom: 2rem;
+}
+.section-header {
+
+  margin-bottom: 3rem;
+}
+.section-description {
+
+  color: var(--text-light);
+  max-width: 600px;
+}
+.btn--white {
+
+  background: var(--white);
+  color: var(--primary);
+  white-space: nowrap;
+}
+.section-header-row {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 3rem;
+}
+
+
+@keyframes spin {
+
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.btn-large {
+
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+/* ============================================
+   TABLET RESPONSIVE STYLES
+   Breakpoint: 769px – 1024px
+   Nav remains visible (no hamburger).
+   Layouts scale from full desktop to 2-col.
+   ============================================ */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  /* ── Navigation ── */
+  .nav-container {
+    max-width: 100%;
+    padding: 0.8rem 1.5rem;
+  }
+
+  .nav-menu {
+    gap: 0.75rem;
+  }
+
+  .nav-link {
+    font-size: 0.82rem;
+    gap: 6px;
+  }
+
+  .nav-logo {
+    height: 34px;
+  }
+
+  .nav-btn .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
+  }
+
+  /* ── Page Hero ── */
+  .page-hero {
+    height: 320px;
+    margin: 1.5rem;
+    border-radius: 14px;
+  }
+
+  .page-hero-content {
+    width: 100%;
+    max-width: 680px;
+    padding: 1.5rem;
+  }
+
+  .page-hero h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .page-tagline {
+    font-size: 1.05rem;
+  }
+
+  .page-hero-image {
+    width: 100%;
+    left: 0;
+  }
+
+  /* ── Section & Container ── */
+  .section {
+    padding: 2rem 2rem;
+    margin-top: 2.5rem;
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 0 0.5rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+
+  .section-title-span {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .section-title-span h2 {
+    font-size: 1.8rem;
+  }
+
+  .section-header-row {
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  /* ── Buttons ── */
+  .btn {
+    padding: 0.9rem 2rem;
+    font-size: 0.95rem;
+  }
+
+  .btn-small {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.88rem;
+  }
+
+  .btn-large {
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+  }
+
+  /* ── Connect Block ── */
+  .connect-info h2 {
+    font-size: 1.6rem;
+  }
+
+  /* ── Summary Cards ── */
+  .summaries-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .summary-card--wide {
+    grid-column: span 2;
+  }
+
+  .summary-card-content--flex {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .summary-card-image--medium {
+    width: 100%;
+    height: 200px;
+  }
+
+  .summary-card-content-left {
+    width: 100%;
+  }
+
+  .summaries-top,
+  .summaries-buttom {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  /* ── Ministry Members ── */
+  .ministry-members-list {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .ministry-member-top {
+    display: flex;
+    justify-content: center;
+  }
+
+  .ministry-head {
+    width: 100%;
+    flex-direction: row;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+  .ministry-members-grid {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .ministry-member-card {
+    width: calc(33.333% - 0.75rem);
+    height: auto;
+  }
+
+  /* ── Ministry Body ── */
+  .ministry-body {
+    flex-wrap: wrap;
+    gap: 1.25rem;
+  }
+
+  .ministry-card {
+    width: calc(50% - 0.625rem);
+  }
+
+  .ministry-section {
+    padding: 2rem 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  /* ── Footer ── */
+  .footer {
+    height: auto;
+  }
+
+  .footer-container {
+    padding: 3rem 2rem 1.5rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .footer-logo {
+    width: 180px;
+  }
+
+  /* ── Leaders Page ── */
+  .leaders-subnav {
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .leaders-tab-btn {
+    font-size: 17px;
+    padding: 12px 14px;
+  }
+
+  .leaders-grid,
+  .zonal-leaders-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .leader-photo,
+  .leader-photo-section {
+    height: 170px;
+  }
+
+  /* ── History Page ── */
+  .mission-vison-summary {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .left-content {
+    width: 100%;
+    padding: 2rem;
+    gap: 2rem;
+  }
+
+  .right-content {
+    width: 100%;
+    padding: 0 2rem 2rem;
+  }
+
+  .images-right {
+    width: 100%;
+    height: 220px;
+    gap: 8px;
+  }
+
+  .image-1,
+  .image-2 {
+    width: 48%;
+    height: 100%;
+  }
+
+  .history-timeline {
+    padding: 2.5rem 2rem;
+  }
+
+  .timeline-content {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  /* ── Who We Are ── */
+  .identity-box {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 2rem;
+    gap: 1.25rem;
+  }
+
+  .about-card {
+    flex-direction: column;
+    height: auto;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .about-left {
+    width: 100%;
+    height: 300px;
+  }
+
+  .mission-statement {
+    padding: 2rem;
+    gap: 1.25rem;
+  }
+
+  .additional-info {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .enquiry-wrapper {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .enquiry-info {
+    padding: 2rem;
+  }
+
+  .enquiry-info h2 {
+    font-size: 2rem;
+  }
+
+  .enquiry-form-wrapper {
+    padding: 2rem;
+    width: 100%;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+
+  /* ── Announcements ── */
+  .bulletin-card {
+    flex-direction: column;
+    height: auto;
+    gap: 1.5rem;
+  }
+
+  .bulletin-cover {
+    width: 100%;
+    height: 240px;
+    order: -1;
+  }
+
+  .bulletin-info {
+    width: 100%;
+  }
+
+  .notes-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .archive-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+
+  /* ── Contact ── */
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .contact-card,
+  .form-card {
+    padding: 2rem;
+  }
+
+  /* ── Give ── */
+  .giving-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .giving-enquiry-section {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .giving-enquiry-info {
+    width: 100%;
+  }
+
+  .alt-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .quote-box-large {
+    padding: 3rem 2rem;
+  }
+
+  .quote-box-large blockquote {
+    font-size: 1.4rem;
+  }
+
+  /* ── Resources ── */
+  .resources-hero-split {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .hero-content-box h2 {
+    font-size: 2rem;
+  }
+
+  .theme-banner-box {
+    flex-direction: row;
+    height: 300px;
+  }
+
+  .resources-image {
+    width: 45%;
+    height: 100%;
+  }
+
+  .categories-grid {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .category-card {
+    width: calc(33.333% - 0.75rem);
+  }
+
+  .schedule-table-wrapper {
+    overflow-x: auto;
+  }
+
+  /* ── Worship ── */
+  .worship-section {
+    padding: 2rem;
+    gap: 2rem;
+    border-radius: 14px;
+  }
+
+  .worship-period {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .midweek-worship-period {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .midweek-service-info {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .monthly-activities {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  /* ── Minister ── */
+  .minister-profile {
+    grid-template-columns: 260px 1fr;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .minister-info h2 {
+    font-size: 1.8rem;
+  }
+
+  .sessions {
+    gap: 1rem;
+  }
+
+  .session-group,
+  .next-session {
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem 1.5rem;
+  }
+
+  /* ── Beliefs ── */
+  .beliefs-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    padding: 1.5rem;
+  }
+
+  /* ── Evangelism ── */
+  .evangelism-join-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .evangelism-join-form-container {
+    width: 100%;
+  }
+
+  .evangelism-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  /* ── Secretariat ── */
+  .support {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2.5rem 2rem;
+    text-align: center;
+  }
+
+  .buttom-info {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  /* ── Infrastructure ── */
+  .maintenance-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  /* ── Publicity ── */
+  .sign-up-card {
+    width: 100%;
+  }
+
+  /* ── Youth ── */
+  .feature-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .journey-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .journey-title {
+    font-size: 2rem;
+  }
+
+  .side-cards {
+    gap: 1.5rem;
+  }
+
+  /* ── Sisters ── */
+  .sisters-prayer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .sisters-prayer-image-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  /* ── Finance ── */
+  .financial-pillars,
+  .financial-reports {
+    padding: 2rem;
+  }
+
+  /* ── Health ── */
+  .health-content,
+  .evangelism-content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .consultation-form-container {
+    padding: 2rem;
+  }
+
+  /* ── Gallery ── */
+  .gallery {
+    gap: 1rem;
+  }
+
+  .gallery-image {
+    width: calc(33.333% - 0.75rem);
+    height: 220px;
+  }
+
+  /* ── Youth Activity Schedule ── */
+  .youth-activities {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  /* ── Index Page Specific ── */
+  .hero-slider {
+    margin: 1.5rem;
+    height: 600px;
+    border-radius: 14px;
+  }
+
+  .quick-info-1 {
+    padding: 0 1.5rem 3rem;
+    margin-top: -50px;
+  }
+
+  .info-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .quick-info-2 {
+    padding: 4rem 2rem;
+  }
+
+  .thought-section {
+    padding: 0 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .thought-box {
+    padding: 2.5rem;
+  }
+
+  .summaries {
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-radius: 14px;
+  }
+
+  .summaries-header {
+    padding: 1rem 1.5rem;
+  }
+
+  .summaries-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .attendance-section {
+    padding: 3rem 2rem;
+  }
+
+  .attendance-item .number {
+    font-size: 3rem;
+  }
+
+  .enquiry-section {
+    padding: 3.5rem 2rem;
+  }
+
+}
+
+/* ── Small mobile (480px) ── */
+@media (max-width: 768px) {
+
+  /* ── Base ── */
+  body {
+    overflow-x: hidden;
+  }
+
+  /* ── Navigation ── */
+  .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .nav-container {
+    max-width: 100%;
+    padding: 0.8rem 1rem;
+  }
+
+  .nav-logo {
+    height: 32px;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 57px;
+    flex-direction: column;
+    background: var(--white);
+    width: 100%;
+    text-align: left;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0,0,0,0.1);
+    padding: 0.5rem 0;
+    gap: 0;
+    max-height: calc(100vh - 57px);
+    overflow-y: auto;
+    z-index: 999;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-btn {
+    padding: 1rem 1.5rem;
+    width: 100%;
+  }
+
+  .nav-btn .btn {
+    width: auto;
+    display: inline-flex;
+  }
+
+  .nav-item {
+    width: 100%;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-link {
+    padding: 1rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .nav-link.active {
+    background-color: var(--primary);
+    color: var(--white);
+    border-bottom: none;
+  }
+
+  .dropdown-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    display: none;
+    background: var(--light-blue);
+    border-radius: 0;
+    padding: 0;
+    min-width: 100%;
+  }
+
+  .dropdown.active .dropdown-menu {
+    display: block;
+  }
+
+  .dropdown-item {
+    padding: 0.8rem 2.5rem;
+    border-left: none;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.9rem;
+  }
+  .dropdown-item.active {
+    font-weight: bold;
+  }
+
+  .dropdown-item:last-child {
+    border-bottom: none;
+  }
+  .dropdown-toggle-icon.active {
+    filter: var(--filterwhite);
+  }
+
+  /* ── Page Hero ── */
+  .page-hero {
+    height: auto;
+    min-height: 260px;
+    margin: 1rem;
+    border-radius: 12px;
+    padding: 2rem 1rem;
+  }
+
+  .page-hero-content {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .page-hero h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .page-tagline {
+    font-size: 1rem;
+  }
+
+  .page-hero-image {
+    width: 100%;
+    left: 0;
+  }
+
+  /* ── Section & Container ── */
+  .section {
+    padding: 1.5rem 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .container {
+    width: 100%;
+    padding: 0;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .section-subtitle {
+    font-size: 0.95rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .section-title-span {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+
+  .section-title-span h2 {
+    font-size: 1.6rem;
+  }
+
+  .section-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+  }
+
+  .section-header-center {
+    text-align: center;
+  }
+
+  /* ── Buttons ── */
+  .btn {
+    padding: 0.85rem 1.5rem;
+    font-size: 0.95rem;
+    border-radius: 12px;
+  }
+
+  .btn-large {
+    padding: 0.85rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  /* ── Connect Block ── */
+  .connect {
+    padding: 2rem 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+  }
+
+  .connect-info h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .connect-info p {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+
+  .connect-btn {
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+  }
+
+  .connect-btn .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* ── Badges ── */
+  .badge {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.6rem;
+  }
+
+  /* ── Summary Cards ── */
+  .summaries-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem;
+  }
+
+  .summary-card {
+    width: 100%;
+  }
+
+  .summary-card--wide {
+    grid-column: span 1;
+  }
+
+  .summary-card-content--flex {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .summary-card-image--medium {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+  }
+
+  .summary-card-content-left {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .summary-card-image--tall {
+    height: 200px;
+  }
+
+  .summaries-top,
+  .summaries-buttom {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  /* ── Ministry Members ── */
+  .ministry-members-list {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .ministry-head {
+    width: 100%;
+  }
+
+  .ministry-head-photo {
+    height: 280px;
+  }
+
+  .ministry-members-grid {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .ministry-member-card {
+    width: calc(50% - 0.5rem);
+  }
+
+  /* ── Ministry Body/Photo ── */
+  .ministry-body {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .ministry-card {
+    width: 100%;
+  }
+
+  .ministry-section {
+    padding: 1.5rem 1rem;
+    margin-bottom: 1rem;
+  }
+
+  /* ── Footer ── */
+  .footer {
+    height: auto;
+    min-height: auto;
+  }
+
+  .footer-container {
+    padding: 2rem 1rem 1rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-logo {
+    width: 160px;
+  }
+
+  .footer-bottom {
+    font-size: 0.8rem;
+    padding-top: 1.5rem;
+  }
+
+  /* ── Section-specific: Leaders ── */
+  .leaders-subnav {
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .leaders-tab-btn {
+    font-size: 15px;
+    padding: 10px 12px;
+    height: auto;
+  }
+
+  .leaders-grid,
+  .zonal-leaders-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    padding: 0.75rem;
+    border-radius: 0 12px 12px 12px;
+  }
+
+  .leader-card {
+    padding: 0.4rem;
+  }
+
+  .leader-photo,
+  .leader-photo-section {
+    height: 140px;
+  }
+
+  .leader-info {
+    padding: 0.75rem;
+  }
+
+  .leader-info h3 {
+    font-size: 0.85rem;
+  }
+
+  .leaders-contact {
+    height: 30px;
+  }
+
+  /* ── Section-specific: History ── */
+  .mission-vison-summary {
+    flex-direction: column;
+    width: 100%;
+    border-radius: 12px;
+  }
+
+  .left-content {
+    width: 100%;
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .right-content {
+    width: 100%;
+    padding: 0 1rem 1.5rem;
+  }
+
+  .images-right {
+    width: 100%;
+    height: 180px;
+    gap: 6px;
+  }
+
+  .image-1,
+  .image-2 {
+    width: 48%;
+    height: 100%;
+    border-radius: 10px;
+  }
+
+  .empty-space {
+    height: 20px;
+  }
+
+  .history-timeline {
+    padding: 2rem 1rem;
+    border-radius: 12px;
+  }
+
+  .timeline-content {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    padding: 0 0.5rem;
+  }
+
+  .timeline-line {
+    display: none;
+  }
+
+  .content-container-left,
+  .content-container-right {
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    text-align: left;
+    gap: 0.75rem;
+    background: var(--white);
+    border-radius: 12px;
+    padding: 1rem;
+  }
+
+  .timeline-icon-box {
+    width: 60px;
+    height: 40px;
+    padding: 0.5rem;
+    margin: 0;
+    border-radius: 8px;
+  }
+
+  .timeline-icon {
+    height: 100%;
+    width: auto;
+  }
+
+  /* ── Section-specific: Who We Are ── */
+  .identity-box {
+    grid-template-columns: 1fr;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+  }
+
+  .about-card {
+    flex-direction: column;
+    height: auto;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+  }
+
+  .about-left {
+    width: 100%;
+    height: 240px;
+  }
+
+  .mission-statement {
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+
+  .additional-info {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .enquiry-wrapper {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .enquiry-info {
+    padding: 1.5rem;
+  }
+
+  .enquiry-info h2 {
+    font-size: 1.6rem;
+  }
+
+  .enquiry-form-wrapper {
+    padding: 1.5rem;
+    width: 100%;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .contact-details {
+    gap: 1rem;
+  }
+
+  .map-container {
+    min-height: 250px;
+    border-radius: 12px;
+  }
+
+  /* ── Section-specific: Announcements ── */
+  .bulletin-card {
+    flex-direction: column;
+    height: auto;
+    gap: 1rem;
+  }
+
+  .bulletin-cover {
+    width: 100%;
+    height: 200px;
+    order: -1;
+  }
+
+  .bulletin-info {
+    width: 100%;
+  }
+
+  .bulletin-info h2 {
+    font-size: 1.4rem;
+  }
+
+  .bulletin-actions {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .notes-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .archive-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+  }
+
+  .attendance-numbers {
+    gap: 1rem;
+  }
+
+  .attendance-item .number {
+    font-size: 2.5rem;
+  }
+
+  /* ── Section-specific: Contact ── */
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .contact-card {
+    padding: 1.5rem;
+  }
+
+  .form-card {
+    padding: 1.5rem;
+  }
+
+  .form-tabs {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .tab-btn {
+    padding: 0.75rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .contact-details-inline {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  /* ── Section-specific: Give ── */
+  .giving-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .giving-card {
+    padding: 1.5rem;
+  }
+
+  .giving-enquiry-section {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .giving-enquiry-info {
+    width: 100%;
+  }
+
+  .alt-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .quote-box-large {
+    padding: 2rem 1.5rem;
+  }
+
+  .quote-box-large blockquote {
+    font-size: 1.2rem;
+  }
+
+  .account-box {
+    padding: 1rem;
+  }
+
+  .scripture-section {
+    padding: 2rem 1rem;
+  }
+
+  /* ── Section-specific: Resources ── */
+  .resources-hero-split {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .hero-image-box {
+    order: -1;
+    height: 200px;
+  }
+
+  .hero-content-box {
+    padding: 1rem;
+  }
+
+  .hero-content-box h2 {
+    font-size: 1.6rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .theme-banner-box {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    gap: 1.5rem;
+    border-radius: 12px;
+  }
+
+  .resources-image {
+    width: 100%;
+    height: 200px;
+    border-radius: 12px 12px 0 0;
+  }
+
+  .theme-content {
+    padding: 1.5rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .categories-grid {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .category-card {
+    width: calc(50% - 0.4rem);
+    padding: 1rem 0.5rem;
+  }
+
+  .schedule-table-wrapper {
+    overflow-x: auto;
+  }
+
+  .schedule-table {
+    min-width: 500px;
+  }
+
+  /* ── Section-specific: Worship ── */
+  .worship-section {
+    padding: 1.5rem 1rem;
+    margin-top: 1rem;
+    border-radius: 12px;
+    gap: 1.5rem;
+  }
+
+  .worship-period {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .service-info {
+    padding: 1.5rem;
+  }
+
+  .time-icon {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .midweek-worship-period {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .midweek-service-info {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .midweek-service-info-content {
+    width: 100%;
+    border-radius: 0 0 12px 12px;
+  }
+
+  .monthly-activities {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+  }
+
+  .monthly-activites-info {
+    padding: 1rem 0.75rem;
+  }
+
+  .worship-icons {
+    height: 32px;
+  }
+
+  /* ── Section-specific: About Beliefs ── */
+  .beliefs-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .belief-card-image {
+    height: 180px;
+  }
+
+  .belief-card-content {
+    padding: 1rem;
+  }
+
+  /* ── Section-specific: About Minister ── */
+  .minister-profile {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .minister-avatar {
+    width: 180px;
+    height: 180px;
+    font-size: 4rem;
+  }
+
+  .minister-info h2 {
+    font-size: 1.6rem;
+  }
+
+  .minister-summary-button {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .minister-summary-button a {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .sessions {
+    gap: 1rem;
+  }
+
+  .session-group,
+  .next-session {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+
+  .session-schedule {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  /* ── Section-specific: Evangelism ── */
+  .evangelism-join-content {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .evangelism-join-form-container {
+    width: 100%;
+  }
+
+  .evangelism-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .evangelism-join-cta {
+    padding: 2rem 1.5rem;
+    border-radius: 16px;
+  }
+
+  /* ── Section-specific: Secretariat ── */
+  .support {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem 1.5rem;
+    text-align: center;
+  }
+
+  .apply-btn {
+    width: 100%;
+  }
+
+  .buttom-info {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .operations-info {
+    flex-direction: column;
+  }
+
+  /* ── Section-specific: Infrastructure ── */
+  .maintenance-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .progress-container {
+    margin-top: 0.75rem;
+  }
+
+  /* ── Section-specific: Youth ── */
+  .feature-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .journey-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .journey-title {
+    font-size: 1.8rem;
+  }
+
+  .journey-image-container {
+    order: -1;
+  }
+
+  .image-bg {
+    display: none;
+  }
+
+  .side-cards {
+    gap: 1rem;
+  }
+
+  .card-content-large {
+    height: auto;
+    padding: 1.5rem;
+  }
+
+  /* ── Section-specific: Sisters ── */
+  .sisters-prayer-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .sisters-prayer-image-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  .sisters-prayer-image-top {
+    margin-top: 0;
+  }
+
+  .group-class {
+    gap: 0.5rem;
+  }
+
+  /* ── Section-specific: Finance ── */
+  .financial-pillars,
+  .financial-reports {
+    padding: 1.5rem;
+  }
+
+  /* ── Section-specific: Health ── */
+  .consultation-form-container {
+    padding: 1.5rem;
+  }
+
+  .health-content,
+  .evangelism-content {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* ── Section-specific: Publicity ── */
+  .recruitment-panel {
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+    gap: 1.5rem;
+    border-radius: 12px;
+  }
+
+  .sign-up-card {
+    width: 100%;
+  }
+
+  /* ── Gallery ── */
+  .gallery {
+    gap: 0.75rem;
+    justify-content: center;
+  }
+
+  .gallery-image {
+    width: calc(50% - 0.4rem);
+    height: 180px;
+    border-radius: 12px;
+  }
+
+  /* ── Youth Activity Schedule ── */
+  .youth-activities {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* ── Vision content (History) ── */
+  .vision-content {
+    flex-direction: row;
+    height: auto;
+    padding: 1rem;
+    gap: 0.75rem;
+    align-items: center;
+  }
+
+  .vision-content-logo {
+    height: 40px;
+  }
+
+}
+
+/* ── Small mobile (480px) ── */
+@media (max-width: 480px) {
+
+  .page-hero {
+    margin: 0.75rem;
+    min-height: 220px;
+  }
+
+  .page-hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .page-tagline {
+    font-size: 0.9rem;
+  }
+
+  .section {
+    padding: 1rem 0.75rem;
+    margin-top: 1rem;
+  }
+
+  .leaders-grid,
+  .zonal-leaders-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+
+  .leader-photo,
+  .leader-photo-section {
+    height: 120px;
+  }
+
+  .leader-info h3 {
+    font-size: 0.8rem;
+  }
+
+  .ministry-member-card {
+    width: calc(50% - 0.5rem);
+    height: auto;
+  }
+
+  .members-photo {
+    height: 120px;
+  }
+
+  .archive-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .evangelism-stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .category-card {
+    width: calc(50% - 0.4rem);
+  }
+
+  .monthly-activities {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gallery-image {
+    width: 100%;
+    height: 200px;
+  }
+
+  .footer-container {
+    padding: 1.5rem 0.75rem 1rem;
+  }
+
+  .connect {
+    padding: 1.5rem 1rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 0.75rem 1.25rem;
+  }
+
+  .section-title {
+    font-size: 1.4rem;
+  }
+
+  .timeline-header-title {
+    font-size: 1.4rem;
+  }
+
+  .content-container-left,
+  .content-container-right {
+    padding: 0.75rem;
+  }
+}

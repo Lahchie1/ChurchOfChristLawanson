@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Give | Church of Christ, Lawanson</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" href="give.css">
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="logo-link">
+          <img
+            src="assets/svgs/complete-logo-1.svg"
+            alt="Church of Christ, Lawanson Logo"
+            class="nav-logo"
+          />
+        </a>
+        <button
+          class="nav-toggle" id="navToggle"
+          aria-label="Toggle navigation"
+          onclick="toggleNav()"
+        >
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item dropdown" onclick="toggleDropdown(this)">
+            <div class="nav-link dropdown-toggle">About Us<img src="assets/svgs/icons/chevron-down.svg" class="dropdown-toggle-icon"></div>
+            <div class="dropdown-menu">
+              <a href="about-who-we-are.html" class="dropdown-item"
+                >Who We Are</a
+              >
+              <a href="about-history.html" class="dropdown-item">Our History</a>
+              <a href="about-beliefs.html" class="dropdown-item">Our Beliefs</a>
+              <a href="about-minister.html" class="dropdown-item"
+                >Meet Our Minister</a
+              >
+              <a href="about-leaders.html" class="dropdown-item"
+                >Church Leaders</a
+              >
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="worship.html" class="nav-link">Worship & Services</a>
+          </li>
+          <li class="nav-item dropdown" onclick="toggleDropdown(this)">
+            <div class="nav-link dropdown-toggle">Ministries<img src="assets/svgs/icons/chevron-down.svg" class="dropdown-toggle-icon"></div>
+            <div class="dropdown-menu">
+              <a href="ministries-all.html" class="dropdown-item"
+                >All Ministries</a
+              >
+              <a href="ministries-secretariat.html" class="dropdown-item"
+                >Secretariat</a
+              >
+              <a href="ministries-finance.html" class="dropdown-item"
+                >Finance</a
+              >
+              <a href="ministries-infrastructure.html" class="dropdown-item"
+                >Infrastructure</a
+              >
+              <a href="ministries-evangelism.html" class="dropdown-item"
+                >Evangelism</a
+              >
+              <a href="ministries-health.html" class="dropdown-item">Health</a>
+              <a href="ministries-publicity.html" class="dropdown-item"
+                >Publicity</a
+              >
+              <a href="ministries-sisters.html" class="dropdown-item"
+                >Sisters</a
+              >
+              <a href="ministries-youth.html" class="dropdown-item">Youth</a>
+              <a href="ministries-children.html" class="dropdown-item"
+                >Children</a
+              >
+              <a href="ministries-singles.html" class="dropdown-item"
+                >Singles</a
+              >
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="announcements.html" class="nav-link">Announcements</a>
+          </li>
+          <li class="nav-item">
+            <a href="resources.html" class="nav-link">Resources</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+          <div class="nav-btn">
+            <a
+              href="give.html"
+              class="btn btn-light active"
+              onclick="event.stopPropagation()"
+              >Give Now</a
+            >
+          </div>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+      <img src="assets/Images/giving.png" class="page-hero-image" />
+      <div class="page-hero-content">
+        <h1>Giving</h1>
+        <p class="page-tagline">
+          Worship the Lord with your substance. Your giving fuels our mission to
+          reach Lagos and beyond with the message of truth.
+        </p>
+      </div>
+    </section>
+
+    <!-- Scripture Quote -->
+    <section class="scripture-section">
+      <div class="container">
+        <div class="quote-box-large">
+          <blockquote>
+            "Each of you should give what you have decided in your heart to
+            give, not reluctantly or under compulsion, for God loves a cheerful
+            giver."
+          </blockquote>
+          <cite>2 Corinthians 9:7</cite>
+        </div>
+      </div>
+    </section>
+
+    <!-- Giving Options Grid -->
+    <section class="section">
+      <div class="container">
+          <div class="giving-options">
+            <div class="section-header-center">
+              <h2>Ways to Support</h2>
+            </div>
+            <div class="giving-grid">
+              <!-- Church Projects -->
+              <div class="giving-card">
+                <h3>Church Projects</h3>
+                <p>
+                  Supporting our ongoing building projects, infrastructure
+                  development, and community outreach initiatives.
+                </p>
+                <div class="account-box">
+                  <img src="assets/Images/UBA-logo.png" class="bank-logo">
+                  <div class="account-row">
+                    <span class="account-label">Bank Name</span>
+                    <span class="account-value">United Bank for Africa</span
+                    >
+                  </div>
+                  
+                  <div class="account-row-divider"></div>
+                  
+                  <div class="account-row">
+                    <span class="account-label">Account Number</span>
+                    <span class="account-number">2016866362</span>
+                  </div>
+                  <div>
+                    <button
+                      class="copy-btn"
+                      onclick="copyToClipboard('2016866362')"
+                      title="Copy">
+                      <span>copy</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Preacher's Support -->
+              <div class="giving-card featured">
+                <h3>Preacher's Support</h3>
+                <p>
+                  Monthly support and quarterly contributions to sustain our
+                  minister and visiting preachers.
+                </p>
+                <div class="account-box light">
+                  <img src="assets/Images/UBA-logo.png" class="bank-logo">
+                  <div class="account-row">
+                    <span class="account-label">Bank Name</span>
+                    <span class="account-value"
+                      >United Bank for Africa</span
+                    >
+                  </div>
+
+                  <div class="account-row-divider"></div>
+
+                  <div class="account-row">
+                    <span class="account-label">Account Number</span>
+                    <span class="account-number-white">2081538913</span>
+                  </div>
+                  <div>
+                    <button
+                      class="copy-btn accent"
+                      onclick="copyToClipboard('2081538913')"
+                      title="Copy">
+                      <span>copy</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Evangelism & Benevolence -->
+              <div class="giving-card">
+                <h3>Gospel & Needy</h3>
+                <p>
+                  Evangelism support <strong>1st Sundays</strong> and Benevolence Support <strong>3rd Sundays</strong>.
+                </p>
+                
+                <div class="account-box">
+                  <img src="assets/Images/UBA-logo.png" class="bank-logo">
+                  <div class="account-row">
+                    <span class="account-label">Bank Name</span>
+                    <span class="account-value">United Bank for Africa</span
+                    >
+                  </div>
+                  
+                  <div class="account-row-divider"></div>
+                  
+                  <div class="account-row">
+                    <span class="account-label">Account Number</span>
+                    <span class="account-number">2016866362</span>
+                  </div>
+                  <div>
+                    <button
+                      class="copy-btn"
+                      onclick="copyToClipboard('2016866362')"
+                      title="Copy">
+                      <span>copy</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <!-- Alternative Giving Methods -->
+    <section class="section">
+      <div class="container">
+        <div class="alt-giving">
+          <h2>Other Ways to Give</h2>
+          <div class="alt-grid">
+            <div class="alt-card">
+              <img src="assets/Images/mobile-transfer.png" class="bank-logo">
+              <h4>Mobile Transfer</h4>
+              <p>
+                Use your banking app to transfer to any of the account numbers
+                above.
+              </p>
+            </div>
+            <div class="alt-card">
+              <img src="assets/Images/cash-envelope.png" class="bank-logo">
+              <h4>Cash Envelope</h4>
+              <p>
+                Place cash in offering envelopes available at the usher's stand
+                during service.
+              </p>
+            </div>
+            <div class="alt-card">
+              <img src="assets/Images/benevolence-box.png" class="bank-logo">
+              <h4>Benevolence Box</h4>
+              <p>
+                Place cash in benevolence boxes available at the entrance of the church hall anyday and anytime.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="section">
+      <div class="container">
+        <div class="giving-enquiry-section" id="enquiry">
+          <div class="giving-enquiry-info-left">
+            <div class="giving-enquiry-info">
+              <h2>Questions About Giving?</h2>
+              <p class="giving-enquiry-subtitle">
+                Have questions about our projects or want to know more about
+                stewardship? We're here to help.
+              </p>
+            </div>
+
+            <div class="giving-map-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.1234567890123!2d3.123456789012345!3d6.123456789012345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMDcnMjQuNCJOIDPCsDA3JzI0LjQiRQ!5e0!3m2!1sen!2sng!4v1234567890123!5m2!1sen!2sng"
+                width="100%"
+                height="100%"
+                class="iframe-no-border"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              >
+              </iframe>
+            </div>
+
+            <div class="giving-contact-details">
+              <div class="contact-item">
+                <span class="contact-icon"
+                  ><img
+                    src="assets/svgs/icons/location-pin.svg"
+                    alt="location"
+                    class="icons"
+                /></span>
+                <div>
+                  <h4>Visit Us</h4>
+                  <p>
+                    9/11 Odubiyi Street, Ikate<br />Surulere, Lagos, Nigeria
+                  </p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <span class="contact-icon"
+                  ><img
+                    src="assets/svgs/icons/phone.svg"
+                    alt="call"
+                    class="icons"
+                /></span>
+                <div>
+                  <h4>Call Us</h4>
+                  <p>08069553181<br />08121133361<br />07049172845</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <span class="contact-icon"
+                  ><img
+                    src="assets/svgs/icons/envelope.svg"
+                    alt="mail"
+                    class="icons"
+                /></span>
+                <div>
+                  <h4>Email Us</h4>
+                  <p>coclawanson@yahoo.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="enquiry-form-wrapper">
+            <form
+              class="enquiry-form"
+              id="enquiryForm"
+              onsubmit="handleEnquiry(event)"
+            >
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="enqName">Your Name *</label>
+                  <input
+                    type="text"
+                    id="enqName"
+                    name="name"
+                    required
+                    placeholder="Enter your full name"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="enqEmail">Email Address *</label>
+                  <input
+                    type="email"
+                    id="enqEmail"
+                    name="email"
+                    required
+                    placeholder="Enter your email"
+                  />
+                </div>
+              </div>
+              <div class="form-group full-width">
+                <label for="enqSubject">Subject *</label>
+                <select id="enqSubject" name="subject" required>
+                  <option value="">Select a subject</option>
+                  <option value="projects">Church Projects Inquiry</option>
+                  <option value="preacher-support">Preacher Support</option>
+                  <option value="benevolence">Benevolence Questions</option>
+                  <option value="receipt">Request Receipt</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="form-group full-width">
+                <label for="enqMessage">Your Message *</label>
+                <textarea
+                  id="enqMessage"
+                  name="message"
+                  rows="5"
+                  required
+                  placeholder="How can we help you?"
+                ></textarea>
+              </div>
+              <button type="submit" class="submit-btn">
+                <span class="btn-text">Send Message</span>
+                <span class="btn-loading">Sending...</span>
+              </button>
+              <div class="form-message" id="formMessage"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <img src="assets/Images/footer.png" class="footer-image" />
+      <div class="footer-container">
+        <div class="container">
+          <div class="footer-grid">
+            <div class="footer-brand">
+              <img
+                src="assets/svgs/complete-logo-h-2.svg"
+                alt="Church Logo"
+                class="footer-logo"
+              />
+              <p class="footer-motto">
+                The Ground and Pillar of Truth – 1 Timothy 3:15
+              </p>
+            </div>
+            <div class="footer-contact">
+              <h4>Contact Us</h4>
+              <p>9/11 Odubiyi Street, Ikate, Surulere<br />Lagos, Nigeria</p>
+              <p>Email: coclawanson@yahoo.com</p>
+              <p>Phone: 08069553181 | 08121133361 | 07049172845</p>
+            </div>
+            <div class="footer-links">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="about-who-we-are.html">About Us</a></li>
+                <li><a href="worship.html">Worship Times</a></li>
+                <li><a href="announcements.html">Announcements</a></li>
+                <li><a href="give.html">Give Online</a></li>
+              </ul>
+            </div>
+            <div class="footer-stream">
+              <h4>Watch Live</h4>
+              <p>Join us every Sunday for live streaming</p>
+              <a
+                href="https://www.youtube.com/@coclawanson"
+                target="_blank"
+                class="btn btn-accent"
+                >YouTube Channel</a
+              >
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>&copy; 2026 Church of Christ, Lawanson. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function toggleNav() {
+        document.getElementById("navMenu").classList.toggle("active");
+      }
+
+      function toggleDropdown(element) {
+        if (window.innerWidth <= 768) {
+          element.classList.toggle("active");
+        }
+      }
+
+      function copyToClipboard(text) {
+        navigator.clipboard.writeText(text).then(
+          function () {
+            alert("Account number copied: " + text);
+          },
+          function (err) {
+            console.error("Could not copy text: ", err);
+          },
+        );
+      }
+
+      function handleEnquiry(e) {
+        e.preventDefault();
+        // Form handling logic here
+        document.getElementById("formMessage").className =
+          "form-message success";
+        document.getElementById("formMessage").textContent =
+          "Thank you! We will respond shortly.";
+        document.getElementById("formMessage").style.display = "block";
+      }
+      const navToggle = document.getElementById ('navToggle')
+      navToggle.addEventListener('click', () =>{
+        navToggle.classList.toggle ('active');
+      })
+    </script>
+  </body>
+</html>
+

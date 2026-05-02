@@ -1,0 +1,551 @@
+<!-- ============================================ -->
+<!-- MINISTRIES-PUBLICITY.HTML -->
+<!-- ============================================ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Publicity Ministry | Church of Christ, Lawanson</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" href="ministries-publicity.css">
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="logo-link">
+          <img
+            src="assets/svgs/complete-logo-1.svg"
+            alt="Church of Christ, Lawanson Logo"
+            class="nav-logo"
+          />
+        </a>
+        <button
+          class="nav-toggle" id="navToggle"
+          aria-label="Toggle navigation"
+          onclick="toggleNav()"
+        >
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item dropdown" onclick="toggleDropdown(this)">
+            <div class="nav-link dropdown-toggle">About Us<img src="assets/svgs/icons/chevron-down.svg" class="dropdown-toggle-icon"></div>
+            <div class="dropdown-menu">
+              <a href="about-who-we-are.html" class="dropdown-item"
+                >Who We Are</a
+              >
+              <a href="about-history.html" class="dropdown-item">Our History</a>
+              <a href="about-beliefs.html" class="dropdown-item">Our Beliefs</a>
+              <a href="about-minister.html" class="dropdown-item"
+                >Meet Our Minister</a
+              >
+              <a href="about-leaders.html" class="dropdown-item"
+                >Church Leaders</a
+              >
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="worship.html" class="nav-link">Worship & Services</a>
+          </li>
+          <li class="nav-item dropdown" onclick="toggleDropdown(this)">
+            <div class="nav-link dropdown-toggle">Ministries<img src="assets/svgs/icons/chevron-down.svg" class="dropdown-toggle-icon"></div>
+            <div class="dropdown-menu">
+              <a href="ministries-all.html" class="dropdown-item">All Ministries</a>
+              <a href="ministries-secretariat.html" class="dropdown-item"
+                >Secretariat</a
+              >
+              <a href="ministries-finance.html" class="dropdown-item"
+                >Finance</a
+              >
+              <a href="ministries-infrastructure.html" class="dropdown-item"
+                >Infrastructure</a
+              >
+              <a href="ministries-evangelism.html" class="dropdown-item"
+                >Evangelism</a
+              >
+              <a href="ministries-health.html" class="dropdown-item">Health</a>
+              <a href="ministries-publicity.html" class="dropdown-item"
+                >Publicity</a
+              >
+              <a href="ministries-sisters.html" class="dropdown-item"
+                >Sisters</a
+              >
+              <a href="ministries-youth.html" class="dropdown-item">Youth</a>
+              <a href="ministries-children.html" class="dropdown-item"
+                >Children</a
+              >
+              <a href="ministries-singles.html" class="dropdown-item"
+                >Singles</a
+              >
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="announcements.html" class="nav-link">Announcements</a>
+          </li>
+          <li class="nav-item">
+            <a href="resources.html" class="nav-link">Resources</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+          <div class="nav-btn">
+            <a
+              href="give.html"
+              class="btn btn-light"
+              onclick="event.stopPropagation()"
+              >Give Now</a
+            >
+          </div>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <img src="assets/Images/publicity.png" class="page-hero-image">
+      <div class="page-hero-content">
+        <h1>Publicity Ministry</h1>
+        <p class="page-tagline">
+          The Publicity Ministry is dedicated to sharing the gospel through
+          high-fidelity media, digital storytelling, and seamless live
+          broadcasts.
+        </p>
+      </div>
+    </section>
+
+    <!-- Media Services -->
+    <section class="section">
+      <div class="container">
+        <div class="media-services">
+          <div class="ministry-overview">
+            <div class="section-title-span">
+              <h2>Our Media Services</h2>
+            </div>
+            <div class="description-schedule">
+              <p class="section-subtitle-span">We leverage modern technology to ensure the message of Christ
+              reaches every corner of the digital world with excellence.
+              </p>
+            </div>
+          </div>
+          
+          <div class="summaries-grid">
+            <!-- Live Broadcast -->
+            <div class="summary-card summary-card--wide">
+              <img
+                src="assets/Images/live-broadcast.png"
+                alt="Media Control Room"
+                class="summary-card-image summary-card-image--tall"
+              />
+              <div class="summary-card-content summary-card-content--large">
+                <div class="card-header-column">
+                    <h3>Live Broadcast</h3>
+                    <p>
+                      Multi-camera HD streaming of every service to YouTube,
+                      Facebook, and our website, reaching hundreds globally.
+                    </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Engagement -->
+            <div class="summary-card summary-card-soft">
+              <img
+                src="assets/Images/social-engagement.png"
+                alt="Social Engagement"
+                class="summary-card-image summary-card-image--tall"
+              />
+              <div class="summary-card-content">
+                <h3>Social Engagement</h3>
+                <p>
+                  Connecting with our community 24/7 through curated spiritual
+                  content and updates across all platforms.
+                </p>
+              </div>
+            </div>
+
+            <!-- Digital Content -->
+            <div class="summary-card">
+              <img
+                src="assets/Images/digital-content.png"
+                alt="Digital Content"
+                class="summary-card-image summary-card-image--tall"
+              />
+              <div class="summary-card-content">
+                <h3>Digital Content</h3>
+                <p>
+                  Short-form videos, sermon highlights, and digital devotionals
+                  produced weekly for online engagement.
+                </p>
+              </div>
+            </div>
+
+            <!-- Visual Identity -->
+            <div class="summary-card summary-card--wide">
+              <img
+                src="assets/Images/visual-identity.png"
+                alt="Visual Identity"
+                class="summary-card-image summary-card-image--tall"
+              />
+              <div class="summary-card-content">
+                <h3>Visual Identity</h3>
+                <p>
+                  Crafting the visual narrative of Lawanson Church through
+                  professional branding, print media, and screen graphics.
+                </p>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recent Updates -->
+    <section class="section">
+      <div class="container">
+        <div class="recent-updates">
+          <div class="ministry-overview">
+            <div class="section-title-span">
+              <h2>Recent Updates</h2>
+            </div>
+          </div>
+
+          <div class="summaries-grid">
+            <!-- Update 1 -->
+            <article class="summary-card">
+              <img
+                src="assets/Images/projection-infrastructure.png"
+                alt="4K Camera Upgrade"
+                class="summary-card-image summary-card-image--tall"
+              />
+              <div class="summary-card-content">
+                <div class="card-meta-row">
+                  <span class="badge-pill">Equipment</span>
+                  <span class="meta-text">2 WEEKS AGO</span>
+                </div>
+                <h3>Upgraded & Relocated Projection Infrastructure</h3>
+                <p>
+                  We've replaced some HDMI cables and also moved the front splitters
+                  to the office to ensure ordelinessin worship.
+                </p>
+                <a href="#" class="summary-link">Read More →</a>
+              </div>
+            </article>
+
+            <!-- Update 2 -->
+            <article class="summary-card">
+              <img
+                src="assets/Images/tripod.png"
+                alt="Audio Workshop"
+                class="summary-card-image summary-card-image--tall"
+              />
+              <div class="summary-card-content">
+                <div class="card-meta-row">
+                  <span class="badge-pill">Workshop</span>
+                  <span class="meta-text">5 MONTHS AGO</span>
+                </div>
+                <h3>Tripod Projection Stand Upgrade</h3>
+                <p>
+                  We acquired a new tripod stand which aids the use of phones & camera, has a detachable mount pad for hand use.
+                </p>
+                <a href="#" class="summary-link">Read More →</a>
+              </div>
+            </article>
+
+            <!-- Update 3 -->
+            <article class="summary-card">
+              <img
+                src="assets/Images/social-media.png"
+                alt="Social Media Milestone"
+                class="summary-card-image summary-card-image--tall"
+              />
+              <div class="summary-card-content">
+                <div class="card-meta-row">
+                  <span class="badge-pill">Digital</span>
+                  <span class="meta-text">3 DAYS AGO</span>
+                </div>
+                <h3>Reaching 10,000 via Social Media</h3>
+                <p>
+                  This month we celebrated a milestone in our digital reach,
+                  connecting with more souls than ever.
+                </p>
+                <a href="#" class="summary-link">Read More →</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recruitment Section -->
+    <section class="section">
+      <div class="container">
+        <div class="recruitment-panel">   
+          <div class="recruitment-copy">
+            <h2 class="recruitment-title">Your Talents Have a Home Here</h2>
+            <p class="recruitment-text">
+              Are you a photographer, videographer, graphic designer, or social
+              media enthusiast? Join the Publicity Ministry and help us build a
+              Digital Sanctuary for the next generation.
+            </p>
+
+            <div class="benefit-list">
+              <div class="benefit-item">
+                <span class="benefit-icon">✓</span>
+                <span>Training Provided</span>
+              </div>
+              <div class="benefit-item">
+                <span class="benefit-icon">✓</span>
+                <span>Modern Equipment</span>
+              </div>
+              <div class="benefit-item">
+                <span class="benefit-icon">✓</span>
+                <span>Impactful Mission</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="recruitment-side">
+            <div class="sign-up-card">
+              <h4>Quick Sign Up</h4>
+              <form class="sign-up-form">
+                <input type="text" placeholder="Full Name" class="form-input" />
+                <input
+                  type="email"
+                  placeholder="Email Address"
+                  class="form-input"
+                />
+                <div class="form-group form-group--no-margin">
+                  <select class="">
+                     <option>Area of Interest</option>
+                    <option>Video Production</option>
+                    <option>Social Media</option>
+                    <option>Graphic Design</option>
+                    <option>Audio/Sound</option>
+                  </select>
+                </div>
+                <button type="submit" class="btn btn-accent btn-full">
+                  Send Application
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Publicity Ministry Members -->
+    <section class="section">
+      <div class="container">
+        <div class="ministry-members">
+          <div class="ministry-members-header">
+            <h2 class="section-title">Meet Our Members</h2>
+            <p class="section-subtitle">
+              Creative communicators crafting compelling stories that showcase
+              God's work in our community.
+            </p>
+          </div>
+
+          <div class="ministry-members-list">
+            <!-- Head of Ministry -->
+            <div class="ministry-member-top">
+              <div class="ministry-head">
+                <div class="ministry-leader-photo">
+                  <img
+                    src="assets/Images/leader1.png"
+                    alt="Bro. Publicity Director"
+                    class="ministry-head-photo"
+                  />
+                </div>
+                <div class="ministry-head-info">
+                  <h3>Bro. Udo'bong Eka</h3>
+                  <p>Publicity Coordinator</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="ministry-members-grid">
+              <!-- Leader 1 -->
+              <div class="ministry-member-card">
+                <div class="ministry-members-photo">
+                  <img
+                    src="assets/Images/leader2.png"
+                    alt="Sis. Social Media Manager"
+                    class="members-photo"
+                  />
+                </div>
+                <div class="leader-info">
+                  <h3>Bro. Member 1</h3>
+                  <p>Social Media Manager</p>
+                </div>
+              </div>
+
+              <!-- Leader 2 -->
+              <div class="ministry-member-card">
+                <div class="ministry-members-photo">
+                  <img
+                    src="assets/Images/leader3.png"
+                    alt="Bro. Content Creator"
+                    class="members-photo"
+                  />
+                </div>
+                <div class="leader-info">
+                  <h3>Bro. Member 2</h3>
+                  <p>Content Creator</p>
+                </div>
+              </div>
+
+              <!-- Leader 3 -->
+              <div class="ministry-member-card">
+                <div class="ministry-members-photo">
+                  <img
+                    src="assets/Images/leader4.png"
+                    alt="Sis. Graphic Designer"
+                    class="members-photo"
+                  />
+                </div>
+                <div class="leader-info">
+                  <h3>Bro. Member 3</h3>
+                  <p>Graphic Designer</p>
+                </div>
+              </div>
+
+              <!-- Leader 4 -->
+              <div class="ministry-member-card">
+                <div class="ministry-members-photo">
+                  <img
+                    src="assets/Images/leader5.png"
+                    alt="Bro. Photographer"
+                    class="members-photo"
+                  />
+                </div>
+                <div class="leader-info">
+                  <h3>Bro. Member 4</h3>
+                  <p>Photographer</p>
+                </div>
+              </div>
+
+              <!-- Leader 5 -->
+              <div class="ministry-member-card">
+                <div class="ministry-members-photo">
+                  <img
+                    src="assets/Images/leader6.png"
+                    alt="Sis. Video Editor"
+                    class="members-photo"
+                  />
+                </div>
+                <div class="leader-info">
+                  <h3>Bro. Member 5</h3>
+                  <p>Video Editor</p>
+                </div>
+              </div>
+
+              <!-- Leader 6 -->
+              <div class="ministry-member-card">
+                <div class="ministry-members-photo">
+                  <img
+                    src="assets/Images/leader8.png"
+                    alt="Bro. Publicity Member"
+                    class="members-photo"
+                  />
+                </div>
+                <div class="leader-info">
+                  <h3>Bro. Member 6</h3>
+                  <p>Team Member</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Connect CTA -->
+    <section class="section">
+    <div class="container">
+        <div class="connect">
+          <div class="connect-info">
+            <h2>Connect With Us Online</h2>
+            <p>
+              Follow our social media channels for daily inspiration, live
+              updates, and behind-the-scenes content from the Publicity Ministry.
+            </p>
+            <div class="connect-btn">
+              <a href="#" class="btn btn-light"><img src="assets/svgs/icons/youtube.svg" class="connect-icons-white">YouTube Channel</a>
+              <a href="#" class="btn btn-accent"><img src="assets/svgs/icons/facebook.svg" class="connect-icons-primary">Facebook Page</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <img src="assets/Images/footer.png" class="footer-image">
+      <div class="footer-container">
+        <div class="container">
+          <div class="footer-grid">
+            <div class="footer-brand">
+              <img
+                src="assets/svgs/complete-logo-h-2.svg"
+                alt="Church Logo"
+                class="footer-logo"
+              />
+              <p class="footer-motto">
+                The Ground and Pillar of Truth – 1 Timothy 3:15
+              </p>
+            </div>
+            <div class="footer-contact">
+              <h4>Contact Us</h4>
+              <p>9/11 Odubiyi Street, Ikate, Surulere<br />Lagos, Nigeria</p>
+              <p>Email: coclawanson@yahoo.com</p>
+              <p>Phone: 08069553181 | 08121133361 | 07049172845</p>
+            </div>
+            <div class="footer-links">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="about-who-we-are.html">About Us</a></li>
+                <li><a href="worship.html">Worship Times</a></li>
+                <li><a href="announcements.html">Announcements</a></li>
+                <li><a href="give.html">Give Online</a></li>
+              </ul>
+            </div>
+            <div class="footer-stream">
+              <h4>Watch Live</h4>
+              <p>Join us every Sunday for live streaming</p>
+              <a
+                href="https://www.youtube.com/@coclawanson"
+                target="_blank"
+                class="btn btn-accent"
+                >YouTube Channel</a
+              >
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>&copy; 2026 Church of Christ, Lawanson. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function toggleNav() {
+        document.getElementById("navMenu").classList.toggle("active");
+      }
+
+      function toggleDropdown(element) {
+        if (window.innerWidth <= 768) {
+          element.classList.toggle("active");
+        }
+      }
+      const navToggle = document.getElementById ('navToggle')
+      navToggle.addEventListener('click', () =>{
+        navToggle.classList.toggle ('active');
+      })
+    </script>
+  </body>
+</html>
+

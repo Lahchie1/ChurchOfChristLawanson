@@ -1,0 +1,527 @@
+<!-- ============================================ -->
+<!-- MINISTRIES-SISTERS.HTML -->
+<!-- ============================================ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sisters Ministry | Church of Christ, Lawanson</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" href="ministries-sisters.css">
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="logo-link">
+          <img
+            src="assets/svgs/complete-logo-1.svg"
+            alt="Church of Christ, Lawanson Logo"
+            class="nav-logo"
+          />
+        </a>
+        <button
+          class="nav-toggle" id="navToggle"
+          aria-label="Toggle navigation"
+          onclick="toggleNav()"
+        >
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item dropdown" onclick="toggleDropdown(this)">
+            <div class="nav-link dropdown-toggle">About Us<img src="assets/svgs/icons/chevron-down.svg" class="dropdown-toggle-icon"></div>
+            <div class="dropdown-menu">
+              <a href="about-who-we-are.html" class="dropdown-item"
+                >Who We Are</a
+              >
+              <a href="about-history.html" class="dropdown-item">Our History</a>
+              <a href="about-beliefs.html" class="dropdown-item">Our Beliefs</a>
+              <a href="about-minister.html" class="dropdown-item"
+                >Meet Our Minister</a
+              >
+              <a href="about-leaders.html" class="dropdown-item"
+                >Church Leaders</a
+              >
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="worship.html" class="nav-link">Worship & Services</a>
+          </li>
+          <li class="nav-item dropdown" onclick="toggleDropdown(this)">
+            <div class="nav-link dropdown-toggle active">Ministries<img src="assets/svgs/icons/chevron-down.svg" class="dropdown-toggle-icon active"></div>
+            <div class="dropdown-menu">
+              <a href="ministries-all.html" class="dropdown-item">All Ministries</a>
+              <a href="ministries-secretariat.html" class="dropdown-item"
+                >Secretariat</a
+              >
+              <a href="ministries-finance.html" class="dropdown-item"
+                >Finance</a
+              >
+              <a href="ministries-infrastructure.html" class="dropdown-item"
+                >Infrastructure</a
+              >
+              <a href="ministries-evangelism.html" class="dropdown-item"
+                >Evangelism</a
+              >
+              <a href="ministries-health.html" class="dropdown-item">Health</a>
+              <a href="ministries-publicity.html" class="dropdown-item"
+                >Publicity</a
+              >
+              <a href="ministries-sisters.html" class="dropdown-item active"
+                >Sisters</a
+              >
+              <a href="ministries-youth.html" class="dropdown-item">Youth</a>
+              <a href="ministries-children.html" class="dropdown-item"
+                >Children</a
+              >
+              <a href="ministries-singles.html" class="dropdown-item">Singles</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="announcements.html" class="nav-link">Announcements</a>
+          </li>
+          <li class="nav-item">
+            <a href="resources.html" class="nav-link">Resources</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+          <div class="nav-btn">
+            <a
+              href="give.html"
+              class="btn btn-light"
+              onclick="event.stopPropagation()"
+              >Give Now</a
+            >
+          </div>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <img src="assets/Images/sisters.png" class="page-hero-image">
+      <div class="page-hero-content">
+        <h1>Sisters Ministry</h1>
+        <p class="page-tagline">
+          Join a community where faith meets culture. We are building a
+          foundation of truth while navigating the modern world together.
+        </p>
+    </section>
+
+    <!-- Identity Box -->
+    <div class="identity-box">
+      <div class="identity-item-1">
+        <p class="identity-label">Community</p>
+        <h2 class="identity-number">200+</h2>
+        <h4>Active Sisters</h4>
+      </div>
+      <div class="identity-item-2">
+        <p class="identity-label">Weekly Fellowship</p>
+        <h2 class="identity-number-accent">Tuesdays</h2>
+        <h4 class="identity-time">7:00 PM</h4>
+      </div>
+      <div class="identity-item-1">
+        <p class="identity-label">Annual Retreat</p>
+        <h2 class="identity-number">2026</h2>
+        <h4>Coming Soon</h4>
+      </div>
+    </div>
+
+    <!-- Weekly Sisters Schedule -->
+    <section class="section">
+      <div class="container">
+        <div class="sisters-activity-schedule">
+          <div class="ministry-overview">
+            <div class="section-title-span">
+              <h2>Weekly Sisters Class</h2>
+              <p class="section-subtitle-span">
+                Deepen your understanding of the Word through interactive study
+                and heartfelt discussion every Tuesday evening.
+              </p>
+            </div>
+            <div class="year-schedule">
+              <h3>April 2026</h3>
+              <div class="schedule">
+                7:00 PM - 8:00 PM
+              </div>
+            </div>
+          </div>
+
+          <div class="summaries-grid">
+              <!-- Week 1 -->
+              <div class="summary-card summary-card-class1">
+                <div class="summary-card-content">
+                  <h3>Week 1</h3>
+                  <span class="summary-age-label class-1">7th April 2026</span>
+                  <div class="summary-detail-list">
+                    <div class="activity-track">
+                      <div class="mini-header">
+                        <h4>Moderator:</h4>
+                        <p>Sis. Elizabeth Bassey</p>
+                        <h4>Leader:</h4>
+                        <p>Sis. Chisom Otuya</p>
+                        <h4>Opening Prayer:</h4>
+                        <p>Sis. Grace Edim</p>
+                        <h4>Closing Prayer:</h4>
+                        <p>Sis. Immaculata Willie</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Week 2 -->
+              <div class="summary-card summary-card-class2">
+                <div class="summary-card-content">
+                  <h3>Week 2</h3>
+                  <span class="summary-age-label class-2">10th April 2026</span>
+                  <div class="summary-detail-list">
+                    <div class="activity-track">
+                      <div class="mini-header">
+                        <h4>Moderator:</h4>
+                        <p>Sis. Elizabeth Bassey</p>
+                        <h4>Leader:</h4>
+                        <p>Sis. Chisom Otuya</p>
+                        <h4>Opening Prayer:</h4>
+                        <p>Sis. Grace Edim</p>
+                        <h4>Closing Prayer:</h4>
+                        <p>Sis. Immaculata Willie</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Week 3 -->
+              <div class="summary-card summary-card-class3">
+                <div class="summary-card-content">
+                  <h3>Week 3</h3>
+                  <span class="summary-age-label class-3">17th April 2026</span>
+                  <div class="summary-detail-list">
+                    <div class="activity-track">
+                      <div class="mini-header">
+                        <h4>Moderator:</h4>
+                        <p>Sis. Elizabeth Bassey</p>
+                        <h4>Leader:</h4>
+                        <p>Sis. Chisom Otuya</p>
+                        <h4>Opening Prayer:</h4>
+                        <p>Sis. Grace Edim</p>
+                        <h4>Closing Prayer:</h4>
+                        <p>Sis. Immaculata Willie</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Week 4 -->
+              <div class="summary-card summary-card-class4">
+                <div class="summary-card-content">
+                  <h3>Week 4</h3>
+                  <span class="summary-age-label class-4">24th April 2026</span>
+                  <div class="summary-detail-list">
+                    <div class="activity-track">
+                      <div class="mini-header">
+                        <h4>Moderator:</h4>
+                        <p>Sis. Elizabeth Bassey</p>
+                        <h4>Leader:</h4>
+                        <p>Sis. Chisom Otuya</p>
+                        <h4>Opening Prayer:</h4>
+                        <p>Sis. Grace Edim</p>
+                        <h4>Closing Prayer:</h4>
+                        <p>Sis. Immaculata Willie</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Sisters Meeting -->
+              <div class="summary-card summary-card-class-constant">
+                <div class="summary-card-content">
+                  <h3>Monthly Sisters Meeting</h3>
+                  <span class="summary-age-label class-constant">3rd Sunday of the Month</span>
+                  <div class="summary-detail-list">
+                    <div class="activity-track">
+                      <div class="mini-header">
+                        <h4>Time:</h4>
+                        <p>12:00 PM - 1:30 PM</p>
+                      </div>
+
+                      <div class="mini-header">
+                        <p>Discussions on the progress of the sisters and its activities</p>
+                        <h4>Moderator:</h4>
+                        <p>Sis. Elizabeth Bassey</p>
+                        <h4>Leader:</h4>
+                        <p>Sis. Chisom Otuya</p>
+                        <h4>Opening Prayer:</h4>
+                        <p>Sis. Grace Edim</p>
+                        <h4>Closing Prayer:</h4>
+                        <p>Sis. Immaculata Willie</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Other Activities -->
+              <div class="summary-card-class-grouping">
+                <div class="summary-card-content">
+                  <div>
+                    <h3>In-Group Duties</h3>
+                    <span class="summary-age-label class-constant">Rotating sweeping duties every Saturday at 6:00 AM</span>
+                    <div class="group-class">
+                      <div class="grouping actioned">
+                        <h4>Group 1</h4>
+                        <p>March 7th</p>
+                      </div>
+                      <div class="grouping actioned">
+                        <h4>Group 2</h4>
+                        <p>March 14th</p>
+                      </div>
+                      <div class="grouping actioned">
+                        <h4>Group 3</h4>
+                        <p>March 21st</p>
+                      </div>
+                      <div class="grouping actioned">
+                        <h4>Group 4</h4>
+                        <p>March 28th</p>
+                      </div>
+                      <div class="grouping actioned">
+                        <h4>Group 5</h4>
+                        <p>April 4th</p>
+                      </div>
+                      <div class="grouping actioned">
+                        <h4>Group 6</h4>
+                        <p>April 11th</p>
+                      </div>
+                      <div class="grouping next-actioned">
+                        <h4>Group 7</h4>
+                        <p>April 18th</p>
+                      </div>
+                      <div class="grouping not-actioned">
+                        <h4>Group 8</h4>
+                        <p>April 25th</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Upcoming Events -->
+    <div class="section">
+      <div class="container">
+        <div class="upcoming-events">
+          <div class="summary-card summary-card--wide">
+            <div class="summary-card-content--flex">
+              <div class="summary-card-text">
+                <span class="badge badge-primary">Upcoming Events</span>
+                <h3>Sisters' Lectures</h3>
+                <p class="description-white">
+                  Join us for a transformative lecture designed to empower
+                  and inspire women in their faith journey. Our minister's wife would be exposing and empowering us on how we ought to divinely align in every season of womanhood. 
+                </p>
+              </div>
+
+              <img
+                src="assets/Images/sisters-lectures.png"
+                alt="Sisters Lectures"
+                class="summary-card-image summary-card-image--event"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Our Coordinators -->
+    <section class="section">
+      <div class="container">
+        <div class="ministry-members">
+          <div class="ministry-members-header">
+            <h2 class="section-title">Meet Our Coordinators</h2>
+            <p class="section-subtitle">
+              Dedicated women serving with grace to lead our ministry closer to God's heart.</p>
+          </div>
+
+          <div class="ministry-members-list">
+            <!-- Head of Ministry -->
+            <div class="ministry-member-top">
+              <div class="ministry-head">
+                <div class="ministry-leader-photo">
+                  <img src="assets/Images/leader1.png" alt="Bro. Ema Akpan" class="ministry-head-photo"/>
+                </div>
+                <div class="ministry-head-info">
+                  <h3>Sis. Mary Ogbu</h3>
+                  <p>Ministry Coordinator</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="ministry-members-grid">
+              <!-- Member 1 -->
+              <div class="ministry-member-card">
+                <div class="ministry-members-photo">
+                  <img src="assets/Images/leader2.png" alt="Bro. Idongesit Essien" class="members-photo"/>
+                </div>
+                <div class="leader-info">
+                  <h3>Bro. Idongesit Essien</h3>
+                  <p>Assistant Secretary</p>
+                </div>
+              </div>
+
+              <!-- Member 2 -->
+              <div class="ministry-member-card">
+                <div class="ministry-members-photo">
+                  <img src="assets/Images/leader3.png" alt="Bro. Emmanuel Ibok" class="members-photo"/>
+                </div>
+                <div class="leader-info">
+                  <h3>Bro. Emmanuel Ibok</h3>
+                  <p>Member</p>
+                </div>
+              </div>
+
+              <!-- Member 3 -->
+              <div class="ministry-member-card">
+                <div class="ministry-members-photo">
+                  <img src="assets/Images/leader4.png" alt="Bro. Akan Udoh" class="members-photo"/>
+                </div>
+                <div class="leader-info">
+                  <h3>Bro. Akan Udoh</h3>
+                  <p>Member</p>
+                </div>
+              </div>
+
+              <!-- Member 4 -->
+              <div class="ministry-member-card">
+                <div class="ministry-members-photo">
+                  <img src="assets/Images/leader5.png" alt="Bro. Akan Udoh" class="members-photo"/>
+                </div>
+                <div class="leader-info">
+                  <h3>Bro. Akan Udoh</h3>
+                  <p>Member</p>
+                </div>
+              </div>
+
+              <!-- Member 5 -->
+              <div class="ministry-member-card">
+                <div class="ministry-members-photo">
+                  <img src="assets/Images/leader6.png" alt="Bro. Akan Udoh" class="members-photo"/>
+                </div>
+                <div class="leader-info">
+                  <h3>Bro. Akan Udoh</h3>
+                  <p>Member</p>
+                </div>
+              </div>
+
+              <!-- Member 6 -->
+              <div class="ministry-member-card">
+                <div class="ministry-members-photo">
+                  <img src="assets/Images/leader7.png" alt="Bro. Akan Udoh" class="members-photo"/>
+                </div>
+                <div class="leader-info">
+                  <h3>Bro. Akan Udoh</h3>
+                  <p>Member</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Connect CTA -->
+    <section class="section">
+      <div class="container">
+        <div class="connect">
+          <div class="connect-info">
+            <h2>Join Our Sisterhood</h2>
+            <p>
+              Every woman has a place here. Whether you're new to the faith or
+              have walked with God for decades, there's a seat at the table for
+              you.
+            </p>
+            <div class="connect-btn">
+              <a href="contact.html" class="btn btn-light">Connect With Us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <img src="assets/Images/footer.png" class="footer-image">
+      <div class="footer-container">
+        <div class="container">
+          <div class="footer-grid">
+            <div class="footer-brand">
+              <img
+                src="assets/svgs/complete-logo-h-2.svg"
+                alt="Church Logo"
+                class="footer-logo"
+              />
+              <p class="footer-motto">
+                The Ground and Pillar of Truth – 1 Timothy 3:15
+              </p>
+            </div>
+            <div class="footer-contact">
+              <h4>Contact Us</h4>
+              <p>9/11 Odubiyi Street, Ikate, Surulere<br />Lagos, Nigeria</p>
+              <p>Email: coclawanson@yahoo.com</p>
+              <p>Phone: 08069553181 | 08121133361 | 07049172845</p>
+            </div>
+            <div class="footer-links">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="about-who-we-are.html">About Us</a></li>
+                <li><a href="worship.html">Worship Times</a></li>
+                <li><a href="announcements.html">Announcements</a></li>
+                <li><a href="give.html">Give Online</a></li>
+              </ul>
+            </div>
+            <div class="footer-stream">
+              <h4>Watch Live</h4>
+              <p>Join us every Sunday for live streaming</p>
+              <a
+                href="https://www.youtube.com/@coclawanson"
+                target="_blank"
+                class="btn btn-accent"
+                >YouTube Channel</a
+              >
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>&copy; 2026 Church of Christ, Lawanson. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function toggleNav() {
+        document.getElementById("navMenu").classList.toggle("active");
+      }
+
+      function toggleDropdown(element) {
+        if (window.innerWidth <= 768) {
+          element.classList.toggle("active");
+        }
+      }
+      const navToggle = document.getElementById ('navToggle')
+      navToggle.addEventListener('click', () =>{
+        navToggle.classList.toggle ('active');
+      })
+    </script>
+  </body>
+</html>
+

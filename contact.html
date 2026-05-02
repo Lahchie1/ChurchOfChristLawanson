@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | Church of Christ, Lawanson</title>
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+    <link rel="stylesheet" href="contact.css">
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="logo-link">
+          <img
+            src="assets/svgs/complete-logo-1.svg"
+            alt="Church of Christ, Lawanson Logo"
+            class="nav-logo"
+          />
+        </a>
+        <button
+          class="nav-toggle" id="navToggle"
+          aria-label="Toggle navigation"
+          onclick="toggleNav()"
+        >
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item dropdown" onclick="toggleDropdown(this)">
+            <div class="nav-link dropdown-toggle">About Us<img src="assets/svgs/icons/chevron-down.svg" class="dropdown-toggle-icon"></div>
+            <div class="dropdown-menu">
+              <a href="about-who-we-are.html" class="dropdown-item"
+                >Who We Are</a
+              >
+              <a href="about-history.html" class="dropdown-item">Our History</a>
+              <a href="about-beliefs.html" class="dropdown-item">Our Beliefs</a>
+              <a href="about-minister.html" class="dropdown-item"
+                >Meet Our Minister</a
+              >
+              <a href="about-leaders.html" class="dropdown-item"
+                >Church Leaders</a
+              >
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="worship.html" class="nav-link">Worship & Services</a>
+          </li>
+          <li class="nav-item dropdown" onclick="toggleDropdown(this)">
+            <div class="nav-link dropdown-toggle">Ministries<img src="assets/svgs/icons/chevron-down.svg" class="dropdown-toggle-icon"></div>
+            <div class="dropdown-menu">
+              <a href="ministries-all.html" class="dropdown-item"
+                >All Ministries</a
+              >
+              <a href="ministries-secretariat.html" class="dropdown-item"
+                >Secretariat</a
+              >
+              <a href="ministries-finance.html" class="dropdown-item"
+                >Finance</a
+              >
+              <a href="ministries-infrastructure.html" class="dropdown-item"
+                >Infrastructure</a
+              >
+              <a href="ministries-evangelism.html" class="dropdown-item"
+                >Evangelism</a
+              >
+              <a href="ministries-health.html" class="dropdown-item">Health</a>
+              <a href="ministries-publicity.html" class="dropdown-item"
+                >Publicity</a
+              >
+              <a href="ministries-sisters.html" class="dropdown-item"
+                >Sisters</a
+              >
+              <a href="ministries-youth.html" class="dropdown-item">Youth</a>
+              <a href="ministries-children.html" class="dropdown-item"
+                >Children</a
+              >
+              <a href="ministries-singles.html" class="dropdown-item"
+                >Singles</a
+              >
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="announcements.html" class="nav-link">Announcements</a>
+          </li>
+          <li class="nav-item">
+            <a href="resources.html" class="nav-link">Resources</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link active">Contact</a>
+          </li>
+          <div class="nav-btn">
+            <a
+              href="give.html"
+              class="btn btn-light"
+              onclick="event.stopPropagation()"
+              >Give Now</a
+            >
+          </div>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <img src="assets/Images/contact.png" class="page-hero-image" />
+      <div class="page-hero-content">
+        <h1>Contact Us</h1>
+        <p class="page-tagline">
+          Reach out to us at anytime, we are just the green button away from you.
+        </p>
+      </div>
+    </section>
+
+    <!-- Enquiry Section -->
+    <section class="section">
+      <div class="container">
+        <section class="enquiry-section" id="enquiry">
+          <div class="enquiry-wrapper">
+            <div class="enquiry-info">
+              <h2>Get In Touch</h2>
+              <p class="enquiry-subtitle">
+                We'd love to hear from you. Send us a message and we'll respond
+                as soon as possible.
+              </p>
+
+              <div class="contact-details">
+                <div class="contact-item">
+                  <span class="contact-icon"
+                    ><img
+                      src="assets/svgs/icons/location-pin.svg"
+                      alt="location"
+                      class="icons"
+                  /></span>
+                  <div>
+                    <h4>Visit Us</h4>
+                    <p>
+                      9/11 Odubiyi Street, Ikate<br />Surulere, Lagos, Nigeria
+                    </p>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <span class="contact-icon"
+                    ><img
+                      src="assets/svgs/icons/phone.svg"
+                      alt="call"
+                      class="icons"
+                  /></span>
+                  <div>
+                    <h4>Call Us</h4>
+                    <p>08069553181, 08121133361, 07049172845</p>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <span class="contact-icon"
+                    ><img
+                      src="assets/svgs/icons/envelope.svg"
+                      alt="mail"
+                      class="icons"
+                  /></span>
+                  <div>
+                    <h4>Email Us</h4>
+                    <p>coclawanson@yahoo.com</p>
+                  </div>
+                </div>
+                <div class="contact-map-container">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.1234567890123!2d3.123456789012345!3d6.123456789012345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMDcnMjQuNCJOIDPCsDA3JzI0LjQiRQ!5e0!3m2!1sen!2sng!4v1234567890123!5m2!1sen!2sng"
+                    width="100%"
+                    height="100%"
+                    class="iframe-no-border"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                  >
+                  </iframe>
+                </div>
+              </div>
+            </div>
+
+            <div class="enquiry-form-wrapper">
+              <!-- Form Tabs -->
+              <div class="form-tabs">
+                <button class="tab-btn active" onclick="switchTab('prayer')">
+                  Prayer Request
+                </button>
+                <button class="tab-btn" onclick="switchTab('general')">
+                  General Inquiry
+                </button>
+                <button class="tab-btn" onclick="switchTab('membership')">
+                  Become Member
+                </button>
+              </div>
+
+              <!-- Prayer Request Form -->
+              <form
+                class="enquiry-form active"
+                id="prayerForm"
+                onsubmit="handleForm(event, 'prayer')"
+              >
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="prayerName">Your Name *</label>
+                    <input
+                      type="text"
+                      id="prayerName"
+                      name="name"
+                      required
+                      placeholder="Enter your full name"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="prayerEmail">Email Address *</label>
+                    <input
+                      type="email"
+                      id="prayerEmail"
+                      name="email"
+                      required
+                      placeholder="Enter your email"
+                    />
+                  </div>
+                </div>
+                <div class="form-group full-width">
+                  <label for="prayerRequest">Prayer Request *</label>
+                  <textarea
+                    id="prayerRequest"
+                    name="message"
+                    rows="5"
+                    required
+                    placeholder="Share your prayer request with us..."
+                  ></textarea>
+                </div>
+                <div class="checkbox-group">
+                  <input
+                    type="checkbox"
+                    id="confidential"
+                    name="confidential"
+                  />
+                  <label for="confidential"
+                    >Keep this request confidential.</label
+                  >
+                </div>
+                <button type="submit" class="submit-btn">
+                  <span class="btn-text">Submit Prayer Request</span>
+                  <span class="btn-loading">Sending...</span>
+                </button>
+                <div class="form-message" id="prayerMessage"></div>
+              </form>
+
+              <!-- General Inquiry Form -->
+              <form
+                class="enquiry-form enquiry-form--hidden"
+                id="generalForm"
+                onsubmit="handleForm(event, 'general')"
+              >
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="genName">Your Name *</label>
+                    <input
+                      type="text"
+                      id="genName"
+                      name="name"
+                      required
+                      placeholder="Enter your full name"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="genEmail">Email Address *</label>
+                    <input
+                      type="email"
+                      id="genEmail"
+                      name="email"
+                      required
+                      placeholder="Enter your email"
+                    />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="genPhone">Phone Number</label>
+                    <input
+                      type="tel"
+                      id="genPhone"
+                      name="phone"
+                      placeholder="Enter your phone number"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="genSubject">Subject *</label>
+                    <select id="genSubject" name="subject" required>
+                      <option value="">Select a subject</option>
+                      <option value="visitation">Home Visitation</option>
+                      <option value="counseling">Counseling</option>
+                      <option value="baptism">Baptism Inquiry</option>
+                      <option value="general">General Enquiry</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group full-width">
+                  <label for="genMessage">Your Message *</label>
+                  <textarea
+                    id="genMessage"
+                    name="message"
+                    rows="5"
+                    required
+                    placeholder="Type your message here..."
+                  ></textarea>
+                </div>
+                <button type="submit" class="submit-btn">
+                  <span class="btn-text">Send Message</span>
+                  <span class="btn-loading">Sending...</span>
+                </button>
+                <div class="form-message" id="generalMessage"></div>
+              </form>
+
+              <!-- Membership Form -->
+              <form
+                class="enquiry-form enquiry-form--hidden"
+                id="membershipForm"
+                onsubmit="handleForm(event, 'membership')"
+              >
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="memName">Full Name *</label>
+                    <input
+                      type="text"
+                      id="memName"
+                      name="name"
+                      required
+                      placeholder="Enter your full name"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="memEmail">Email Address *</label>
+                    <input
+                      type="email"
+                      id="memEmail"
+                      name="email"
+                      required
+                      placeholder="Enter your email"
+                    />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="memPhone">Phone Number *</label>
+                    <input
+                      type="tel"
+                      id="memPhone"
+                      name="phone"
+                      required
+                      placeholder="Enter your phone number"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="memStatus">Current Status *</label>
+                    <select id="memStatus" name="status" required>
+                      <option value="">Select status</option>
+                      <option value="visitor">First-time Visitor</option>
+                      <option value="regular">Regular Attendee</option>
+                      <option value="transfer">
+                        Transfer from Another COC
+                      </option>
+                      <option value="new-convert">New Convert</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group full-width">
+                  <label for="memMessage">Tell us about yourself</label>
+                  <textarea
+                    id="memMessage"
+                    name="message"
+                    rows="4"
+                    placeholder="Share your background and what brought you to our church..."
+                  ></textarea>
+                </div>
+                <button type="submit" class="submit-btn">
+                  <span class="btn-text">Request Membership Info</span>
+                  <span class="btn-loading">Sending...</span>
+                </button>
+                <div class="form-message" id="membershipMessage"></div>
+              </form>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <img src="assets/Images/footer.png" class="footer-image" />
+      <div class="footer-container">
+        <div class="container">
+          <div class="footer-grid">
+            <div class="footer-brand">
+              <img
+                src="assets/svgs/complete-logo-h-2.svg"
+                alt="Church Logo"
+                class="footer-logo"
+              />
+              <p class="footer-motto">
+                The Ground and Pillar of Truth – 1 Timothy 3:15
+              </p>
+            </div>
+            <div class="footer-contact">
+              <h4>Contact Us</h4>
+              <p>9/11 Odubiyi Street, Ikate, Surulere<br />Lagos, Nigeria</p>
+              <p>Email: coclawanson@yahoo.com</p>
+              <p>Phone: 08069553181 | 08121133361 | 07049172845</p>
+            </div>
+            <div class="footer-links">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="about-who-we-are.html">About Us</a></li>
+                <li><a href="worship.html">Worship Times</a></li>
+                <li><a href="announcements.html">Announcements</a></li>
+                <li><a href="give.html">Give Online</a></li>
+              </ul>
+            </div>
+            <div class="footer-stream">
+              <h4>Watch Live</h4>
+              <p>Join us every Sunday for live streaming</p>
+              <a
+                href="https://www.youtube.com/@coclawanson"
+                target="_blank"
+                class="btn btn-accent"
+                >YouTube Channel</a
+              >
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>&copy; 2026 Church of Christ, Lawanson. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function toggleNav() {
+        document.getElementById("navMenu").classList.toggle("active");
+      }
+
+      function toggleDropdown(element) {
+        if (window.innerWidth <= 768) {
+          element.classList.toggle("active");
+        }
+      }
+
+      function setActiveNav() {
+        const path = window.location.pathname;
+        const filename = path.split("/").pop();
+        const navLinks = document.querySelectorAll(".nav-link");
+        navLinks.forEach((link) => {
+          if (link.getAttribute("href") === filename) {
+            link.classList.add("active");
+          }
+        });
+        // Special handling for dropdown parents
+        if (path.includes("/about-")) {
+          const aboutLink = document.querySelector(".nav-link.dropdown-toggle");
+          if (aboutLink && aboutLink.textContent.includes("About Us")) {
+            aboutLink.classList.add("active");
+          }
+        }
+        if (path.includes("/ministries-")) {
+          const ministriesLink = document.querySelectorAll(
+            ".nav-link.dropdown-toggle",
+          )[1];
+          if (
+            ministriesLink &&
+            ministriesLink.textContent.includes("Ministries")
+          ) {
+            ministriesLink.classList.add("active");
+          }
+        }
+      }
+
+      function switchTab(tabName) {
+        // Hide all forms
+        document.getElementById("prayerForm").style.display = "none";
+        document.getElementById("generalForm").style.display = "none";
+        document.getElementById("membershipForm").style.display = "none";
+
+        // Remove active class from all tabs
+        document
+          .querySelectorAll(".tab-btn")
+          .forEach((btn) => btn.classList.remove("active"));
+
+        // Show selected form and activate tab
+        if (tabName === "prayer") {
+          document.getElementById("prayerForm").style.display = "flex";
+          document.querySelectorAll(".tab-btn")[0].classList.add("active");
+        } else if (tabName === "general") {
+          document.getElementById("generalForm").style.display = "flex";
+          document.querySelectorAll(".tab-btn")[1].classList.add("active");
+        } else if (tabName === "membership") {
+          document.getElementById("membershipForm").style.display = "flex";
+          document.querySelectorAll(".tab-btn")[2].classList.add("active");
+        }
+      }
+
+      function handleForm(e, formType) {
+        e.preventDefault();
+        const messageDiv = document.getElementById(formType + "Message");
+        messageDiv.className = "form-message success";
+        messageDiv.textContent = "Thank you! We will respond shortly.";
+        messageDiv.style.display = "block";
+      }
+
+      setActiveNav();
+      const navToggle = document.getElementById ('navToggle')
+      navToggle.addEventListener('click', () =>{
+        navToggle.classList.toggle ('active');
+      })
+    </script>
+  </body>
+</html>
+

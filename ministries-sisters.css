@@ -1,0 +1,1780 @@
+* {
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+
+  --primary: #1a237e;
+  --primary-dark: #0d1642;
+  --primary-light: #3949ab;
+  --accent: #d4af37;
+  --accent-dark: #a67c00;
+  --accent-light: #ffdb80;
+  --accent-very-light: #fff2cc;
+  --Success: #2e7d32;
+  --Error: #c62828;
+  --light-blue: #e8eaf6;
+  --white: #ffffff;
+  --text: #212121;
+  --text-light: #616161;
+  --border: #c5cae9;
+  --filterprimary: brightness(0) saturate(100%) invert(17%) sepia(16%)
+    saturate(7418%) hue-rotate(221deg) brightness(95%) contrast(111%);
+  --filteraccent: brightness(0) saturate(100%) invert(82%) sepia(17%)
+    saturate(746%) hue-rotate(1deg) brightness(95%) contrast(90%);
+  --filtertext: brightness(0) saturate(100%) invert(13%) sepia(0%) saturate(0%)
+    hue-rotate(336deg) brightness(95%) contrast(90%);
+  --filterlight-blue: brightness(0) saturate(100%) invert(92%) sepia(0%)
+    saturate(0%) hue-rotate(336deg) brightness(95%) contrast(90%);
+  --filterwhite: brightness(0) saturate(100%) invert(99%) sepia(16%) saturate(2%)
+    hue-rotate(121deg) brightness(103%) contrast(101%);
+}
+body {
+
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--light-blue);
+}
+img {
+
+  object-fit: cover;
+}
+/* Navigation */
+.navbar {
+
+  background: var(--white);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.nav-container {
+
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 0rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo-link {
+
+  display: flex;
+  align-items: center;
+}
+.nav-logo {
+
+  height: 40px;
+  width: auto;
+  transition: transform 0.3s;
+}
+.nav-logo:hover {
+
+  transform: scale(1.05);
+}
+.nav-menu {
+
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  align-items: center;
+}
+.nav-item {
+
+  position: relative;
+}
+.nav-link {
+
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.5rem 0;
+  display: flex;
+  transition: color 0.3s;
+  gap: 12px;
+  align-items: center;
+}
+.nav-link:hover {
+
+  color: var(--primary);
+}
+.nav-link.active {
+
+  color: var(--primary);
+  border-bottom: 2px solid var(--primary);
+}
+/* Dropdown */
+.dropdown {
+
+  position: relative;
+}
+.dropdown-toggle-icon {
+
+  height: 16px;
+}
+.dropdown-toggle::after {
+
+  font-size: 0.7rem;
+}
+.dropdown-menu {
+
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--white);
+  min-width: 220px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s;
+  z-index: 1001;
+  padding: 0.5rem 0;
+}
+.dropdown:hover .dropdown-menu {
+
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.dropdown-item {
+
+  display: block;
+  padding: 0.8rem 1.5rem;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s;
+  border-left: 3px solid transparent;
+}
+.dropdown-item:hover {
+
+  background: var(--light-blue);
+  color: var(--primary);
+}
+.dropdown-item.active {
+
+  background: var(--light-blue);
+  color: var(--primary);
+  border-left-color: var(--primary);
+}
+.slide.active {
+
+  opacity: 1;
+}
+.dot.active {
+
+  background: var(--white);
+}
+/* Buttons */
+.btn {
+
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  border-radius: 15px;
+  text-decoration: none;
+  width: 100%;
+  font-weight: 600;
+  transition: all 0.3s;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.btn-primary {
+
+  display: flex;
+  background: var(--white);
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--primary);
+}
+.btn-primary:hover {
+
+  background: var(--light-blue);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.btn-light {
+
+  display: flex;
+  background: var(--primary);
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--white);
+  border: 2px solid var(--primary);
+}
+.btn-light:hover {
+
+  background: var(--white);
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.btn-accent {
+  display: flex;
+  background: var(--accent);
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--primary-dark);
+  border: 2px solid var(--accent);
+}
+.btn-accent:hover {
+  background: var(--white);
+  color: var(--accent);
+  border: 2px solid var(--accent);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.btn-small {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0.5rem 1.5rem;
+  font-size: 0.9rem;
+}
+.summaries-grid {
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+.summary-card {
+
+  background: var(--white);
+  border: 2px solid var(--white);
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+.summary-card:hover {
+
+  border: 2px solid var(--primary);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+.summary-card-content {
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  height: 100%;
+}
+.summary-card-image {
+
+  height: 200px;
+  object-fit: cover;
+  border-radius: 16px;
+  width: 100%;
+  transition: transform 0.3s;
+}
+.summary-card h3 {
+
+  font-size: 1.4rem;
+}
+.summary-card p {
+
+  line-height: 1.8;
+}
+/* Page Hero */
+.page-hero {
+
+  position: relative;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--white);
+  overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    var(--primary-dark) 0%,
+    var(--primary) 100%
+  );
+  margin: 2rem;
+  border-radius: 16px;
+}
+.page-hero-image {
+
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 1920px;
+  height: 100%;
+  opacity: 20%;
+}
+.page-hero-content {
+
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+  width: 900px;
+  opacity: 80;
+}
+.children-hero-buttons .btn-light {
+
+  margin-left: 1rem;
+}
+.summary-card-class1 {
+
+  border-bottom: 4px solid #ff9800;
+}
+.summary-card-class2 {
+
+  border-bottom: 4px solid #2196f3;
+}
+.summary-card-class3 {
+
+  border-bottom: 4px solid #9c27b0;
+}
+.summary-card-class4 {
+
+  border-bottom: 4px solid #4caf50;
+}
+.summary-card-class1:hover {
+
+  background: #fff3e0;
+  border-color: #ff9800;
+}
+.summary-card-class2:hover {
+
+  background: #e3f2fd;
+  border-color: #2196f3;
+}
+.summary-card-class3:hover {
+
+  background: #f3e5f5;
+  border-color: #9c27b0;
+}
+.summary-card-class4:hover {
+
+  background: #e8f5e9;
+  border-color: #4caf50;
+}
+.summary-card-class-constant {
+
+  background-color: var(--primary);
+  color: var(--white);
+  border-bottom: 4px solid var(--accent);
+}
+.summary-card-class-constant h3 {
+
+  color: var(--accent);
+}
+.summary-card-class-constant .class-constant {
+
+  color: var(--accent-light);
+}
+.summary-card-class-constant p {
+
+  color: var(--white);
+}
+.summary-card-class-constant:hover {
+
+  background: var(--light-blue);
+  border-color: var(--primary);
+  color: var(--text-light);
+}
+.summary-card-class-constant:hover .class-constant {
+
+  color: var(--primary);
+}
+.summary-card-class-constant:hover p {
+
+  color: var(--text-light);
+}
+.summary-card-class-grouping {
+
+  border-radius: 16px;
+  background-color: var(--text);
+  color: var(--white);
+  border-bottom: 4px solid #188ba0;
+}
+.summary-card-class-grouping h3 {
+
+  color: var(--accent);
+}
+.summary-card-class-grouping .class-constant {
+
+  color: #188ba0;
+}
+.summary-card-class-grouping p {
+
+  color: var(--white);
+}
+.summary-card-class-grouping:hover {
+
+  background: var(--light-blue);
+  border: 2px solid var(--text);
+  border-color: var(--text);
+  color: var(--text-light);
+}
+.summary-card-class-grouping:hover .class-constant {
+
+  color: var(--text);
+}
+.summary-card-class-grouping:hover p {
+
+  color: var(--text-light);
+}
+.page-hero h1 {
+
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.page-tagline {
+
+  font-size: 1.3rem;
+  font-style: italic;
+  opacity: 0.95;
+}
+/* Section Styles */
+.section {
+
+  padding: 0rem 4rem 0rem 4rem;
+  background: var(--light-blue);
+  margin-top: 4rem;
+}
+.container {
+
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.section-title {
+
+  text-align: center;
+  color: var(--primary);
+  font-size: 2.2rem;
+}
+.section-subtitle {
+
+  text-align: center;
+  color: var(--text-light);
+}
+.summary-card--wide {
+
+  grid-column: span 2;
+}
+.summary-age-label {
+
+  color: var(--text-light);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  display: block;
+}
+.class-1 {
+
+  color: #ff9800;
+}
+.class-2 {
+
+  color: #2196f3;
+}
+.class-3 {
+
+  color: #9c27b0;
+}
+.class-4 {
+
+  color: #4caf50;
+}
+.summary-detail-list {
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.summary-card-image--event {
+
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.summary-card-center .summary-card-content {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.summary-card-center .btn {
+
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.connect .connect-btn {
+
+  justify-content: center;
+}
+.connect-btn:hover .ministry-icons {
+
+  filter: var(--filterprimary);
+}
+/* ABOUT PAGE - Who We Are */
+.identity-box {
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  max-width: 1200px;
+  margin-top: -100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+  gap: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+.identity-item-1 {
+
+  background: var(--white);
+  padding: 1.5rem;
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+.identity-item-2 {
+
+  background: var(--primary-dark);
+  padding: 1.5rem;
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+.identity-item-1 p {
+
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+.identity-item-1 h2 {
+
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+.identity-item-1 h4 {
+
+  color: var(--text);
+  font-size: medium;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.identity-item-2 p {
+
+  color: var(--light-blue);
+  margin-bottom: 0.5rem;
+}
+.identity-item-2 h2 {
+
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+.identity-item-2 h4 {
+
+  color: var(--white);
+  font-size: medium;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.summary-card-text {
+
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 1rem;
+}
+
+.summary-card-content--flex {
+
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  height: 360px;
+}
+
+.badge {
+
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  width: fit-content;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.badge-primary {
+
+  background: var(--primary);
+  color: var(--white);
+}
+.badge-success {
+
+  background: var(--Success);
+  color: var(--white);
+}
+.badge-accent {
+
+  background: var(--accent);
+  color: var(--primary-dark);
+}
+
+/* Active Tab */
+.leaders-tab-btn.active {
+
+  background-color: var(--primary);
+  color: var(--white);
+  font-weight: 600;
+  padding: 16px;
+}
+.leaders-tab-btn.active::after {
+
+  width: 100%;
+}
+.leaders-tab-content.active {
+
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.leaders-nav-link.active {
+
+  background-color: var(--accent);
+  color: var(--white);
+}
+.leader-info {
+
+  padding: 1rem;
+  height: auto;
+}
+.leader-info h3 {
+
+  color: var(--primary);
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+.leader-info p {
+
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+.connect {
+
+  background: var(--white);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 2rem 18rem;
+  border-radius: 16px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+.connect-info {
+
+  display: grid;
+  max-width: 600px;
+  text-align: center;
+}
+.connect-info h2 {
+
+  color: var(--primary);
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.connect-info p {
+
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+.connect-btn {
+
+  display: flex;
+  width: 100%;
+  gap: 8px;
+}
+.ministry-overview {
+
+  display: flex;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+.section-title-span {
+
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: start;
+  justify-content: space-between;
+}
+.section-title-span h2 {
+
+  text-align: center;
+  color: var(--primary);
+  font-size: 2.2rem;
+}
+.section-subtitle-span {
+
+  max-width: 720px;
+  text-align: start;
+  color: var(--text-light);
+}
+.year-schedule {
+
+  display: flex;
+  flex-direction: column;
+  width: 160px;
+  justify-content: space-between;
+  height: 100%;
+}
+.schedule {
+
+  align-content: center;
+  text-align: center;
+  padding: 0.8rem;
+  width: 160px;
+  border-radius: 8px;
+  font-weight: bold;
+  background-color: var(--text);
+  color: var(--white);
+  font-size: 0.95rem;
+}
+.ministry-members {
+
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 16px;
+}
+.ministry-members-header {
+
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.ministry-members-list {
+
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+.ministry-head {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 400px;
+  height: fit-content;
+  background-color: var(--primary);
+  border-radius: 16px;
+  padding: 1rem;
+}
+.ministry-leader-photo {
+
+  width: 100%;
+  height: fit-content;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ministry-head-photo {
+
+  width: 100%;
+  height: 360px;
+  border-radius: 8px;
+}
+.ministry-head-info {
+
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  align-items: center;
+}
+.ministry-head-info h3 {
+
+  color: var(--accent);
+  font-size: 1.6rem;
+  margin-bottom: 0.3rem;
+}
+.ministry-head-info p {
+
+  color: var(--white);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.ministry-members-grid {
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 900px;
+  padding-left: 0.8rem;
+}
+.ministry-member-card {
+
+  background: var(--light-blue);
+  height: 260px;
+  padding: 0.5rem;
+  border-radius: 16px;
+  overflow: hidden;
+  text-align: center;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+.ministry-members-photo {
+
+  width: 100%;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  color: var(--white);
+}
+.members-photo {
+
+  width: 100%;
+  height: 160px;
+  border-radius: 8px;
+}
+.activity-track p {
+
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+.activity-track ul {
+
+  list-style: none;
+  margin-top: 0.5rem;
+}
+.activity-track li {
+
+  padding: 0.3rem 0;
+  position: relative;
+}
+.activity-track li::before {
+
+  position: absolute;
+  left: 0;
+}
+/* SIsters Activities */
+.sisters-activity-schedule {
+
+  background-color: var(--white);
+  border-radius: 16px;
+  padding: 2rem;
+}
+.mini-header {
+
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.description-schedule {
+
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.description-white {
+
+  color: var(--text-light);
+}
+.schedule {
+
+  align-content: center;
+  text-align: center;
+  padding: 0.8rem;
+  border-radius: 8px;
+  font-weight: bold;
+  background-color: var(--text);
+  color: var(--white);
+  font-size: 0.95rem;
+}
+/* Sisters Activities */
+.group-class {
+
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  gap: 1rem;
+}
+.grouping {
+
+  background-color: var(--light-blue);
+  padding: 0.5rem 1rem;
+  width: 120px;
+  border-radius: 8px;
+}
+
+.actioned h4 {
+  color: var(--text-light);
+}
+.actioned p{
+
+  color: var(--text-light);
+}
+.summary-card-content:hover .actioned {
+
+  background-color: var(--primary);
+  color: var(--white);
+}
+.next-actioned {
+
+  background-color: var(--Success);
+  color: var(--white);
+  font-weight: bold;
+}
+.not-actioned {
+
+  background-color: var(--accent);
+  color: var(--primary);
+}
+
+.not-actioned p {
+
+  color: var(--primary);
+}
+
+/* Footer */
+.footer {
+
+  background: var(--primary-dark);
+  color: var(--white);
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+.footer-container {
+  position: relative;
+  padding: 4rem 2rem 1rem;
+  z-index: 1;
+}
+.footer-image {
+
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 20%;
+}
+.footer-grid {
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+.footer-logo {
+
+  width: 200px;
+  height: auto;
+  margin-bottom: 1rem;
+  padding: 5px;
+}
+.footer-motto {
+
+  font-style: italic;
+  opacity: 0.9;
+  font-size: 0.95rem;
+}
+.footer h4 {
+
+  margin-bottom: 1.5rem;
+  color: var(--light-blue);
+  font-size: 1.2rem;
+}
+.footer p,
+.footer a {
+
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  line-height: 1.8;
+}
+.footer-stream {
+
+  gap: 10px;
+}
+.footer-links ul {
+
+  list-style: none;
+}
+.footer-links li {
+
+  margin-bottom: 0.5rem;
+}
+.footer-bottom {
+
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
+/* ============================================
+   ADDITIONAL STYLES FOR NEW PAGES
+   ============================================ */
+
+/* Page Hero Variations */
+.page-hero-content {
+
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+  max-width: 900px;
+  text-align: center;
+  opacity: 80%;
+}
+
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+.tab-btn.active {
+
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+}
+
+
+/* RESPONSIVE ADJUSTMENTS */
+
+
+/* Responsive */
+
+.connect-section {
+
+  padding-bottom: 4rem;
+}
+
+
+@keyframes spin {
+
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1312px) {
+/* ── Navigation ── */
+  .nav-container {
+    max-width: 100%;
+    padding: 1rem 2rem;
+  }
+.nav-menu {
+    gap: 1rem;
+  }
+.nav-link {
+    font-size: 0.87rem;
+    gap: 8px;
+  }
+.nav-logo {
+    height: 36px;
+  }
+.nav-btn .btn {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.9rem;
+  }
+/* ── Page Hero ── */
+  .page-hero {
+    height: 360px;
+    margin: 1.75rem;
+  }
+.page-hero-content {
+    max-width: 780px;
+    padding: 2rem;
+  }
+.page-hero h1 {
+    font-size: 2.6rem;
+  }
+.page-tagline {
+    font-size: 1.15rem;
+  }
+/* ── Section & Container ── */
+  .section {
+    padding: 0 2.5rem;
+    margin-top: 3rem;
+  }
+.container {
+    max-width: 1100px;
+  }
+/* ── Buttons ── */
+  .btn {
+    padding: 0.95rem 2.2rem;
+    font-size: 0.97rem;
+  }
+.btn-small {
+    padding: 0.5rem 1.4rem;
+    font-size: 0.9rem;
+  }
+/* ── Connect Block ── */
+  .connect {
+    padding: 2rem 8rem;
+    margin-bottom: 3rem;
+  }
+  .identity-box {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    padding: 0px 2rem 0px 2rem;
+  }
+/* ── Summary Cards ── */
+  .summaries-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  .group-class {
+    padding: 0rem;
+  }
+  .grouping {
+    padding: 0.5rem;
+    width: 45%;
+  }
+  .grouping p {
+    font-size: 14px;
+  }
+  .summary-card-image {
+    width: 64.5%;
+  }
+/* ── Ministry Members ── */
+  .ministry-members-list {
+    flex-direction: row;
+    gap: 1.25rem;
+  }
+.ministry-head {
+    width: 340px;
+    flex-shrink: 0;
+    flex-direction: column;
+  }
+.ministry-head-photo {
+    width: 100%;
+    height: 320px;
+  }
+  .ministry-members-grid {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  .ministry-member-card {
+    width: 31.5%;
+    height: 240px;
+  }
+  .leader-info {
+    padding: 0.5rem;
+  }
+  .leader-info h3 {
+    font-size: 13px;
+  }
+  .leader-info p {
+    font-size: 13px;
+  }
+/* ── Footer ── */
+  .footer {
+    height: auto;
+  }
+.footer-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+/* ── Sisters ── */
+  .sisters-prayer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+/* ── Gallery ── */
+  .gallery-image {
+    width: calc(33.333% - 1rem);
+    height: 260px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+body {
+    overflow-x: hidden;
+  }
+/* ── Navigation ── */
+  .nav-container {
+    padding: 0.8rem 1.5rem;
+  }
+.nav-menu {
+    gap: 0.75rem;
+  } 
+.nav-link {
+    font-size: 0.66rem;
+    gap: 6px;
+  }
+.nav-logo {
+    height: 34px;
+  }
+.nav-btn .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
+  }
+  .dropdown-toggle-icon {
+    height: 10px;
+  }
+/* ── Page Hero ── */
+  .page-hero {
+    height: 320px;
+    margin: 1.5rem;
+    border-radius: 14px;
+  }
+.page-hero-content {
+    width: 100%;
+    max-width: 680px;
+    padding: 1.5rem;
+  }
+.page-hero h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.75rem;
+  }
+.page-tagline {
+    font-size: 1.05rem;
+  }
+/* ── Section & Container ── */
+  .section {
+    padding: 2rem 2rem;
+    margin-top: 2.5rem;
+  }
+.container {
+    max-width: 100%;
+    padding: 0 0.5rem;
+  }
+/* ── Buttons ── */
+  .btn {
+    padding: 0.9rem 2rem;
+    font-size: 0.95rem;
+  }
+.btn-small {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.88rem;
+  }
+/* ── Connect Block ── */
+  .connect {
+    padding: 2rem 3rem;
+    border-radius: 14px;
+    margin-bottom: 1rem;
+  }
+.connect-btn {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .identity-box {
+    display: flex;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  .identity-item-1 {
+    width: 33.333%;
+  }
+  .identity-item-2 {
+    width: 33.333%;
+  }
+  .sisters-activity-schedule {
+    margin-top: -2rem;
+    margin-bottom: -2rem;
+  }
+  .section-subtitle-span {
+    width: 72%;
+  }
+
+  .group-class {
+    padding: 0;
+  }
+
+  .grouping {
+    width: 46%;
+  }
+
+  .grouping p {
+    font-size: 14px;
+  }
+  
+  /* ── Summary Cards ── */
+  .summaries-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+  .summary-card-content {
+    width: 100%;
+    height: fit-content;
+  }
+  .summary-card-content--flex {
+    height: fit-content;
+  }
+  .upcoming-events {
+    margin-top: -2rem;
+    margin-bottom: -2rem;
+    height: fit-content;
+  }
+  .summary-card-image--event {
+
+    height: fit-content;
+  }
+  /* ── Ministry Members ── */
+  .ministry-members {
+    margin-top: -2rem;
+    margin-bottom: -4rem;
+  }
+  .ministry-members-list {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .ministry-head {
+    width: fit-content;
+    gap: 1.5rem;
+  }
+  .ministry-leader-photo {
+    width: fit-content;
+  }
+  .ministry-head-photo {
+    width: 280px;
+    height: 280px;
+    flex-shrink: 0;
+  }
+  .ministry-head-info {
+    width: 100%;
+  }
+  .ministry-head-info h3 {
+    font-size: 1.3rem;
+  }
+  .ministry-members-grid {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .ministry-member-card {
+    width: calc(33.333% - 0.75rem);
+    height: auto;
+  }
+  /* ── Footer ── */
+  .footer {
+    height: auto;
+  }
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  /* ── Sisters ── */
+  .sisters-prayer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .sisters-prayer-image-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  /* ── Gallery ── */
+  .gallery {
+    gap: 1rem;
+  }
+  .gallery-image {
+    width: calc(33.333% - 0.75rem);
+    height: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+/* ── Base ── */
+  body {
+    overflow-x: hidden;
+  }
+/* ── Navigation ── */
+  .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+.nav-container {
+    max-width: 100%;
+    padding: 0.8rem 1rem;
+  }
+.nav-logo {
+    height: 32px;
+  }
+.nav-toggle {
+    display: flex;
+  }
+.nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 57px;
+    flex-direction: column;
+    background: var(--white);
+    width: 100%;
+    text-align: left;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0,0,0,0.1);
+    padding: 0.5rem 0;
+    gap: 0;
+    max-height: calc(100vh - 57px);
+    overflow-y: auto;
+    z-index: 999;
+  }
+.nav-menu.active {
+    left: 0;
+  }
+.nav-btn {
+    padding: 1rem 1.5rem;
+    width: 100%;
+  }
+.nav-btn .btn {
+    width: auto;
+    display: inline-flex;
+  }
+.nav-item {
+    width: 100%;
+    border-bottom: 1px solid var(--border);
+  }
+.nav-link {
+    padding: 1rem 1.5rem;
+    font-size: 0.95rem;
+  }
+.nav-link.active {
+    background-color: var(--primary);
+    color: var(--white);
+    border-bottom: none;
+  }
+.dropdown-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    display: none;
+    background: var(--light-blue);
+    border-radius: 0;
+    padding: 0;
+    min-width: 100%;
+  }
+.dropdown.active .dropdown-menu {
+    display: block;
+  }
+.dropdown-item {
+    padding: 0.8rem 2.5rem;
+    border-left: none;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.9rem;
+  }
+.dropdown-item:last-child {
+    border-bottom: none;
+  }
+/* ── Page Hero ── */
+  .page-hero {
+    height: auto;
+    min-height: 260px;
+    margin: 1rem;
+    border-radius: 12px;
+    padding: 2rem 1rem;
+  }
+.page-hero-content {
+    width: 100%;
+    padding: 1rem;
+  }
+.page-hero h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.75rem;
+  }
+.page-tagline {
+    font-size: 1rem;
+  }
+.page-hero-image {
+    width: 100%;
+    left: 0;
+  }
+/* ── Section & Container ── */
+  .section {
+    padding: 1.5rem 1rem;
+    margin-top: 1.5rem;
+  }
+.container {
+    width: 100%;
+    padding: 0;
+  }
+.section-title {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+.section-subtitle {
+    font-size: 0.95rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+.section-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+  }
+.section-header-center {
+    text-align: center;
+  }
+/* ── Buttons ── */
+  .btn {
+    padding: 0.85rem 1.5rem;
+    font-size: 0.95rem;
+    border-radius: 12px;
+  }
+.btn-large {
+    padding: 0.85rem 1.5rem;
+    font-size: 1rem;
+  }
+/* ── Connect Block ── */
+  .connect {
+    padding: 2rem 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+  }
+.connect-info h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+.connect-info p {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+.connect-btn {
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+  }
+.connect-btn .btn {
+    width: 100%;
+    justify-content: center;
+  }
+/* ── Badges ── */
+  .badge {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.6rem;
+  }
+/* ── Summary Cards ── */
+  .summaries-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem;
+  }
+.summary-card {
+    width: 100%;
+  }
+.summary-card--wide {
+    grid-column: span 1;
+  }
+.summary-card-content--flex {
+    flex-direction: column;
+    height: auto;
+  }
+.summary-card-image--medium {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+  }
+.summary-card-content-left {
+    width: 100%;
+    padding: 1rem;
+  }
+.summaries-top,
+  .summaries-buttom {
+    flex-direction: column;
+    gap: 1rem;
+  }
+/* ── Ministry Members ── */
+  .ministry-members {
+    margin-bottom: -2rem;
+  }
+  .ministry-members-list {
+    flex-direction: column;
+    gap: 1rem;
+  }
+.ministry-head {
+    width: 100%;
+  }
+.ministry-head-photo {
+    height: 280px;
+  }
+  .ministry-members-grid {
+    width: 100%;
+    justify-content: center;
+    padding-left: 0;
+  }
+.ministry-member-card {
+    width: calc(50% - 0.5rem);
+  }
+/* ── Ministry Body/Photo ── */
+  .ministry-body {
+    flex-direction: column;
+    gap: 1rem;
+  }
+.ministry-card {
+    width: 100%;
+  }
+.ministry-section {
+    padding: 1.5rem 1rem;
+    margin-bottom: 1rem;
+  }
+/* ── Footer ── */
+  .footer {
+    height: auto;
+    min-height: auto;
+  }
+.footer-container {
+    padding: 2rem 1rem 1rem;
+  }
+.footer-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+.footer-logo {
+    width: 160px;
+  }
+.footer-bottom {
+    font-size: 0.8rem;
+    padding-top: 1.5rem;
+  }
+/* ── Section-specific: Who We Are ── */
+  .identity-box {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    margin: 1rem;
+    margin-top: -4rem;
+    margin-bottom: -2rem;
+    gap: 1rem;
+  }
+.form-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+/* ── Gallery ── */
+  .gallery {
+    gap: 0.75rem;
+    justify-content: center;
+  }
+  .gallery-image {
+    width: calc(50% - 0.4rem);
+    height: 180px;
+    border-radius: 12px;
+  }
+  .ministry-overview {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .section-title-span {
+    display: flex;
+    flex-direction: column;
+  }
+  .section-title-span h2 {
+    font-size: 1.5rem;
+    text-align: start;
+  }
+  .year-schedule {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .dropdown-toggle-icon.active {
+    filter: var(--filterwhite);
+  }
+  .page-hero {
+    margin: 0.75rem;
+    min-height: 220px;
+  }
+  .page-hero h1 {
+    font-size: 1.5rem;
+  }
+  .page-tagline {
+    font-size: 0.9rem;
+  }
+  .section {
+    padding: 1rem 0.75rem;
+    margin-top: 1rem;
+  }
+  .ministry-member-card {
+    width: calc(50% - 0.5rem);
+    height: auto;
+  }
+  .members-photo {
+    height: 120px;
+  }
+  .gallery-image {
+    width: 100%;
+    height: 200px;
+  }
+  .footer-container {
+    padding: 1rem;
+  }
+  .connect {
+    padding: 1.5rem 1rem;
+  }
+  .btn {
+    font-size: 0.9rem;
+    padding: 0.75rem 1.25rem;
+  }
+  .ministry-overview {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .section-title-span {
+    display: flex;
+    flex-direction: column;
+  }
+  .section-title-span h2 {
+    font-size: 1.5rem;
+    text-align: start;
+  }
+  .year-schedule {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .section-title {
+    font-size: 1.4rem;
+  }
+  .identity-box {
+    margin-top: -4rem;
+  }
+  .ministry-members-grid {
+    justify-content: start;
+    padding-left: 0;
+  }
+}

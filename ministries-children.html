@@ -1,0 +1,503 @@
+<!-- ============================================ -->
+<!-- MINISTRIES-CHILDREN.HTML -->
+<!-- ============================================ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Children's Ministry | Church of Christ, Lawanson</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" href="ministries-children.css">
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="logo-link">
+          <img
+            src="assets/svgs/complete-logo-1.svg"
+            alt="Church of Christ, Lawanson Logo"
+            class="nav-logo"
+          />
+        </a>
+        <button
+          class="nav-toggle" id="navToggle"
+          aria-label="Toggle navigation"
+          onclick="toggleNav()"
+        >
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item dropdown" onclick="toggleDropdown(this)">
+            <div class="nav-link dropdown-toggle">About Us<img src="assets/svgs/icons/chevron-down.svg" class="dropdown-toggle-icon"></div>
+            <div class="dropdown-menu">
+              <a href="about-who-we-are.html" class="dropdown-item"
+                >Who We Are</a
+              >
+              <a href="about-history.html" class="dropdown-item">Our History</a>
+              <a href="about-beliefs.html" class="dropdown-item">Our Beliefs</a>
+              <a href="about-minister.html" class="dropdown-item"
+                >Meet Our Minister</a
+              >
+              <a href="about-leaders.html" class="dropdown-item"
+                >Church Leaders</a
+              >
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="worship.html" class="nav-link">Worship & Services</a>
+          </li>
+          <li class="nav-item dropdown" onclick="toggleDropdown(this)">
+            <div class="nav-link dropdown-toggle active">Ministries<img src="assets/svgs/icons/chevron-down.svg" class="dropdown-toggle-icon active"></div>
+            <div class="dropdown-menu">
+              <a href="ministries-all.html" class="dropdown-item">All Ministries</a>
+              <a href="ministries-secretariat.html" class="dropdown-item"
+                >Secretariat</a
+              >
+              <a href="ministries-finance.html" class="dropdown-item"
+                >Finance</a
+              >
+              <a href="ministries-infrastructure.html" class="dropdown-item"
+                >Infrastructure</a
+              >
+              <a href="ministries-evangelism.html" class="dropdown-item"
+                >Evangelism</a
+              >
+              <a href="ministries-health.html" class="dropdown-item">Health</a>
+              <a href="ministries-publicity.html" class="dropdown-item active"
+                >Publicity</a
+              >
+              <a href="ministries-sisters.html" class="dropdown-item"
+                >Sisters</a
+              >
+              <a href="ministries-youth.html" class="dropdown-item">Youth</a>
+              <a href="ministries-children.html" class="dropdown-item"
+                >Children</a
+              >
+              <a href="ministries-singles.html" class="dropdown-item">Singles</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="announcements.html" class="nav-link">Announcements</a>
+          </li>
+          <li class="nav-item">
+            <a href="resources.html" class="nav-link">Resources</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+          <div class="nav-btn">
+            <a
+              href="give.html"
+              class="btn btn-light"
+              onclick="event.stopPropagation()"
+              >Give Now</a
+            >
+          </div>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <img src="assets/Images/children.png" class="page-hero-image">
+      <div class="page-hero-content">
+        <h1>Children Ministry</h1>
+        <p class="page-tagline">
+          A joyful space where children discover God's love through
+          storytelling, creative play, and meaningful friendships.
+        </p>
+      </div>
+    </section>
+
+    <!-- Identity Box -->
+    <div class="identity-box">
+      <div class="identity-item-1">
+        <p class="identity-label">Community</p>
+        <h2 class="identity-number">200+</h2>
+        <h4>Active Sisters</h4>
+      </div>
+      <div class="identity-item-2">
+        <p class="identity-label">Weekly Fellowship</p>
+        <h2 class="identity-number-accent">Saturday</h2>
+        <h4 class="identity-time">6:00 PM</h4>
+      </div>
+      <div class="identity-item-3">
+        <p class="identity-label">2026</p>
+        <h2 class="identity-number">Children Bible Quiz</h2>
+        <h4>Coming Soon</h4>
+      </div>
+    </div>
+
+    <!-- Classes -->
+    <section class="section" id="classes">
+      <div class="container">
+        <div class="classes">
+          <div class="ministry-overview">
+            <div class="section-title-span">
+              <h2>Monthly Class Teachers</h2>
+              <p class="section-subtitle-span">
+                Age-appropriate learning journeys designed to build a solid
+                foundation of biblical truth and character.
+              </p>
+            </div>
+
+            <div class="year-schedule">
+              <h3>March - April 2026</h3>
+              <div class="schedule">
+                9:00 PM - 9:50 AM
+              </div>
+            </div>
+          </div>
+
+          <div class="summaries-grid">
+            <!-- Class 1 -->
+            <div class="summary-card summary-card-class1">
+              <div class="summary-card-content">
+                <h3>Class 1</h3>
+                <span class="summary-age-label class-1">Ages 1 - 5</span>
+                <p class="summary-description">
+                  Focusing on basic biblical concepts through music, sensory
+                  activities, and simple stories of God's creation.
+                </p>
+
+                <div class="summary-detail-list">
+                  <div class="activity-track">
+                    <p><strong>Teachers:</strong></p>
+                    <ul>
+                      <li>Sis. Ime Williams</li>
+                      <li>Sis. Ngozi Amanze</li>
+                      <li>Sis. Hope Essien</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Class 2 -->
+            <div class="summary-card summary-card-class2">
+              <div class="summary-card-content">
+                <h3>Class 2</h3>
+                <span class="summary-age-label class-2">Ages 6 – 9</span>
+                <p class="summary-description">
+                  Building core knowledge of scripture through dramatized stories,
+                  memory verses, and community-focused crafts.
+                </p>
+
+                <div class="summary-detail-list">
+                  <div class="activity-track">
+                    <p><strong>Teachers:</strong></p>
+                    <ul>
+                      <li>Sis. Chinonso Udofia</li>
+                      <li>Sis. Abasiama Archibong</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Class 3 -->
+            <div class="summary-card summary-card-class3">
+              <div class="summary-card-content">
+                <h3>Class 3</h3>
+                <span class="summary-age-label class-3">Ages 10 - 12</span>
+                <p class="summary-description">
+                  Deepening faith with critical thinking, group discussions on
+                  biblical application, and leadership development skills.
+                </p>
+
+                <div class="summary-detail-list">
+                  <div class="activity-track">
+                    <p><strong>Teachers:</strong></p>
+                    <ul>
+                      <li>Bro. Ambrose Bariledum</li>
+                      <li>Bro. Godswill Ekanem</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Class 4 -->
+            <div class="summary-card summary-card-class4">
+              <div class="summary-card-content">
+                <h3>Class 4</h3>
+                <span class="summary-age-label class-4">Ages 13 - 15</span>
+                <p class="summary-description">
+                  Deepening faith with critical thinking, group discussions on
+                  biblical application, and leadership development skills.
+                </p>
+
+                <div class="summary-detail-list">
+                  <div class="activity-track">
+                    <p><strong>Teachers:</strong></p>
+                    <ul>
+                      <li>Bro. Jeremiah Esio</li>
+                      <li>Bro. Ben Nwafor</li>
+                      <li>Bro. Nelson Simeon</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Class 5 -->
+            <div class="summary-card summary-card-class5">
+              <div class="summary-card-content">
+                <h3>Class 5</h3>
+                <span class="summary-age-label class-5">Ages 16+</span>
+                <p class="summary-description">
+                  Deepening faith with critical thinking, group discussions on
+                  biblical application, and leadership development skills.
+                </p>
+
+                <div class="summary-detail-list">
+                  <div class="activity-track">
+                    <p><strong>Teachers:</strong></p>
+                    <ul>
+                      <li>Bro. Ugo Nwankwere</li>
+                      <li>Bro. Omodiagbe Onuwagbagbe</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Class 6 -->
+            <div class="summary-card summary-card-class6">
+              <div class="summary-card-content">
+                <h3>Class 6</h3>
+                <span class="summary-age-label class-6">newly Baptized</span>
+                <p class="summary-description">
+                  Deepening faith with critical thinking, group discussions on
+                  biblical application, and leadership development skills.
+                </p>
+
+                <div class="summary-detail-list">
+                  <div class="activity-track">
+                    <p><strong>Teachers:</strong></p>
+                    <ul>
+                      <li>Bro. Idongesit Essien</li>
+                      <li>Bro. Chiemela Eze</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="section">
+      <div class="container">
+        <div class="gallery-section">
+          <div class="gallery-header">
+            <h2 class="section-title">Children's Ministry Highlights</h2>
+          </div>
+
+          <div class="gallery">
+            <div class="gallery-card">
+              <img
+                src="assets/Images/a-capella.png"
+                alt="image of evangelism activity"
+                class="gallery-image"
+              />
+            </div>
+            <div class="gallery-card">
+              <img
+                src="assets/Images/a-capella.png"
+                alt="image of evangelism activity"
+                class="gallery-image"
+              />
+            </div>
+            <div class="gallery-card">
+              <img
+                src="assets/Images/a-capella.png"
+                alt="image of evangelism activity"
+                class="gallery-image"
+              />
+            </div>
+          </div>
+          <div class="connect-btn">
+            <a href="https://goldtechsolutions.pixieset.com/coclawnsonyouthweek2025/" class="btn btn-light"
+              >See More</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="ministry-members">
+          <div class="ministry-members-header">
+            <h2 class="section-title">Meet Our Members</h2>
+            <p class="section-subtitle">
+              Loving caregivers and teachers planting seeds of faith in young
+              hearts with joy and dedication.
+            </p>
+          </div>
+
+          <div class="ministry-members-list">
+            <!-- Head of Ministry -->
+            <div class="ministry-member-top">
+              <div class="ministry-head">
+                <div class="ministry-leader-photo">
+                  <img
+                    src="assets/Images/leader1.png"
+                    alt="Bro. Benjamin Nwafor"
+                    class="ministry-head-photo"
+                  />
+                </div>
+                <div class="ministry-head-info">
+                  <h3>Bro. Benjamin Nwafor</h3>
+                  <p>Children Coordinator</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="ministry-members-grid">
+              <!-- Leader 1 -->
+              <div class="ministry-member-card">
+                <div class="ministry-members-photo">
+                  <img
+                    src="assets/Images/leader2.png"
+                    alt="Sis. Sunday School Coordinator"
+                    class="members-photo"
+                  />
+                </div>
+                <div class="leader-info">
+                  <h3>Bro. Nelson Simeon</h3>
+                  <p>Coordinator</p>
+                </div>
+              </div>
+
+              <!-- Leader 2 -->
+              <div class="ministry-member-card">
+                <div class="ministry-members-photo">
+                  <img
+                    src="assets/Images/leader3.png"
+                    alt="Bro. Kids Club Leader"
+                    class="members-photo"
+                  />
+                </div>
+                <div class="leader-info">
+                  <h3>Bro. Coordinator 3</h3>
+                  <p>Coordinator</p>
+                </div>
+              </div>
+
+              <!-- Leader 3 -->
+              <div class="ministry-member-card">
+                <div class="ministry-members-photo">
+                  <img
+                    src="assets/Images/leader4.png"
+                    alt="Sis. Nursery Coordinator"
+                    class="members-photo"
+                  />
+                </div>
+                <div class="leader-info">
+                  <h3>Bro. Coordinator 4</h3>
+                  <p>Coordinator</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Connect CTA -->
+    <section class="section">
+      <div class="container">
+        <div class="connect">
+          <div class="connect-info">
+            <h2>Every Child Matters</h2>
+            <p>
+              We believe in nurturing the faith of our youngest members in a safe,
+              fun, and spiritually enriching environment. Bring your children to
+              experience the love of God tailored just for them.
+            </p>
+            <div class="connect-btn">
+              <a href="#enroll" class="btn btn-accent">Register Your Child</a>
+              <a href="contact.html" class="btn btn-light"
+                >Contact Children's Ministry</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <img src="assets/Images/footer.png" class="footer-image">
+      <div class="footer-container">
+        <div class="container">
+          <div class="footer-grid">
+            <div class="footer-brand">
+              <img
+                src="assets/svgs/complete-logo-h-2.svg"
+                alt="Church Logo"
+                class="footer-logo"
+              />
+              <p class="footer-motto">
+                The Ground and Pillar of Truth – 1 Timothy 3:15
+              </p>
+            </div>
+            <div class="footer-contact">
+              <h4>Contact Us</h4>
+              <p>9/11 Odubiyi Street, Ikate, Surulere<br />Lagos, Nigeria</p>
+              <p>Email: coclawanson@yahoo.com</p>
+              <p>Phone: 08069553181 | 08121133361 | 07049172845</p>
+            </div>
+            <div class="footer-links">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="about-who-we-are.html">About Us</a></li>
+                <li><a href="worship.html">Worship Times</a></li>
+                <li><a href="announcements.html">Announcements</a></li>
+                <li><a href="give.html">Give Online</a></li>
+              </ul>
+            </div>
+            <div class="footer-stream">
+              <h4>Watch Live</h4>
+              <p>Join us every Sunday for live streaming</p>
+              <a
+                href="https://www.youtube.com/@coclawanson"
+                target="_blank"
+                class="btn btn-accent"
+                >YouTube Channel</a
+              >
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>&copy; 2026 Church of Christ, Lawanson. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function toggleNav() {
+        document.getElementById("navMenu").classList.toggle("active");
+      }
+
+      function toggleDropdown(element) {
+        if (window.innerWidth <= 768) {
+          element.classList.toggle("active");
+        }
+      }
+      const navToggle = document.getElementById ('navToggle')
+      navToggle.addEventListener('click', () =>{
+        navToggle.classList.toggle ('active');
+      })
+    </script>
+  </body>
+</html>
+

@@ -1,0 +1,379 @@
+<!-- ============================================ -->
+<!-- MINISTRIES.HTML - MINISTRIES PAGE -->
+<!-- ============================================ -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Our Ministries | Church of Christ, Lawanson</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="stylesheet" href="ministries-all.css">
+    </head>
+    <body>
+        <!-- Navigation -->
+        <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo-link">
+            <img src="assets/svgs/complete-logo-1.svg" alt="Church of Christ, Lawanson Logo" class="nav-logo"/>
+            </a>
+            <button
+          class="nav-toggle" id="navToggle"
+          aria-label="Toggle navigation"
+          onclick="toggleNav()"
+        >
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </button>
+            <ul class="nav-menu" id="navMenu">
+            <li class="nav-item dropdown" onclick="toggleDropdown(this)">
+                <div class="nav-link dropdown-toggle">About Us<img src="assets/svgs/icons/chevron-down.svg" class="dropdown-toggle-icon"></div>
+                <div class="dropdown-menu">
+                <a href="about-who-we-are.html" class="dropdown-item">Who We Are</a>
+                <a href="about-history.html" class="dropdown-item">Our History</a>
+                <a href="about-beliefs.html" class="dropdown-item">Our Beliefs</a>
+                <a href="about-minister.html" class="dropdown-item">Meet Our Minister</a>
+                <a href="about-leaders.html" class="dropdown-item">Church Leaders</a>
+                </div>
+            </li>
+            <li class="nav-item"><a href="worship.html" class="nav-link">Worship & Services</a></li>
+            <li class="nav-item dropdown" onclick="toggleDropdown(this)">
+                <div class="nav-link dropdown-toggle active">Ministries<img src="assets/svgs/icons/chevron-down.svg" class="dropdown-toggle-icon active"></div>
+                <div class="dropdown-menu">
+                <a href="ministries-all.html" class="dropdown-item active">All Ministries</a>
+                <a href="ministries-secretariat.html" class="dropdown-item">Secretariat</a>
+                <a href="ministries-finance.html" class="dropdown-item">Finance</a>
+                <a href="ministries-infrastructure.html" class="dropdown-item">Infrastructure</a>
+                <a href="ministries-evangelism.html" class="dropdown-item">Evangelism</a>
+                <a href="ministries-health.html" class="dropdown-item">Health</a>
+                <a href="ministries-publicity.html" class="dropdown-item">Publicity</a>
+                <a href="ministries-sisters.html" class="dropdown-item">Sisters</a>
+                <a href="ministries-youth.html" class="dropdown-item">Youth</a>
+                <a href="ministries-children.html" class="dropdown-item">Children</a>
+                <a href="ministries-singles.html" class="dropdown-item">Singles</a>
+                </div>
+            </li>
+            <li class="nav-item"><a href="announcements.html" class="nav-link">Announcements</a></li>
+            <li class="nav-item"><a href="resources.html" class="nav-link">Resources</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            <div class="nav-btn"><a href="give.html" class="btn btn-light" onclick="event.stopPropagation()">Give Now</a></div>
+            </ul>
+        </div>
+        </nav>
+
+        <!-- Page Hero -->
+        <section class="page-hero">
+        <img src="assets/Images/ministries.png" class="page-hero-image">
+        <div class="page-hero-content" about-us>
+            <h1>Our Ministries</h1>
+            <p class="page-tagline">Serving the Lord and One Another</p>
+        </div>
+        </section>
+
+        <!-- Main Content -->
+        <section class="section">
+            <div class="container">
+                <div class="all-ministry">
+                    <!-- Administrative Ministries -->
+                    <div class="ministry-section" id="children">
+                        <div class="ministry-header">
+                            <h2>Administrative Ministries</h2>
+                            <p>Ensuring orderliness while administring record keeping of church.</p>
+                        </div>
+
+                        <div class="ministry-body">
+                            <div class="summary-card summary-card-class1">
+                                <div class="ministry-photo-section"><img src="assets/Images/secretariat.png" class="ministry-photo"></div>
+                                <div class="summary-card-content ministry-info">
+                                    <div class="brief-ministry-info">
+                                        <h2>Secetariat Ministry</h2>
+                                        <p>Provides orderly and efficient support, record keeping to the daily operations of the congregation.</p>
+                                    </div>
+
+                                    <div class="connect-btn">
+                                        <a href="ministries-secretariat.html" class="btn btn-light" onclick="event.stopPropagation()">Learn More<img src="assets/svgs/icons/chevron-right.svg" class="ministry-icons"></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="summary-card summary-card-class2">
+                                <div class="ministry-photo-section"><img src="assets/Images/finance.png" class="ministry-photo"></div>
+                                <div class="summary-card-content ministry-info">
+                                    <div class="brief-ministry-info">
+                                        <h2>Finance Ministry</h2>
+                                        <p>Careful transparent management of the financial resources God has given to the congregation.</p>
+                                    </div>
+
+                                    <div class="connect-btn">
+                                        <a href="ministries-finance.html" class="btn btn-light" onclick="event.stopPropagation()">Learn More<img src="assets/svgs/icons/chevron-right.svg" class="ministry-icons"></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="summary-card summary-card-class3">
+                                <div class="ministry-photo-section"><img src="assets/Images/publicity.png" class="ministry-photo"></div>
+                                <div class="summary-card-content ministry-info">
+                                    <div class="brief-ministry-info">
+                                        <h2>Publicity Ministry</h2>
+                                        <p>Preparation and projection of audio visual contents to aid the activities of the congregation.</p>
+                                    </div>
+
+                                    <div class="connect-btn">
+                                        <a href="ministries-publicity.html" class="btn btn-light" onclick="event.stopPropagation()">Learn More<img src="assets/svgs/icons/chevron-right.svg" class="ministry-icons"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fellowship & Community -->
+                    <div class="ministry-section" id="children">
+                        <div class="ministry-header">
+                            <h2>Fellowship & Community</h2>
+                            <p>Serving our members and our neighbours with love.</p>
+                        </div>
+
+                        <div class="ministry-body">
+                            <div class="summary-card summary-card-class4">
+                                <div class="ministry-photo-section"><img src="assets/Images/evangelism.png" class="ministry-photo"></div>
+                                <div class="summary-card-content ministry-info">
+                                    <div class="brief-ministry-info">
+                                        <h2>Evangelism Ministry</h2>
+                                        <p>Reaching out to our local community through preaching of the gospel via door-to-door, open air and Annual lectures.</p>
+                                    </div>
+                                
+                                    <div class="upcoming-events">
+                                        <h5>UPCOMING EVENT</h5>
+                                        <div class="event-info">
+                                            <h4>Annual Bible Lectures</h4>
+                                            <p>25th AUG - 30th AUG, 2026</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="connect-btn">
+                                        <a href="ministries-evangelism.html" class="btn btn-light" onclick="event.stopPropagation()">Learn More<img src="assets/svgs/icons/chevron-right.svg" class="ministry-icons"></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="summary-card summary-card-class5">
+                                <div class="ministry-photo-section"><img src="assets/Images/health.png" class="ministry-photo"></div>
+                                <div class="summary-card-content ministry-info">
+                                    <div class="brief-ministry-info">
+                                        <h2>Health Ministry</h2>
+                                        <p>Promoting wellness in mind, body, and spirit. We offer health screenings, seminars, and counseling support.</p>
+                                    </div>
+                                
+                                    <div class="upcoming-events">
+                                        <h5>UPCOMING EVENT</h5>
+                                        <div class="event-info">
+                                            <h4>Immunization 0 - 5years</h4>
+                                            <p>3rd JUN - 6th JUN, 2026</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="connect-btn">
+                                        <a href="ministries-health.html" class="btn btn-light" onclick="event.stopPropagation()">Learn More<img src="assets/svgs/icons/chevron-right.svg" class="ministry-icons"></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="summary-card summary-card-class6">
+                                <div class="ministry-photo-section"><img src="assets/Images/sisters.png" class="ministry-photo"></div>
+                                <div class="summary-card-content ministry-info">
+                                    <div class="brief-ministry-info">
+                                        <h2>Sister's Ministry</h2>
+                                        <p>A supportive space for women to connect, pray and grow through bible study and shared life experiences.</p>
+                                    </div>
+
+                                    <div class="upcoming-events">
+                                        <h5>UPCOMING EVENT</h5>
+                                        <div class="event-info">
+                                            <h4>Sister's Lectures</h4>
+                                            <p>2nd MAY, 2026</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="connect-btn">
+                                        <a href="ministries-sisters.html" class="btn btn-light" onclick="event.stopPropagation()">Learn More<img src="assets/svgs/icons/chevron-right.svg" class="ministry-icons"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Next Generation -->
+                    <div class="ministry-section" id="children">
+                        <div class="ministry-header">
+                            <h2>Nurturing the Next Generation</h2>
+                            <p>Equipping our kids and teens with a foundation of faith.</p>
+                        </div>
+                        <div class="ministry-body">
+                            <div class="summary-card summary-card-class1">
+                                <div class="ministry-photo-section"><img src="assets/Images/children.png" class="ministry-photo"></div>
+                                <div class="summary-card-content ministry-info">
+                                    <div class="brief-ministry-info">
+                                        <h4>AGES 3-12</h4>
+                                        <h2>Children's Ministry</h2>
+                                        <p>Building a foundation of faith through stories, play, and creative learning while ensure a safe and fun environment every Sunday.</p>
+                                    </div>
+                                    <div class="connect-btn">
+                                        <a href="ministries-children.html" class="btn btn-light" onclick="event.stopPropagation()">Learn More<img src="assets/svgs/icons/chevron-right.svg" class="ministry-icons"></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="summary-card summary-card-class2">
+                                <div class="ministry-photo-section"><img src="assets/Images/youth.png" class="ministry-photo"></div>
+                                <div class="summary-card-content ministry-info">
+                                    <div class="brief-ministry-info">
+                                        <h4>TEENS & YOUNG ADULTS</h4>
+                                        <h2>Youth Ministry</h2>
+                                        <p>Empowering young people to lead and grow in their relationship with Christ through relevant teaching, activities and outings.</p>
+                                    </div>
+                                    <div class="connect-btn">
+                                        <a href="ministries-youth.html" class="btn btn-light" onclick="event.stopPropagation()">Learn More<img src="assets/svgs/icons/chevron-right.svg" class="ministry-icons"></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="summary-card summary-card-class5">
+                                <div class="ministry-photo-section"><img src="assets/Images/singles.png" class="ministry-photo"></div>
+                                <div class="summary-card-content ministry-info">
+                                    <div class="brief-ministry-info">
+                                        <h4>SINGLES</h4>
+                                        <h2>Singles Ministry</h2>
+                                        <p>Supporting and connecting singles to fellowship with home-building events while understanding the Lord's will for their lives.</p>
+                                    </div>
+
+                                    <div class="connect-btn">
+                                        <a href="ministries-singles.html" class="btn btn-light" onclick="event.stopPropagation()">Learn More<img src="assets/svgs/icons/chevron-right.svg" class="ministry-icons"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Future Story -->
+        <Section class="section">
+            <div class="container">
+                <div class="connect">
+                    <div class="connect-info">
+                        <h2>Don't see what you are looking for?</h2>
+                        <p>We have many more ways to get involved in church activities. Reach out to our secretary to find your perfect fit.</p>
+                    </div>
+                    <div class="connect-btn">
+                        <a href="about-minister.html" class="btn btn-light" onclick="event.stopPropagation()">Get Directions</a>
+                        <a href="about-who-we-are.html" class="btn btn-accent" onclick="event.stopPropagation()">Contact Preacher</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+        <img src="assets/Images/footer.png" class="footer-image">
+        <div class="footer-container">
+            <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                <img
+                    src="assets/svgs/complete-logo-h-2.svg"
+                    alt="Church Logo"
+                    class="footer-logo"
+                />
+                <p class="footer-motto">
+                    The Ground and Pillar of Truth – 1 Timothy 3:15
+                </p>
+                </div>
+                <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p>9/11 Odubiyi Street, Ikate, Surulere<br />Lagos, Nigeria</p>
+                <p>Email: coclawanson@yahoo.com</p>
+                <p>Phone: 08069553181 | 08121133361 | 07049172845</p>
+                </div>
+                <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about-who-we-are.html">About Us</a></li>
+                    <li><a href="worship.html">Worship Times</a></li>
+                    <li><a href="announcements.html">Announcements</a></li>
+                    <li><a href="give.html">Give Online</a></li>
+                </ul>
+                </div>
+                <div class="footer-stream">
+                <h4>Watch Live</h4>
+                <p>Join us every Sunday for live streaming</p>
+                <a
+                    href="https://www.youtube.com/@coclawanson"
+                    target="_blank"
+                    class="btn btn-accent"
+                    >YouTube Channel</a
+                >
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Church of Christ, Lawanson. All rights reserved.</p>
+            </div>
+            </div>
+        </div>
+        </footer>
+
+        <script>
+            function toggleNav() {
+                document.getElementById("navMenu").classList.toggle("active");
+            }
+
+            function toggleDropdown(element) {
+                if (window.innerWidth <= 768) {
+                element.classList.toggle("active");
+                }
+            }
+
+            function setActiveNav() {
+                const path = window.location.pathname;
+                const navLinks = document.querySelectorAll('.nav-link');
+                navLinks.forEach(link => {
+                if (link.href && link.href.endsWith(path)) {
+                    link.classList.add('active');
+                }
+                });
+                // Special handling for dropdown parents
+                if (path.includes('/about-')) {
+                const aboutLink = document.querySelector('.nav-link.dropdown-toggle');
+                if (aboutLink && aboutLink.textContent.includes('About Us')) {
+                    aboutLink.classList.add('active');
+                }
+                }
+                if (path.includes('/ministries-')) {
+                const ministriesLink = document.querySelectorAll('.nav-link.dropdown-toggle')[1];
+                if (ministriesLink && ministriesLink.textContent.includes('Ministries')) {
+                    ministriesLink.classList.add('active');
+                }
+                }
+            }
+
+                // Smooth scroll for ministry nav links
+                document.querySelectorAll('.ministry-nav-link').forEach(link => {
+                    link.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        const target = document.querySelector(this.getAttribute('href'));
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    });
+                });
+
+            setActiveNav();
+            
+            const navToggle = document.getElementById ('navToggle')
+            navToggle.addEventListener('click', () =>{
+                navToggle.classList.toggle ('active');
+            })
+        </script>
+    </body>
+</html>

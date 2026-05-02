@@ -1,0 +1,411 @@
+<!-- ============================================ -->
+<!-- MINISTRIES-INFRASTRUCTURE.HTML -->
+<!-- ============================================ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Infrastructure Ministry | Church of Christ, Lawanson</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" href="ministries-infrastructure.css">
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="logo-link">
+          <img
+            src="assets/svgs/complete-logo-1.svg"
+            alt="Church of Christ, Lawanson Logo"
+            class="nav-logo"
+          />
+        </a>
+        <button
+          class="nav-toggle" id="navToggle"
+          aria-label="Toggle navigation"
+          onclick="toggleNav()"
+        >
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item dropdown" onclick="toggleDropdown(this)">
+            <div class="nav-link dropdown-toggle">About Us<img src="assets/svgs/icons/chevron-down.svg" class="dropdown-toggle-icon"></div>
+            <div class="dropdown-menu">
+              <a href="about-who-we-are.html" class="dropdown-item"
+                >Who We Are</a
+              >
+              <a href="about-history.html" class="dropdown-item">Our History</a>
+              <a href="about-beliefs.html" class="dropdown-item">Our Beliefs</a>
+              <a href="about-minister.html" class="dropdown-item"
+                >Meet Our Minister</a
+              >
+              <a href="about-leaders.html" class="dropdown-item"
+                >Church Leaders</a
+              >
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="worship.html" class="nav-link">Worship & Services</a>
+          </li>
+          <li class="nav-item dropdown" onclick="toggleDropdown(this)">
+            <div class="nav-link dropdown-toggle active">Ministries<img src="assets/svgs/icons/chevron-down.svg" class="dropdown-toggle-icon active"></div>
+            <div class="dropdown-menu">
+              <a href="ministries-all.html" class="dropdown-item">All Ministries</a>
+              <a href="ministries-secretariat.html" class="dropdown-item"
+                >Secretariat</a
+              >
+              <a href="ministries-finance.html" class="dropdown-item"
+                >Finance</a
+              >
+              <a
+                href="ministries-infrastructure.html"
+                class="dropdown-item active"
+                >Infrastructure</a
+              >
+              <a href="ministries-evangelism.html" class="dropdown-item"
+                >Evangelism</a
+              >
+              <a href="ministries-health.html" class="dropdown-item">Health</a>
+              <a href="ministries-publicity.html" class="dropdown-item"
+                >Publicity</a
+              >
+              <a href="ministries-sisters.html" class="dropdown-item"
+                >Sisters</a
+              >
+              <a href="ministries-youth.html" class="dropdown-item">Youth</a>
+              <a href="ministries-children.html" class="dropdown-item"
+                >Children</a
+              >
+              <a href="ministries-singles.html" class="dropdown-item">Singles</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="announcements.html" class="nav-link">Announcements</a>
+          </li>
+          <li class="nav-item">
+            <a href="resources.html" class="nav-link">Resources</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+          <div class="nav-btn">
+            <a
+              href="give.html"
+              class="btn btn-light"
+              onclick="event.stopPropagation()"
+              >Give Now</a
+            >
+          </div>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <img src="assets/Images/infrastructure.png" class="page-hero-image">
+      <div class="page-hero-content">
+        <h1>Infrastructure Ministry</h1>
+        <p class="page-tagline">
+          Building and sustaining the physical environments where our community
+          thrives, worships, and grows together.
+        </p>
+      </div>
+    </section>
+
+    <!-- Capital Projects Section -->
+    <section class="section">
+      <div class="container">
+        <div class="financial-reports">
+          <div class="ministry-overview">
+            <div class="section-title-span">
+              <h2>Capital Projects & Restoration</h2>
+            </div>
+            <div class="description-schedule">
+              <p class="section-subtitle-span">
+                Witness the transformation of our sacred spaces as we invest in a
+              sustainable future for generations to come.
+              </p>
+            </div>
+          </div>
+
+          <div class="summaries-container">
+            <div class="summaries-top">
+              <!-- Church Bus Purchase -->
+              <div class="summary-card">
+                <img
+                  src="assets/Images/bus.png"
+                  alt="Church Bus Purchase"
+                  class="summary-card-image project-image"
+                />
+                <div class="summary-card-content">
+                  <h3>Church Bus Purchase</h3>
+                  <p>
+                    Acquiring a new church bus to enhance our transportation capabilities
+                    for evangelism and community outreach.
+                  </p>
+                  <div class="progress-container">
+                    <div class="progress-bar">
+                      <div class="bus-progress-fill"></div>
+                    </div>
+                    <p class="progress-text">10% Complete</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Church Hall Restoration -->
+              <div class="summary-card church-hall-card">
+                <img
+                  src="assets/Images/local-autonomy.png"
+                  alt="Church Hall Restoration"
+                  class="summary-card-image project-image"
+                />
+                <div class="summary-card-content">
+                  <h3>Church Building Restoration</h3>
+                  <p>
+                    Restoring the heart of our church building, improving acoustics,
+                    structural integrity, and historic aesthetics. Phase 1 focuses
+                    on roof repairs and interior lighting upgrades.
+                  </p>
+                  <div class="progress-container">
+                    <div class="progress-bar">
+                      <div class="hall-progress-fill"></div>
+                    </div>
+                    <p class="progress-text">20% Complete</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="summaries-buttom">
+              <!-- Solar Grid -->
+              <div class="summary-card">
+                <img
+                  src="assets/Images/solar.png"
+                  alt="Solar Grid Installation"
+                  class="summary-card-image project-image"
+                />
+                <div class="summary-card-content">
+                  <h3>Solar Grid</h3>
+                  <p>
+                    Transitioning to 100% renewable energy through a localized
+                    church microgrid. Reducing costs and environmental impact.
+                  </p>
+                  <div class="progress-container">
+                    <div class="progress-bar">
+                      <div class="solar-progress-fill"></div>
+                    </div>
+                    <p class="progress-text">25% Complete</p>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Priesthood Funiture Upgade -->
+              <div class="summary-card">
+                <img
+                  src="assets/Images/furniture.png"
+                  alt="Sanctuary Restoration"
+                  class="summary-card-image project-image"
+                />
+                <div class="summary-card-content">
+                  <h3>Priesthood Funiture Upgade</h3>
+                  <p>
+                    Repairs and upgrade of the Priesthood nursery & primary school furnitures
+                    has begun. Set to be completed in 3 weeks.
+                  </p>
+                  <div class="progress-container">
+                    <div class="progress-bar">
+                      <div class="priesthood-progress-fill"></div>
+                    </div>
+                    <p class="progress-text">60% Complete</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="ministry-members">
+          <div class="ministry-members-header">
+            <h2 class="section-title">Meet Our Members</h2>
+            <p class="section-subtitle">
+              Skilled craftsmen and planners dedicated to maintaining God's house with excellence.</p>
+          </div>
+
+          <div class="ministry-members-list">
+            <!-- Head of Ministry -->
+            <div class="ministry-member-top">
+              <div class="ministry-head">
+                <div class="ministry-leader-photo">
+                  <img src="assets/Images/leader1.png" alt="Bro. Infrastructure Head" class="ministry-head-photo"/>
+                </div>
+                <div class="ministry-head-info">
+                  <h3>Bro. Wilson Nta</h3>
+                  <p>Infrastructure Director</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="ministry-members-grid">
+              <!-- Leader 1 -->
+              <div class="ministry-member-card">
+                <div class="ministry-members-photo">
+                  <img src="assets/Images/leader2.png" alt="Bro. Project Manager" class="members-photo"/>
+                </div>
+                <div class="leader-info">
+                  <h3>Bro. Member 1</h3>
+                  <p>Project Manager</p>
+                </div>
+              </div>
+
+              <!-- Leader 2 -->
+              <div class="ministry-member-card">
+                <div class="ministry-members-photo">
+                  <img src="assets/Images/leader3.png" alt="Sis. Facilities Coordinator" class="members-photo"/>
+                </div>
+                <div class="leader-info">
+                  <h3>Bro. Member 2</h3>
+                  <p>Facilities Coordinator</p>
+                </div>
+              </div>
+
+              <!-- Leader 3 -->
+              <div class="ministry-member-card">
+                <div class="ministry-members-photo">
+                  <img src="assets/Images/leader4.png" alt="Bro. Electrician" class="members-photo"/>
+                </div>
+                <div class="leader-info">
+                  <h3>Bro. Member 3</h3>
+                  <p>Electrical Specialist</p>
+                </div>
+              </div>
+
+              <!-- Leader 4 -->
+              <div class="ministry-member-card">
+                <div class="ministry-members-photo">
+                  <img src="assets/Images/leader5.png" alt="Bro. Maintenance Tech" class="members-photo"/>
+                </div>
+                <div class="leader-info">
+                  <h3>Bro. Member 4</h3>
+                  <p>Maintenance Technician</p>
+                </div>
+              </div>
+
+              <!-- Leader 5 -->
+              <div class="ministry-member-card">
+                <div class="ministry-members-photo">
+                  <img src="assets/Images/leader6.png" alt="Sis. Admin Support" class="members-photo"/>
+                </div>
+                <div class="leader-info">
+                  <h3>Bro. Member 5</h3>
+                  <p>Administrative Support</p>
+                </div>
+              </div>
+
+              <!-- Leader 6 -->
+              <div class="ministry-member-card">
+                <div class="ministry-members-photo">
+                  <img src="assets/Images/leader7.png" alt="Bro. Infrastructure Member" class="members-photo"/>
+                </div>
+                <div class="leader-info">
+                  <h3>Bro. Member 6</h3>
+                  <p>Team Member</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Connect CTA -->
+    <section class="section">
+      <div class="container">
+        <div class="connect">
+          <div class="connect-info">
+            <h2>Have a Project Idea?</h2>
+            <p>
+              We're always looking for innovative ways to improve our facilities.
+              Share your ideas with the Infrastructure Team.
+            </p>
+            <div class="connect-btn">
+              <a href="#" class="btn btn-accent">Contact Infrastructure Team</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <img src="assets/Images/footer.png" class="footer-image">
+      <div class="footer-container">
+        <div class="container">
+          <div class="footer-grid">
+            <div class="footer-brand">
+              <img
+                src="assets/svgs/complete-logo-h-2.svg"
+                alt="Church Logo"
+                class="footer-logo"
+              />
+              <p class="footer-motto">
+                The Ground and Pillar of Truth – 1 Timothy 3:15
+              </p>
+            </div>
+            <div class="footer-contact">
+              <h4>Contact Us</h4>
+              <p>9/11 Odubiyi Street, Ikate, Surulere<br />Lagos, Nigeria</p>
+              <p>Email: coclawanson@yahoo.com</p>
+              <p>Phone: 08069553181 | 08121133361 | 07049172845</p>
+            </div>
+            <div class="footer-links">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="about-who-we-are.html">About Us</a></li>
+                <li><a href="worship.html">Worship Times</a></li>
+                <li><a href="announcements.html">Announcements</a></li>
+                <li><a href="give.html">Give Online</a></li>
+              </ul>
+            </div>
+            <div class="footer-stream">
+              <h4>Watch Live</h4>
+              <p>Join us every Sunday for live streaming</p>
+              <a
+                href="https://www.youtube.com/@coclawanson"
+                target="_blank"
+                class="btn btn-accent"
+                >YouTube Channel</a
+              >
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>&copy; 2026 Church of Christ, Lawanson. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function toggleNav() {
+        document.getElementById("navMenu").classList.toggle("active");
+      }
+
+      function toggleDropdown(element) {
+        if (window.innerWidth <= 768) {
+          element.classList.toggle("active");
+        }
+      }
+      const navToggle = document.getElementById ('navToggle')
+      navToggle.addEventListener('click', () =>{
+        navToggle.classList.toggle ('active');
+      })
+    </script>
+  </body>
+</html>
+

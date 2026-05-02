@@ -1,0 +1,753 @@
+<!-- ============================================ -->
+<!-- ABOUT-LEADERS.HTML - CHURCH LEADERS PAGE -->
+<!-- ============================================ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Church Leaders | Church of Christ, Lawanson</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" href="about-leaders.css">
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="logo-link">
+          <img
+            src="assets/svgs/complete-logo-1.svg"
+            alt="Church of Christ, Lawanson Logo"
+            class="nav-logo"
+          />
+        </a>
+        <button
+          class="nav-toggle" id="navToggle"
+          aria-label="Toggle navigation"
+          onclick="toggleNav()"
+        >
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item dropdown" onclick="toggleDropdown(this)">
+            <div class="nav-link dropdown-toggle active">About Us<img src="assets/svgs/icons/chevron-down.svg" class="dropdown-toggle-icon active"></div>
+            <div class="dropdown-menu">
+              <a href="about-who-we-are.html" class="dropdown-item"
+                >Who We Are</a
+              >
+              <a href="about-history.html" class="dropdown-item">Our History</a>
+              <a href="about-beliefs.html" class="dropdown-item">Our Beliefs</a>
+              <a href="about-minister.html" class="dropdown-item"
+                >Meet Our Minister</a
+              >
+              <a href="about-leaders.html" class="dropdown-item active"
+                >Church Leaders</a
+              >
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="worship.html" class="nav-link">Worship & Services</a>
+          </li>
+          <li class="nav-item dropdown" onclick="toggleDropdown(this)">
+            <div class="nav-link dropdown-toggle">Ministries<img src="assets/svgs/icons/chevron-down.svg" class="dropdown-toggle-icon"></div>
+            <div class="dropdown-menu">
+              <a href="ministries-all.html" class="dropdown-item">All Ministries</a>
+              <a href="ministries-secretariat.html" class="dropdown-item"
+                >Secretariat</a
+              >
+              <a href="ministries-finance.html" class="dropdown-item"
+                >Finance</a
+              >
+              <a href="ministries-infrastructure.html" class="dropdown-item"
+                >Infrastructure</a
+              >
+              <a href="ministries-evangelism.html" class="dropdown-item"
+                >Evangelism</a
+              >
+              <a href="ministries-health.html" class="dropdown-item">Health</a>
+              <a href="ministries-publicity.html" class="dropdown-item"
+                >Publicity</a
+              >
+              <a href="ministries-sisters.html" class="dropdown-item"
+                >Sisters</a
+              >
+              <a href="ministries-youth.html" class="dropdown-item">Youth</a>
+              <a href="ministries-children.html" class="dropdown-item"
+                >Children</a
+              >
+              <a href="ministries-singles.html" class="dropdown-item">Singles</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="announcements.html" class="nav-link">Announcements</a>
+          </li>
+          <li class="nav-item">
+            <a href="resources.html" class="nav-link">Resources</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+          <div class="nav-btn">
+            <a
+              href="give.html"
+              class="btn btn-light"
+              onclick="event.stopPropagation()"
+              >Give Now</a
+            >
+          </div>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <img src="assets/Images/leaders.png" class="page-hero-image">
+        <div class="page-hero-content">
+            <h1>Church Leaders</h1>
+            <p class="page-tagline">
+              Meet the dedicated servants leading and directing the Church of
+              Christ, Lawanson with faith, wisdom, and love.
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="section">
+      <div class="container">
+        <!-- Sub Navigation -->
+        <div class="leaders-subnav">
+          <button
+            class="leaders-tab-btn active"
+            onclick="openLeadersTab(event, 'leadership')"
+          >
+            Leadership Team
+          </button>
+          <button
+            class="leaders-tab-btn"
+            onclick="openLeadersTab(event, 'zonal')"
+          >
+            Zonal Leaders
+          </button>
+        </div>
+
+        <!-- Leadership Team -->
+        <div id="leadership" class="leaders-tab-content active">
+          <div class="leaders-grid">
+            <div class="leader-card">
+              <div class="leader-photo-section">
+                <img
+                  src="assets/Images/leader1.png"
+                  class="leader-photo"
+                  alt="Bro. Ema Akpan"
+                />
+              </div>
+              <div class="leader-info">
+                <h3>Bro. Ema Akpan</h3>
+                <p>Church Secretary</p>
+                <div class="leaders-contact">
+                  <img
+                    src="assets/svgs/icons/whatsapp.svg"
+                    class="leaders-contact-icon-1"
+                  /><img
+                    src="assets/svgs/icons/phone.svg"
+                    class="leaders-contact-icon-2"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="leader-card">
+              <div class="leader-photo-section">
+                <img
+                  src="assets/Images/leader2.png"
+                  class="leader-photo"
+                  alt="Bro. Grant Amanze"
+                />
+              </div>
+              <div class="leader-info">
+                <h3>Bro. Grant Amanze</h3>
+                <p>Financial Secretary</p>
+                <div class="leaders-contact">
+                  <img
+                    src="assets/svgs/icons/whatsapp.svg"
+                    class="leaders-contact-icon-1"
+                  /><img
+                    src="assets/svgs/icons/phone.svg"
+                    class="leaders-contact-icon-2"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="leader-card">
+              <div class="leader-photo-section">
+                <img
+                  src="assets/Images/leader3.png"
+                  class="leader-photo"
+                  alt="Bro. Benjamin Nwafor"
+                />
+              </div>
+              <div class="leader-info">
+                <h3>Bro. Benjamin Nwafor</h3>
+                <p>Evangelism Coordinator</p>
+                <div class="leaders-contact">
+                  <img
+                    src="assets/svgs/icons/whatsapp.svg"
+                    class="leaders-contact-icon-1"
+                  /><img
+                    src="assets/svgs/icons/phone.svg"
+                    class="leaders-contact-icon-2"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="leader-card">
+              <div class="leader-photo-section">
+                <img
+                  src="assets/Images/leader4.png"
+                  class="leader-photo"
+                  alt="Bro. Aniekan Ntuen"
+                />
+              </div>
+              <div class="leader-info">
+                <h3>Bro. Aniekan Ntuen</h3>
+                <p>Benevolence Coordinator</p>
+                <div class="leaders-contact">
+                  <img
+                    src="assets/svgs/icons/whatsapp.svg"
+                    class="leaders-contact-icon-1"
+                  /><img
+                    src="assets/svgs/icons/phone.svg"
+                    class="leaders-contact-icon-2"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="leader-card">
+              <div class="leader-photo-section">
+                <img
+                  src="assets/Images/leader4.png"
+                  class="leader-photo"
+                  alt="Bro. Aniekan Ntuen"
+                />
+              </div>
+              <div class="leader-info">
+                <h3>Bro. Aniekan Ntuen</h3>
+                <p>Singles Coordinator</p>
+                <div class="leaders-contact">
+                  <img
+                    src="assets/svgs/icons/whatsapp.svg"
+                    class="leaders-contact-icon-1"
+                  /><img
+                    src="assets/svgs/icons/phone.svg"
+                    class="leaders-contact-icon-2"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="leader-card">
+              <div class="leader-photo-section">
+                <img
+                  src="assets/Images/leader5.png"
+                  class="leader-photo"
+                  alt="Bro. Nelson Simeon"
+                />
+              </div>
+              <div class="leader-info">
+                <h3>Bro. Nelson Simeon</h3>
+                <p>Youth Coordinator</p>
+                <div class="leaders-contact">
+                  <img
+                    src="assets/svgs/icons/whatsapp.svg"
+                    class="leaders-contact-icon-1"
+                  /><img
+                    src="assets/svgs/icons/phone.svg"
+                    class="leaders-contact-icon-2"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="leader-card">
+              <div class="leader-photo-section">
+                <img
+                  src="assets/Images/leader6.png"
+                  class="leader-photo"
+                  alt="Bro. Ud'obong Eka"
+                />
+              </div>
+              <div class="leader-info">
+                <h3>Bro. Ud'obong Eka</h3>
+                <p>Publicity Coordinator</p>
+                <div class="leaders-contact">
+                  <img
+                    src="assets/svgs/icons/whatsapp.svg"
+                    class="leaders-contact-icon-1"
+                  /><img
+                    src="assets/svgs/icons/phone.svg"
+                    class="leaders-contact-icon-2"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="leader-card">
+              <div class="leader-photo-section">
+                <img
+                  src="assets/Images/leader7.png"
+                  class="leader-photo"
+                  alt="Bro. Benjamin Nwafor"
+                />
+              </div>
+              <div class="leader-info">
+                <h3>Bro. Benjamin Nwafor</h3>
+                <p>Children Coordinator</p>
+                <div class="leaders-contact">
+                  <img
+                    src="assets/svgs/icons/whatsapp.svg"
+                    class="leaders-contact-icon-1"
+                  /><img
+                    src="assets/svgs/icons/phone.svg"
+                    class="leaders-contact-icon-2"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Zonal Leaders -->
+        <div id="zonal" class="leaders-tab-content">
+          <div class="zonal-leaders-grid">
+            <div class="leader-card">
+              <div class="leader-photo-section">
+                <img
+                  src="assets/Images/leader8.png"
+                  class="leader-photo"
+                  alt="Bro. Moses Nduka"
+                />
+              </div>
+              <div class="leader-info">
+                <h3>Bro. Moses Nduka</h3>
+                <p>Ashimowo Bakare Zone</p>
+                <div class="leaders-contact">
+                  <img
+                    src="assets/svgs/icons/whatsapp.svg"
+                    class="leaders-contact-icon-1"
+                  />
+                  <img
+                    src="assets/svgs/icons/phone.svg"
+                    class="leaders-contact-icon-2"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="leader-card">
+              <div class="leader-photo-section">
+                <img
+                  src="assets/Images/leader9.png"
+                  class="leader-photo"
+                  alt="Bro. Aniefiok Essien"
+                />
+              </div>
+              <div class="leader-info">
+                <h3>Bro. Aniefiok Essien</h3>
+                <p>Odubiyi Zone</p>
+                <div class="leaders-contact">
+                  <img
+                    src="assets/svgs/icons/whatsapp.svg"
+                    class="leaders-contact-icon-1"
+                  />
+                  <img
+                    src="assets/svgs/icons/phone.svg"
+                    class="leaders-contact-icon-2"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="leader-card">
+              <div class="leader-photo-section">
+                <img
+                  src="assets/Images/leader10.png"
+                  class="leader-photo"
+                  alt="Bro. Samuel Udoh"
+                />
+              </div>
+              <div class="leader-info">
+                <h3>Bro. Samuel Udoh</h3>
+                <p>Itire / Odo Zone</p>
+                <div class="leaders-contact">
+                  <img
+                    src="assets/svgs/icons/whatsapp.svg"
+                    class="leaders-contact-icon-1"
+                  />
+                  <img
+                    src="assets/svgs/icons/phone.svg"
+                    class="leaders-contact-icon-2"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="leader-card">
+              <div class="leader-photo-section">
+                <img
+                  src="assets/Images/leader11.png"
+                  class="leader-photo"
+                  alt="Bro. Emmanuel Ibok"
+                />
+              </div>
+              <div class="leader-info">
+                <h3>Bro. Emmanuel Ibok</h3>
+                <p>Mushin Zone</p>
+                <div class="leaders-contact">
+                  <img
+                    src="assets/svgs/icons/whatsapp.svg"
+                    class="leaders-contact-icon-1"
+                  /><img
+                    src="assets/svgs/icons/phone.svg"
+                    class="leaders-contact-icon-2"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="leader-card">
+              <div class="leader-photo-section">
+                <img
+                  src="assets/Images/leader12.png"
+                  class="leader-photo"
+                  alt="Bro. Josiah Chikwendu"
+                />
+              </div>
+              <div class="leader-info">
+                <h3>Bro. Josiah Chikwendu</h3>
+                <p>Ilasa Zone</p>
+                <div class="leaders-contact">
+                  <img
+                    src="assets/svgs/icons/whatsapp.svg"
+                    class="leaders-contact-icon-1"
+                    url="https://wa.me/2348066726631"
+                  />
+                  <img
+                    src="assets/svgs/icons/phone.svg"
+                    class="leaders-contact-icon-2"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="leader-card">
+              <div class="leader-photo-section">
+                <img
+                  src="assets/Images/leader4.png"
+                  class="leader-photo"
+                  alt="Bro. Aniekan Ntuen"
+                />
+              </div>
+              <div class="leader-info">
+                <h3>Bro. Aniekan Ntuen</h3>
+                <p>Aguda Zone</p>
+                <div class="leaders-contact">
+                  <img
+                    src="assets/svgs/icons/whatsapp.svg"
+                    class="leaders-contact-icon-1"
+                  />
+                  <img
+                    src="assets/svgs/icons/phone.svg"
+                    class="leaders-contact-icon-2"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="leader-card">
+              <div class="leader-photo-section">
+                <img
+                  src="assets/Images/leader13.png"
+                  class="leader-photo"
+                  alt="Bro. Grant Amanze"
+                />
+              </div>
+              <div class="leader-info">
+                <h3>Bro. Grant Amanze</h3>
+                <p>Karounwi Zone</p>
+                <div class="leaders-contact">
+                  <img
+                    src="assets/svgs/icons/whatsapp.svg"
+                    class="leaders-contact-icon-1"
+                  />
+                  <img
+                    src="assets/svgs/icons/phone.svg"
+                    class="leaders-contact-icon-2"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="leader-card">
+              <div class="leader-photo-section">
+                <img
+                  src="assets/Images/leader14.png"
+                  class="leader-photo"
+                  alt="Bro. Ifiok Udofia"
+                />
+              </div>
+              <div class="leader-info">
+                <h3>Bro. Ifiok Udofia</h3>
+                <p>Oduduwa Zone</p>
+                <div class="leaders-contact">
+                  <img
+                    src="assets/svgs/icons/whatsapp.svg"
+                    class="leaders-contact-icon-1"
+                  />
+                  <img
+                    src="assets/svgs/icons/phone.svg"
+                    class="leaders-contact-icon-2"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="leader-card">
+              <div class="leader-photo-section">
+                <img
+                  src="assets/Images/leader1.png"
+                  class="leader-photo"
+                  alt="Bro. Akan Udoh"
+                />
+              </div>
+              <div class="leader-info">
+                <h3>Bro. Akan Udoh</h3>
+                <p>Ijesha 1 Zone</p>
+                <div class="leaders-contact">
+                  <img
+                    src="assets/svgs/icons/whatsapp.svg"
+                    class="leaders-contact-icon-1"
+                  />
+                  <img
+                    src="assets/svgs/icons/phone.svg"
+                    class="leaders-contact-icon-2"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="leader-card">
+              <div class="leader-photo-section">
+                <img
+                  src="assets/Images/leader2.png"
+                  class="leader-photo"
+                  alt="Bro. Godswill Archibong"
+                />
+              </div>
+              <div class="leader-info">
+                <h3>Bro. Godswill Archibong</h3>
+                <p>Ojuelegba Zone</p>
+                <div class="leaders-contact">
+                  <img
+                    src="assets/svgs/icons/whatsapp.svg"
+                    class="leaders-contact-icon-1"
+                  />
+                  <img
+                    src="assets/svgs/icons/phone.svg"
+                    class="leaders-contact-icon-2"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="leader-card">
+              <div class="leader-photo-section">
+                <img
+                  src="assets/Images/leader3.png"
+                  class="leader-photo"
+                  alt="Bro. Chinwendu Nnantah"
+                />
+              </div>
+              <div class="leader-info">
+                <h3>Bro. Chinwendu Nnantah</h3>
+                <p>Lawanson Zone</p>
+                <div class="leaders-contact">
+                  <img
+                    src="assets/svgs/icons/whatsapp.svg"
+                    class="leaders-contact-icon-1"
+                  />
+                  <img
+                    src="assets/svgs/icons/phone.svg"
+                    class="leaders-contact-icon-2"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="leader-card">
+              <div class="leader-photo-section">
+                <img
+                  src="assets/Images/leader5.png"
+                  class="leader-photo"
+                  alt="Bro. Temisa Mamuyovwi"
+                />
+              </div>
+              <div class="leader-info">
+                <h3>Bro. Temisa Mamuyovwi</h3>
+                <p>Ijesha 2 Zone</p>
+                <div class="leaders-contact">
+                  <img
+                    src="assets/svgs/icons/whatsapp.svg"
+                    class="leaders-contact-icon-1"
+                  />
+                  <img
+                    src="assets/svgs/icons/phone.svg"
+                    class="leaders-contact-icon-2"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="leader-card">
+              <div class="leader-photo-section">
+                <img
+                  src="assets/Images/leader6.png"
+                  class="leader-photo"
+                  alt="Bro. Etim Asuquo"
+                />
+              </div>
+              <div class="leader-info">
+                <h3>Bro. Etim Asuquo</h3>
+                <p>Johnson Zone</p>
+                <div class="leaders-contact">
+                  <img
+                    src="assets/svgs/icons/whatsapp.svg"
+                    class="leaders-contact-icon-1"
+                  />
+                  <img
+                    src="assets/svgs/icons/phone.svg"
+                    class="leaders-contact-icon-2"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="leader-card">
+              <div class="leader-photo-section">
+                <img
+                  src="assets/Images/leader7.png"
+                  class="leader-photo"
+                  alt="Bro. Kingsley Ntuen"
+                />
+              </div>
+              <div class="leader-info">
+                <h3>Bro. Kingsley Ntuen</h3>
+                <p>Ijegun / Ikotun Zone</p>
+                <div class="leaders-contact">
+                  <img
+                    src="assets/svgs/icons/whatsapp.svg"
+                    class="leaders-contact-icon-1"
+                  />
+                  <img
+                    src="assets/svgs/icons/phone.svg"
+                    class="leaders-contact-icon-2"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Future Story -->
+    <section class="section">
+      <div class="container">
+        <div class="connect">
+          <div class="connect-info">
+            <h2>Connect With Our Preacher</h2>
+            <p>
+              Have questions or need spiritual guidance? Our preacher is here to
+              support you on your faith journey. Reach out today.
+            </p>
+          </div>
+          <div class="connect-btn">
+            <a
+              href="about-minister.html"
+              class="btn btn-light"
+              onclick="event.stopPropagation()"
+              >Contact Preacher</a
+            >
+            <a
+              href="about-who-we-are.html"
+              class="btn btn-accent"
+              onclick="event.stopPropagation()"
+              >Learn More About Us</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <img src="assets/Images/footer.png" class="footer-image" />
+      <div class="footer-container">
+        <div class="container">
+          <div class="footer-grid">
+            <div class="footer-brand">
+              <img
+                src="assets/svgs/complete-logo-h-2.svg"
+                alt="Church Logo"
+                class="footer-logo"
+              />
+              <p class="footer-motto">
+                The Ground and Pillar of Truth – 1 Timothy 3:15
+              </p>
+            </div>
+            <div class="footer-contact">
+              <h4>Contact Us</h4>
+              <p>9/11 Odubiyi Street, Ikate, Surulere<br />Lagos, Nigeria</p>
+              <p>Email: coclawanson@yahoo.com</p>
+              <p>Phone: 08069553181 | 08121133361 | 07049172845</p>
+            </div>
+            <div class="footer-links">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="about-who-we-are.html">About Us</a></li>
+                <li><a href="worship.html">Worship Times</a></li>
+                <li><a href="announcements.html">Announcements</a></li>
+                <li><a href="give.html">Give Online</a></li>
+              </ul>
+            </div>
+            <div class="footer-stream">
+              <h4>Watch Live</h4>
+              <p>Join us every Sunday for live streaming</p>
+              <a
+                href="https://www.youtube.com/@coclawanson"
+                target="_blank"
+                class="btn btn-accent"
+                >YouTube Channel</a
+              >
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>&copy; 2026 Church of Christ, Lawanson. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function toggleNav() {
+        document.getElementById("navMenu").classList.toggle("active");
+      }
+
+      function toggleDropdown(element) {
+        if (window.innerWidth <= 768) {
+          element.classList.toggle("active");
+        }
+      }
+
+      function openLeadersTab(evt, tabId) {
+        const contents = document.querySelectorAll(".leaders-tab-content");
+        const buttons = document.querySelectorAll(".leaders-tab-btn");
+
+        contents.forEach((content) => content.classList.remove("active"));
+        buttons.forEach((btn) => btn.classList.remove("active"));
+
+        document.getElementById(tabId).classList.add("active");
+        evt.currentTarget.classList.add("active");
+      }
+      const navToggle = document.getElementById ('navToggle')
+      navToggle.addEventListener('click', () =>{
+        navToggle.classList.toggle ('active');
+      })
+    </script>
+  </body>
+</html>
+
