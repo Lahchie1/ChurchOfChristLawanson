@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Resources | Church of Christ, Lawanson</title>
-      <link rel="stylesheet" type="text/css" href="styles.css" />
-    <link rel="stylesheet" href="resources.css">
-</head>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" href="resources.css" />
+  </head>
   <body>
     <!-- Navigation -->
     <nav class="navbar">
@@ -19,7 +19,8 @@
           />
         </a>
         <button
-          class="nav-toggle" id="navToggle"
+          class="nav-toggle"
+          id="navToggle"
           aria-label="Toggle navigation"
           onclick="toggleNav()"
         >
@@ -29,7 +30,12 @@
         </button>
         <ul class="nav-menu" id="navMenu">
           <li class="nav-item dropdown" onclick="toggleDropdown(this)">
-            <div class="nav-link dropdown-toggle">About Us<img src="assets/svgs/icons/chevron-down.svg" class="dropdown-toggle-icon"></div>
+            <div class="nav-link dropdown-toggle">
+              About Us<img
+                src="assets/svgs/icons/chevron-down.svg"
+                class="dropdown-toggle-icon"
+              />
+            </div>
             <div class="dropdown-menu">
               <a href="about-who-we-are.html" class="dropdown-item"
                 >Who We Are</a
@@ -48,7 +54,12 @@
             <a href="worship.html" class="nav-link">Worship & Services</a>
           </li>
           <li class="nav-item dropdown" onclick="toggleDropdown(this)">
-            <div class="nav-link dropdown-toggle">Ministries<img src="assets/svgs/icons/chevron-down.svg" class="dropdown-toggle-icon"></div>
+            <div class="nav-link dropdown-toggle">
+              Ministries<img
+                src="assets/svgs/icons/chevron-down.svg"
+                class="dropdown-toggle-icon"
+              />
+            </div>
             <div class="dropdown-menu">
               <a href="ministries-all.html" class="dropdown-item"
                 >All Ministries</a
@@ -119,7 +130,11 @@
       <div class="container">
         <div class="hero-split">
           <div class="resources-hero-split">
-            <img src="assets/Images/grow-in-knowledge.png" alt="Church Resources" class="resources-image"/>
+            <img
+              src="assets/Images/grow-in-knowledge.png"
+              alt="Church Resources"
+              class="resources-image"
+            />
             <div class="hero-content-box">
               <h2>Grow in Faith & Knowledge</h2>
               <p>
@@ -142,13 +157,17 @@
       <div class="container">
         <div class="sermon-schedule">
           <div class="theme-banner-box">
-            <img src="assets/Images/theme.png" alt="Church Resources" class="resources-image"/>
+            <img
+              src="assets/Images/theme.png"
+              alt="Church Resources"
+              class="resources-image"
+            />
             <div class="theme-content">
               <div class="theme-text">
                 <h2>2026 Theme: Divine Alignment</h2>
                 <p>
-                  Join us this year as we explore what it means to live in perfect
-                  alignment with God's will and purpose for our lives.
+                  Join us this year as we explore what it means to live in
+                  perfect alignment with God's will and purpose for our lives.
                 </p>
               </div>
               <a href="#" class="btn btn-accent">Get the Study Guide</a>
@@ -268,27 +287,51 @@
             <h2>Study Categories</h2>
             <div class="categories-grid">
               <a href="#" class="category-card">
-                <img src="assets/Images/sola-scriptura.png" alt="Church Resources" class="summary-card-image--small"/>
+                <img
+                  src="assets/Images/sola-scriptura.png"
+                  alt="Church Resources"
+                  class="summary-card-image--small"
+                />
                 <span class="cat-name">Bible Studies</span>
               </a>
               <a href="#" class="category-card">
-                <img src="assets/Images/audio-sermon.png" alt="Church Resources" class="summary-card-image--small"/>
+                <img
+                  src="assets/Images/audio-sermon.png"
+                  alt="Church Resources"
+                  class="summary-card-image--small"
+                />
                 <span class="cat-name">Audio Sermons</span>
               </a>
               <a href="#" class="category-card">
-                <img src="assets/Images/article.png" alt="Church Resources" class="summary-card-image--small"/>
+                <img
+                  src="assets/Images/article.png"
+                  alt="Church Resources"
+                  class="summary-card-image--small"
+                />
                 <span class="cat-name">Articles</span>
               </a>
               <a href="#" class="category-card">
-                <img src="assets/Images/children.png" alt="Church Resources" class="summary-card-image--small"/>
+                <img
+                  src="assets/Images/children.png"
+                  alt="Church Resources"
+                  class="summary-card-image--small"
+                />
                 <span class="cat-name">Children</span>
               </a>
               <a href="#" class="category-card">
-                <img src="assets/Images/family.png" alt="Church Resources" class="summary-card-image--small"/>
+                <img
+                  src="assets/Images/family.png"
+                  alt="Church Resources"
+                  class="summary-card-image--small"
+                />
                 <span class="cat-name">Family</span>
               </a>
               <a href="#" class="category-card">
-                <img src="assets/Images/newly-baptised.png" alt="Church Resources" class="summary-card-image--small"/>
+                <img
+                  src="assets/Images/newly-baptised.png"
+                  alt="Church Resources"
+                  class="summary-card-image--small"
+                />
                 <span class="cat-name">New Converts</span>
               </a>
             </div>
@@ -304,17 +347,13 @@
           <div class="connect-info">
             <h2>Contact the Preacher</h2>
             <p>
-              Our teachings and admonishing are deeply
-              rooted in the doctrine of Christ. Do you have any questions
-              or have a grey area you feel is left out in the course of
-              your studies?
+              Our teachings and admonishing are deeply rooted in the doctrine of
+              Christ. Do you have any questions or have a grey area you feel is
+              left out in the course of your studies?
             </p>
           </div>
           <div class="connect-btn">
-            <a
-              href="#"
-              target="_blank"
-              class="btn btn-accent"
+            <a href="#" target="_blank" class="btn btn-accent"
               >Contact Preacher</a
             >
           </div>
@@ -378,14 +417,51 @@
 
       function toggleDropdown(element) {
         if (window.innerWidth <= 768) {
+          // Check if the click target is a dropdown item link
+          const target = event.target;
+          if (
+            target.classList.contains("dropdown-item") ||
+            target.closest(".dropdown-item")
+          ) {
+            // Allow the link to navigate, don't toggle
+            return;
+          }
           element.classList.toggle("active");
         }
       }
-      const navToggle = document.getElementById ('navToggle')
-      navToggle.addEventListener('click', () =>{
-        navToggle.classList.toggle ('active');
-      })
+
+      function setActiveNav() {
+        const path = window.location.pathname;
+        const filename = path.split("/").pop();
+        const navLinks = document.querySelectorAll(".nav-link");
+        navLinks.forEach((link) => {
+          if (link.getAttribute("href") === filename) {
+            link.classList.add("active");
+          }
+        });
+        // Special handling for dropdown parents
+        if (path.includes("/about-")) {
+          const aboutLink = document.querySelector(".nav-link.dropdown-toggle");
+          if (aboutLink && aboutLink.textContent.includes("About Us")) {
+            aboutLink.classList.add("active");
+          }
+        }
+        if (path.includes("/ministries-")) {
+          const ministriesLink = document.querySelectorAll(
+            ".nav-link.dropdown-toggle",
+          )[1];
+          if (
+            ministriesLink &&
+            ministriesLink.textContent.includes("Ministries")
+          ) {
+            ministriesLink.classList.add("active");
+          }
+        }
+      }
+      setActiveNav();
+      navToggle.addEventListener("click", () => {
+        navToggle.classList.toggle("active");
+      });
     </script>
   </body>
 </html>
-

@@ -1,24 +1,29 @@
 <!-- ============================================ -->
 <!-- ABOUT-MINISTER.HTML - MEET OUR MINISTER PAGE -->
 <!-- ============================================ -->
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meet Our Minister | Church of Christ, Lawanson</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <link rel="stylesheet" href="about-minister.css">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" href="about-minister.css" />
   </head>
-<body>
+  <body>
     <!-- Navigation -->
     <nav class="navbar">
       <div class="nav-container">
         <a href="index.html" class="logo-link">
-          <img src="assets/svgs/complete-logo-1.svg" alt="Church of Christ, Lawanson Logo" class="nav-logo"/>
+          <img
+            src="assets/svgs/complete-logo-1.svg"
+            alt="Church of Christ, Lawanson Logo"
+            class="nav-logo"
+          />
         </a>
         <button
-          class="nav-toggle" id="navToggle"
+          class="nav-toggle"
+          id="navToggle"
           aria-label="Toggle navigation"
           onclick="toggleNav()"
         >
@@ -28,147 +33,261 @@
         </button>
         <ul class="nav-menu" id="navMenu">
           <li class="nav-item dropdown" onclick="toggleDropdown(this)">
-            <div class="nav-link dropdown-toggle active">About Us<img src="assets/svgs/icons/chevron-down.svg" class="dropdown-toggle-icon active"></div>
+            <div class="nav-link dropdown-toggle active">
+              About Us<img
+                src="assets/svgs/icons/chevron-down.svg"
+                class="dropdown-toggle-icon active"
+              />
+            </div>
             <div class="dropdown-menu">
-              <a href="about-who-we-are.html" class="dropdown-item">Who We Are</a>
+              <a href="about-who-we-are.html" class="dropdown-item"
+                >Who We Are</a
+              >
               <a href="about-history.html" class="dropdown-item">Our History</a>
               <a href="about-beliefs.html" class="dropdown-item">Our Beliefs</a>
-              <a href="about-minister.html" class="dropdown-item active">Meet Our Minister</a>
-              <a href="about-leaders.html" class="dropdown-item">Church Leaders</a>
+              <a href="about-minister.html" class="dropdown-item active"
+                >Meet Our Minister</a
+              >
+              <a href="about-leaders.html" class="dropdown-item"
+                >Church Leaders</a
+              >
             </div>
           </li>
-          <li class="nav-item"><a href="worship.html" class="nav-link">Worship & Services</a></li>
+          <li class="nav-item">
+            <a href="worship.html" class="nav-link">Worship & Services</a>
+          </li>
           <li class="nav-item dropdown" onclick="toggleDropdown(this)">
-            <div class="nav-link dropdown-toggle">Ministries<img src="assets/svgs/icons/chevron-down.svg" class="dropdown-toggle-icon"></div>
+            <div class="nav-link dropdown-toggle">
+              Ministries<img
+                src="assets/svgs/icons/chevron-down.svg"
+                class="dropdown-toggle-icon"
+              />
+            </div>
             <div class="dropdown-menu">
-              <a href="ministries-all.html" class="dropdown-item">All Ministries</a>
-              <a href="ministries-secretariat.html" class="dropdown-item">Secretariat</a>
-              <a href="ministries-finance.html" class="dropdown-item">Finance</a>
-              <a href="ministries-infrastructure.html" class="dropdown-item">Infrastructure</a>
-              <a href="ministries-evangelism.html" class="dropdown-item">Evangelism</a>
+              <a href="ministries-all.html" class="dropdown-item"
+                >All Ministries</a
+              >
+              <a href="ministries-secretariat.html" class="dropdown-item"
+                >Secretariat</a
+              >
+              <a href="ministries-finance.html" class="dropdown-item"
+                >Finance</a
+              >
+              <a href="ministries-infrastructure.html" class="dropdown-item"
+                >Infrastructure</a
+              >
+              <a href="ministries-evangelism.html" class="dropdown-item"
+                >Evangelism</a
+              >
               <a href="ministries-health.html" class="dropdown-item">Health</a>
-              <a href="ministries-publicity.html" class="dropdown-item">Publicity</a>
-              <a href="ministries-sisters.html" class="dropdown-item">Sisters</a>
+              <a href="ministries-publicity.html" class="dropdown-item"
+                >Publicity</a
+              >
+              <a href="ministries-sisters.html" class="dropdown-item"
+                >Sisters</a
+              >
               <a href="ministries-youth.html" class="dropdown-item">Youth</a>
-              <a href="ministries-children.html" class="dropdown-item">Children</a>
-              <a href="ministries-singles.html" class="dropdown-item">Singles</a>
+              <a href="ministries-children.html" class="dropdown-item"
+                >Children</a
+              >
+              <a href="ministries-singles.html" class="dropdown-item"
+                >Singles</a
+              >
             </div>
           </li>
-          <li class="nav-item"><a href="announcements.html" class="nav-link">Announcements</a></li>
-          <li class="nav-item"><a href="resources.html" class="nav-link">Resources</a></li>
-          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-          <div class="nav-btn"><a href="give.html" class="btn btn-light" onclick="event.stopPropagation()">Give Now</a></div>
+          <li class="nav-item">
+            <a href="announcements.html" class="nav-link">Announcements</a>
+          </li>
+          <li class="nav-item">
+            <a href="resources.html" class="nav-link">Resources</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+          <div class="nav-btn">
+            <a
+              href="give.html"
+              class="btn btn-light"
+              onclick="event.stopPropagation()"
+              >Give Now</a
+            >
+          </div>
         </ul>
       </div>
     </nav>
 
     <!-- Page Hero -->
     <section class="page-hero">
-      <img src="assets/Images/minister.png" class="page-hero-image">
-        <div class="page-hero-content">
-            <h1>Meet Our Minister</h1>
-            <p class="page-tagline">The great tool God is using to expose the church to The Truth and helping us to worship in His Spirit. </p>
-        </div>
+      <img src="assets/Images/minister.png" class="page-hero-image" />
+      <div class="page-hero-content">
+        <h1>Meet Our Minister</h1>
+        <p class="page-tagline">
+          The great tool God is using to expose the church to The Truth and
+          helping us to worship in His Spirit.
+        </p>
+      </div>
     </section>
 
     <!-- Main Content -->
     <section class="section">
-        <div class="container">
-          <div class="minister-profile">
-            <div class="minister-summary">
-              <div class="minister-summary-info">
-                <div class="minister-avatar"><img src="assets/Images/minister.png" class="minister-image"></div>
-                <h2>Bro. Ogbu Otola</h2>
-                <div class="minister-title">Evangelister & Minister</div>
-                <div class="minister-service">Serving since 2018</div>
+      <div class="container">
+        <div class="minister-profile">
+          <div class="minister-summary">
+            <div class="minister-summary-info">
+              <div class="minister-avatar">
+                <img src="assets/Images/minister.png" class="minister-image" />
               </div>
-              <div class="minister-summary-button">
-                <a href="worship.html" class="btn btn-light visit" onclick="event.stopPropagation()"><img src="assets/svgs/icons/envelope - w.svg" class="icon">Contact</a>
-                <a href="https://wa.me/2348066726631" class="btn btn-accent share" onclick="event.stopPropagation()"><img src="assets/svgs/icons/share-nodes.svg" class="icon">Share</a>
+              <h2>Bro. Ogbu Otola</h2>
+              <div class="minister-title">Evangelister & Minister</div>
+              <div class="minister-service">Serving since 2018</div>
+            </div>
+            <div class="minister-summary-button">
+              <a
+                href="worship.html"
+                class="btn btn-light visit"
+                onclick="event.stopPropagation()"
+                ><img
+                  src="assets/svgs/icons/envelope - w.svg"
+                  class="icon"
+                />Contact</a
+              >
+              <a
+                href="https://wa.me/2348066726631"
+                class="btn btn-accent share"
+                onclick="event.stopPropagation()"
+                ><img
+                  src="assets/svgs/icons/share-nodes.svg"
+                  class="icon"
+                />Share</a
+              >
+            </div>
+          </div>
+
+          <div class="minister-info">
+            <div class="bio-title">
+              <img src="assets/svgs/icons/address-card.svg" class="icon" />
+              <h4>Biograpahy</h4>
+            </div>
+            <div class="minister-bio">
+              <p>
+                Evang. Ogbu Otola is the dedicated Minister of the Church of
+                Christ, Lawanson. He faithfully preaches every Sunday, leads
+                Bible classes, and oversees the spiritual growth of the
+                congregation.
+              </p>
+              <p>
+                Through his leadership and teaching, Bro. Otola guides our
+                congregation in understanding and applying God's Word to daily
+                life. He is committed to preaching the gospel as it is, without
+                compromise or alteration.
+              </p>
+              <p>
+                Bro. Otola leads our Wednesday General Bible Class and is
+                actively involved in all aspects of our church's ministry and
+                outreach efforts.
+              </p>
+            </div>
+            <div class="additional-info">
+              <div class="info-content">
+                <div class="info-content-header">
+                  <img
+                    src="assets/svgs/icons/church.svg"
+                    class="info-content-image"
+                  />
+                  <h4>My Vision</h4>
+                </div>
+                <p>
+                  To make the church a vibrant, Christ-centered community that
+                  reflects God's love through worship and service.
+                </p>
+              </div>
+
+              <div class="info-content">
+                <div class="info-content-header">
+                  <img
+                    src="assets/svgs/icons/church.svg"
+                    class="info-content-image"
+                  />
+                  <h4>Community Impact</h4>
+                </div>
+                <p>
+                  To engage with the Lawanson community through outreach
+                  programs and charitable initiatives.
+                </p>
               </div>
             </div>
-
-            <div class="minister-info">
-              <div class="bio-title">
-                <img src="assets/svgs/icons/address-card.svg" class="icon">
-                <h4>Biograpahy</h4>
-              </div>
-              <div class="minister-bio">
-                <p>Evang. Ogbu Otola is the dedicated Minister of the Church of Christ, Lawanson. He faithfully preaches every Sunday, leads Bible classes, and oversees the spiritual growth of the congregation.</p>
-                <p>Through his leadership and teaching, Bro. Otola guides our congregation in understanding and applying God's Word to daily life. He is committed to preaching the gospel as it is, without compromise or alteration.</p>
-                <p>Bro. Otola leads our Wednesday General Bible Class and is actively involved in all aspects of our church's ministry and outreach efforts.</p>
-              </div>
-              <div class="additional-info">
-                <div class="info-content">
-                  <div class="info-content-header">
-                    <img src="assets/svgs/icons/church.svg" class="info-content-image">
-                    <h4>My Vision</h4>
-                  </div>
-                  <p>To make the church a vibrant, Christ-centered community that reflects God's love through worship and service.</p>
-                </div>
-
-                <div class="info-content">
-                  <div class="info-content-header">
-                    <img src="assets/svgs/icons/church.svg" class="info-content-image">
-                    <h4>Community Impact</h4>
-                  </div>
-                  <p>To engage with the Lawanson community through outreach programs and charitable initiatives.</p>
-                </div>
-              </div>
-                <div class="upcoming-sessions">
-                  <h3>Upcoming Sessions with Bro. Otola (Min)</h3>
-                  <div class="sessions">
-                    <div class="session-group next-session">
-                      <div class="session-group-left">
-                        <img src="assets/svgs/icons/holy-bible.svg" class="session-icon">
-                        <div class="session-info">
-                          <h4>Sunday School</h4>
-                          <div class="session-schedule">
-                            <p>5th Apr 2026</p>
-                            <p>9:00am - 10:00am</p>
-                          </div>
-                        </div>
+            <div class="upcoming-sessions">
+              <h3>Upcoming Sessions with Bro. Otola (Min)</h3>
+              <div class="sessions">
+                <div class="session-group next-session">
+                  <div class="session-group-left">
+                    <img
+                      src="assets/svgs/icons/holy-bible.svg"
+                      class="session-icon"
+                    />
+                    <div class="session-info">
+                      <h4>Sunday School</h4>
+                      <div class="session-schedule">
+                        <p>5th Apr 2026</p>
+                        <p>9:00am - 10:00am</p>
                       </div>
-                      <img src="assets/svgs/icons/chevron-right.svg" class="session-icon-2">
-                    </div>
-
-                    <div class="session-group">
-                      <div class="session-group-left">
-                        <img src="assets/svgs/icons/holy-bible - w.svg" class="session-icon later-session-icon">
-                        <div class="session-info">
-                          <h4>Wednesday Bible Class</h4>
-                          <div class="session-schedule">
-                            <p>8th Apr 2026</p>
-                            <p>6:30pm - 7:15pm</p>
-                          </div>
-                        </div>
-                      </div>
-                      <img src="assets/svgs/icons/chevron-right.svg" class="session-icon-2">
-                    </div>
-
-                    <div class="session-group">
-                      <div class="session-group-left">
-                        <img src="assets/svgs/icons/holy-bible - w.svg" class="session-icon later-session-icon">
-                        <div class="session-info">
-                          <h4>Sunday Service Teaching</h4>
-                          <div class="session-schedule">
-                            <p>12th Apr 2026</p>
-                            <p>9:00am - 10:00am</p>
-                          </div>
-                        </div>
-                      </div>
-                      <img src="assets/svgs/icons/chevron-right.svg" class="session-icon-2">
                     </div>
                   </div>
+                  <img
+                    src="assets/svgs/icons/chevron-right.svg"
+                    class="session-icon-2"
+                  />
                 </div>
+
+                <div class="session-group">
+                  <div class="session-group-left">
+                    <img
+                      src="assets/svgs/icons/holy-bible - w.svg"
+                      class="session-icon later-session-icon"
+                    />
+                    <div class="session-info">
+                      <h4>Wednesday Bible Class</h4>
+                      <div class="session-schedule">
+                        <p>8th Apr 2026</p>
+                        <p>6:30pm - 7:15pm</p>
+                      </div>
+                    </div>
+                  </div>
+                  <img
+                    src="assets/svgs/icons/chevron-right.svg"
+                    class="session-icon-2"
+                  />
+                </div>
+
+                <div class="session-group">
+                  <div class="session-group-left">
+                    <img
+                      src="assets/svgs/icons/holy-bible - w.svg"
+                      class="session-icon later-session-icon"
+                    />
+                    <div class="session-info">
+                      <h4>Sunday Service Teaching</h4>
+                      <div class="session-schedule">
+                        <p>12th Apr 2026</p>
+                        <p>9:00am - 10:00am</p>
+                      </div>
+                    </div>
+                  </div>
+                  <img
+                    src="assets/svgs/icons/chevron-right.svg"
+                    class="session-icon-2"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-      <img src="assets/Images/footer.png" class="footer-image">
+      <img src="assets/Images/footer.png" class="footer-image" />
       <div class="footer-container">
         <div class="container">
           <div class="footer-grid">
@@ -216,19 +335,59 @@
     </footer>
 
     <script>
-        function toggleNav() {
+      function toggleNav() {
         document.getElementById("navMenu").classList.toggle("active");
       }
 
       function toggleDropdown(element) {
         if (window.innerWidth <= 768) {
+          // Check if the click target is a dropdown item link
+          const target = event.target;
+          if (
+            target.classList.contains("dropdown-item") ||
+            target.closest(".dropdown-item")
+          ) {
+            // Allow the link to navigate, don't toggle
+            return;
+          }
           element.classList.toggle("active");
         }
       }
-      const navToggle = document.getElementById ('navToggle')
-      navToggle.addEventListener('click', () =>{
-        navToggle.classList.toggle ('active');
-      })
+
+      function setActiveNav() {
+        const path = window.location.pathname;
+        const filename = path.split("/").pop();
+        const navLinks = document.querySelectorAll(".nav-link");
+        navLinks.forEach((link) => {
+          if (link.getAttribute("href") === filename) {
+            link.classList.add("active");
+          }
+        });
+        // Special handling for dropdown parents
+        if (path.includes("/about-")) {
+          const aboutLink = document.querySelector(".nav-link.dropdown-toggle");
+          if (aboutLink && aboutLink.textContent.includes("About Us")) {
+            aboutLink.classList.add("active");
+          }
+        }
+        if (path.includes("/ministries-")) {
+          const ministriesLink = document.querySelectorAll(
+            ".nav-link.dropdown-toggle",
+          )[1];
+          if (
+            ministriesLink &&
+            ministriesLink.textContent.includes("Ministries")
+          ) {
+            ministriesLink.classList.add("active");
+          }
+        }
+      }
+
+      setActiveNav();
+      const navToggle = document.getElementById("navToggle");
+      navToggle.addEventListener("click", () => {
+        navToggle.classList.toggle("active");
+      });
     </script>
-</body>
+  </body>
 </html>

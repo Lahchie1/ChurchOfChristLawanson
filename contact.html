@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us | Church of Christ, Lawanson</title>
-    <link rel="stylesheet" type="text/css" href="styles.css"/>
-    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" href="contact.css" />
   </head>
   <body>
     <!-- Navigation -->
@@ -19,7 +19,8 @@
           />
         </a>
         <button
-          class="nav-toggle" id="navToggle"
+          class="nav-toggle"
+          id="navToggle"
           aria-label="Toggle navigation"
           onclick="toggleNav()"
         >
@@ -29,7 +30,12 @@
         </button>
         <ul class="nav-menu" id="navMenu">
           <li class="nav-item dropdown" onclick="toggleDropdown(this)">
-            <div class="nav-link dropdown-toggle">About Us<img src="assets/svgs/icons/chevron-down.svg" class="dropdown-toggle-icon"></div>
+            <div class="nav-link dropdown-toggle">
+              About Us<img
+                src="assets/svgs/icons/chevron-down.svg"
+                class="dropdown-toggle-icon"
+              />
+            </div>
             <div class="dropdown-menu">
               <a href="about-who-we-are.html" class="dropdown-item"
                 >Who We Are</a
@@ -48,7 +54,12 @@
             <a href="worship.html" class="nav-link">Worship & Services</a>
           </li>
           <li class="nav-item dropdown" onclick="toggleDropdown(this)">
-            <div class="nav-link dropdown-toggle">Ministries<img src="assets/svgs/icons/chevron-down.svg" class="dropdown-toggle-icon"></div>
+            <div class="nav-link dropdown-toggle">
+              Ministries<img
+                src="assets/svgs/icons/chevron-down.svg"
+                class="dropdown-toggle-icon"
+              />
+            </div>
             <div class="dropdown-menu">
               <a href="ministries-all.html" class="dropdown-item"
                 >All Ministries</a
@@ -108,7 +119,8 @@
       <div class="page-hero-content">
         <h1>Contact Us</h1>
         <p class="page-tagline">
-          Reach out to us at anytime, we are just the green button away from you.
+          Reach out to us at anytime, we are just the green button away from
+          you.
         </p>
       </div>
     </section>
@@ -443,6 +455,15 @@
 
       function toggleDropdown(element) {
         if (window.innerWidth <= 768) {
+          // Check if the click target is a dropdown item link
+          const target = event.target;
+          if (
+            target.classList.contains("dropdown-item") ||
+            target.closest(".dropdown-item")
+          ) {
+            // Allow the link to navigate, don't toggle
+            return;
+          }
           element.classList.toggle("active");
         }
       }
@@ -509,11 +530,10 @@
       }
 
       setActiveNav();
-      const navToggle = document.getElementById ('navToggle')
-      navToggle.addEventListener('click', () =>{
-        navToggle.classList.toggle ('active');
-      })
+      const navToggle = document.getElementById("navToggle");
+      navToggle.addEventListener("click", () => {
+        navToggle.classList.toggle("active");
+      });
     </script>
   </body>
 </html>
-

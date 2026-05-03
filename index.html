@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Church of Christ, Lawanson | The Ground and Pillar of Truth</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
     <!-- Navigation -->
@@ -22,7 +22,8 @@
           />
         </a>
         <button
-          class="nav-toggle" id="navToggle"
+          class="nav-toggle"
+          id="navToggle"
           aria-label="Toggle navigation"
           onclick="toggleNav()"
         >
@@ -32,7 +33,12 @@
         </button>
         <ul class="nav-menu" id="navMenu">
           <li class="nav-item dropdown" onclick="toggleDropdown(this)">
-            <div class="nav-link dropdown-toggle">About Us<img src="assets/svgs/icons/chevron-down.svg" class="dropdown-toggle-icon"></div>
+            <div class="nav-link dropdown-toggle">
+              About Us<img
+                src="assets/svgs/icons/chevron-down.svg"
+                class="dropdown-toggle-icon"
+              />
+            </div>
             <div class="dropdown-menu">
               <a href="about-who-we-are.html" class="dropdown-item"
                 >Who We Are</a
@@ -51,9 +57,16 @@
             <a href="worship.html" class="nav-link">Worship & Services</a>
           </li>
           <li class="nav-item dropdown" onclick="toggleDropdown(this)">
-            <div class="nav-link dropdown-toggle">Ministries<img src="assets/svgs/icons/chevron-down.svg" class="dropdown-toggle-icon"></div>
+            <div class="nav-link dropdown-toggle">
+              Ministries<img
+                src="assets/svgs/icons/chevron-down.svg"
+                class="dropdown-toggle-icon"
+              />
+            </div>
             <div class="dropdown-menu">
-              <a href="ministries-all.html" class="dropdown-item">All Ministries</a>
+              <a href="ministries-all.html" class="dropdown-item"
+                >All Ministries</a
+              >
               <a href="ministries-secretariat.html" class="dropdown-item"
                 >Secretariat</a
               >
@@ -68,14 +81,18 @@
               >
               <a href="ministries-health.html" class="dropdown-item">Health</a>
               <a href="ministries-publicity.html" class="dropdown-item"
-                >Publicity</a>
+                >Publicity</a
+              >
               <a href="ministries-sisters.html" class="dropdown-item"
-                >Sisters</a>
+                >Sisters</a
+              >
               <a href="ministries-youth.html" class="dropdown-item">Youth</a>
               <a href="ministries-children.html" class="dropdown-item"
-                >Children</a>
+                >Children</a
+              >
               <a href="ministries-singles.html" class="dropdown-item"
-                >Singles</a>
+                >Singles</a
+              >
             </div>
           </li>
           <li class="nav-item">
@@ -111,7 +128,7 @@
           <div
             class="slide-bg"
             style="
-              background-image: url('assets/Images/slide1.png');
+              background-image: url(&quot;assets/Images/slide1.png&quot;);
               background-size: cover;
               background-position: center;
             "
@@ -127,7 +144,7 @@
           <div
             class="slide-bg"
             style="
-              background-image: url('assets/Images/slide2.png');
+              background-image: url(&quot;assets/Images/slide2.png&quot;);
               background-size: cover;
               background-position: center;
             "
@@ -143,7 +160,7 @@
           <div
             class="slide-bg"
             style="
-              background-image: url('assets/Images/sisters-lectures.png');
+              background-image: url(&quot;assets/Images/sisters-lectures.png&quot;);
               background-size: cover;
               background-position: center;
             "
@@ -159,7 +176,7 @@
           <div
             class="slide-bg"
             style="
-              background-image: url('assets/Images/slide4.png');
+              background-image: url(&quot;assets/Images/slide4.png&quot;);
               background-size: cover;
               background-position: center;
             "
@@ -175,12 +192,11 @@
           <div
             class="slide-bg"
             style="
-              background-image: url('assets/Images/slide5.png');
+              background-image: url(&quot;assets/Images/slide5.png&quot;);
               background-size: cover;
               background-position: center;
             "
-          >
-          </div>
+          ></div>
         </div>
       </div>
 
@@ -266,7 +282,8 @@
     <section
       class="quick-info-2"
       style="
-        background-image: url('assets/Images/attendance-section.png'); background-size: cover;
+        background-image: url(&quot;assets/Images/attendance-section.png&quot;);
+        background-size: cover;
       "
     >
       <div class="container">
@@ -324,7 +341,7 @@
             </div>
             <h3>Get Involved</h3>
             <p>Join a ministry today</p>
-            <a href="ministries.html" class="link-arrow">Our Ministries →</a>
+            <a href="ministries-all.html" class="link-arrow">Our Ministries →</a>
           </div>
         </div>
       </div>
@@ -395,7 +412,7 @@
                   Ministry, Youth Ministry, Sisters' Fellowship, Evangelism, and
                   Health Ministry.
                 </p>
-                <a href="ministries.html" class="summary-link"
+                <a href="ministries-all.html" class="summary-link"
                   >Get Involved →</a
                 >
               </div>
@@ -482,7 +499,7 @@
     <section
       class="attendance-section"
       style="
-        background-image: url('assets/Images/attendance-section.png');
+        background-image: url(&quot;assets/Images/attendance-section.png&quot;);
       "
     >
       <div class="container">
@@ -642,7 +659,7 @@
 
     <!-- Footer -->
     <footer class="footer">
-      <img src="assets/Images/footer.png" class="footer-image"/>
+      <img src="assets/Images/footer.png" class="footer-image" />
       <div class="footer-container">
         <div class="container">
           <div class="footer-grid">
@@ -696,6 +713,15 @@
 
       function toggleDropdown(element) {
         if (window.innerWidth <= 768) {
+          // Check if the click target is a dropdown item link
+          const target = event.target;
+          if (
+            target.classList.contains("dropdown-item") ||
+            target.closest(".dropdown-item")
+          ) {
+            // Allow the link to navigate, don't toggle
+            return;
+          }
           element.classList.toggle("active");
         }
       }
@@ -728,6 +754,12 @@
           }
         }
       }
+
+      setActiveNav();
+      const navToggle = document.getElementById("navToggle");
+      navToggle.addEventListener("click", () => {
+        navToggle.classList.toggle("active");
+      });
 
       let currentSlide = 1;
       const totalSlides = 5;
@@ -773,13 +805,6 @@
         currentSlide++;
         showSlide(currentSlide);
       }, 5000);
-
-      setActiveNav();
-      const navToggle = document.getElementById ('navToggle')
-      navToggle.addEventListener('click', () =>{
-        navToggle.classList.toggle ('active');
-      })
     </script>
   </body>
 </html>
-

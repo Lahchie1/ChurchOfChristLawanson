@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Church Leaders | Church of Christ, Lawanson</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
-    <link rel="stylesheet" href="about-leaders.css">
+    <link rel="stylesheet" href="about-leaders.css" />
   </head>
   <body>
     <!-- Navigation -->
@@ -22,7 +22,8 @@
           />
         </a>
         <button
-          class="nav-toggle" id="navToggle"
+          class="nav-toggle"
+          id="navToggle"
           aria-label="Toggle navigation"
           onclick="toggleNav()"
         >
@@ -32,7 +33,12 @@
         </button>
         <ul class="nav-menu" id="navMenu">
           <li class="nav-item dropdown" onclick="toggleDropdown(this)">
-            <div class="nav-link dropdown-toggle active">About Us<img src="assets/svgs/icons/chevron-down.svg" class="dropdown-toggle-icon active"></div>
+            <div class="nav-link dropdown-toggle active">
+              About Us<img
+                src="assets/svgs/icons/chevron-down.svg"
+                class="dropdown-toggle-icon active"
+              />
+            </div>
             <div class="dropdown-menu">
               <a href="about-who-we-are.html" class="dropdown-item"
                 >Who We Are</a
@@ -51,9 +57,16 @@
             <a href="worship.html" class="nav-link">Worship & Services</a>
           </li>
           <li class="nav-item dropdown" onclick="toggleDropdown(this)">
-            <div class="nav-link dropdown-toggle">Ministries<img src="assets/svgs/icons/chevron-down.svg" class="dropdown-toggle-icon"></div>
+            <div class="nav-link dropdown-toggle">
+              Ministries<img
+                src="assets/svgs/icons/chevron-down.svg"
+                class="dropdown-toggle-icon"
+              />
+            </div>
             <div class="dropdown-menu">
-              <a href="ministries-all.html" class="dropdown-item">All Ministries</a>
+              <a href="ministries-all.html" class="dropdown-item"
+                >All Ministries</a
+              >
               <a href="ministries-secretariat.html" class="dropdown-item"
                 >Secretariat</a
               >
@@ -77,7 +90,9 @@
               <a href="ministries-children.html" class="dropdown-item"
                 >Children</a
               >
-              <a href="ministries-singles.html" class="dropdown-item">Singles</a>
+              <a href="ministries-singles.html" class="dropdown-item"
+                >Singles</a
+              >
             </div>
           </li>
           <li class="nav-item">
@@ -103,14 +118,14 @@
 
     <!-- Page Hero -->
     <section class="page-hero">
-      <img src="assets/Images/leaders.png" class="page-hero-image">
-        <div class="page-hero-content">
-            <h1>Church Leaders</h1>
-            <p class="page-tagline">
-              Meet the dedicated servants leading and directing the Church of
-              Christ, Lawanson with faith, wisdom, and love.
-            </p>
-        </div>
+      <img src="assets/Images/leaders.png" class="page-hero-image" />
+      <div class="page-hero-content">
+        <h1>Church Leaders</h1>
+        <p class="page-tagline">
+          Meet the dedicated servants leading and directing the Church of
+          Christ, Lawanson with faith, wisdom, and love.
+        </p>
+      </div>
     </section>
 
     <!-- Main Content -->
@@ -729,7 +744,45 @@
 
       function toggleDropdown(element) {
         if (window.innerWidth <= 768) {
+          // Check if the click target is a dropdown item link
+          const target = event.target;
+          if (
+            target.classList.contains("dropdown-item") ||
+            target.closest(".dropdown-item")
+          ) {
+            // Allow the link to navigate, don't toggle
+            return;
+          }
           element.classList.toggle("active");
+        }
+      }
+
+      function setActiveNav() {
+        const path = window.location.pathname;
+        const filename = path.split("/").pop();
+        const navLinks = document.querySelectorAll(".nav-link");
+        navLinks.forEach((link) => {
+          if (link.getAttribute("href") === filename) {
+            link.classList.add("active");
+          }
+        });
+        // Special handling for dropdown parents
+        if (path.includes("/about-")) {
+          const aboutLink = document.querySelector(".nav-link.dropdown-toggle");
+          if (aboutLink && aboutLink.textContent.includes("About Us")) {
+            aboutLink.classList.add("active");
+          }
+        }
+        if (path.includes("/ministries-")) {
+          const ministriesLink = document.querySelectorAll(
+            ".nav-link.dropdown-toggle",
+          )[1];
+          if (
+            ministriesLink &&
+            ministriesLink.textContent.includes("Ministries")
+          ) {
+            ministriesLink.classList.add("active");
+          }
         }
       }
 
@@ -743,11 +796,12 @@
         document.getElementById(tabId).classList.add("active");
         evt.currentTarget.classList.add("active");
       }
-      const navToggle = document.getElementById ('navToggle')
-      navToggle.addEventListener('click', () =>{
-        navToggle.classList.toggle ('active');
-      })
+
+      setActiveNav();
+      const navToggle = document.getElementById("navToggle");
+      navToggle.addEventListener("click", () => {
+        navToggle.classList.toggle("active");
+      });
     </script>
   </body>
 </html>
-

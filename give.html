@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Give | Church of Christ, Lawanson</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
-    <link rel="stylesheet" href="give.css">
+    <link rel="stylesheet" href="give.css" />
   </head>
   <body>
     <!-- Navigation -->
@@ -19,7 +19,8 @@
           />
         </a>
         <button
-          class="nav-toggle" id="navToggle"
+          class="nav-toggle"
+          id="navToggle"
           aria-label="Toggle navigation"
           onclick="toggleNav()"
         >
@@ -29,7 +30,12 @@
         </button>
         <ul class="nav-menu" id="navMenu">
           <li class="nav-item dropdown" onclick="toggleDropdown(this)">
-            <div class="nav-link dropdown-toggle">About Us<img src="assets/svgs/icons/chevron-down.svg" class="dropdown-toggle-icon"></div>
+            <div class="nav-link dropdown-toggle">
+              About Us<img
+                src="assets/svgs/icons/chevron-down.svg"
+                class="dropdown-toggle-icon"
+              />
+            </div>
             <div class="dropdown-menu">
               <a href="about-who-we-are.html" class="dropdown-item"
                 >Who We Are</a
@@ -48,7 +54,12 @@
             <a href="worship.html" class="nav-link">Worship & Services</a>
           </li>
           <li class="nav-item dropdown" onclick="toggleDropdown(this)">
-            <div class="nav-link dropdown-toggle">Ministries<img src="assets/svgs/icons/chevron-down.svg" class="dropdown-toggle-icon"></div>
+            <div class="nav-link dropdown-toggle">
+              Ministries<img
+                src="assets/svgs/icons/chevron-down.svg"
+                class="dropdown-toggle-icon"
+              />
+            </div>
             <div class="dropdown-menu">
               <a href="ministries-all.html" class="dropdown-item"
                 >All Ministries</a
@@ -131,109 +142,109 @@
     <!-- Giving Options Grid -->
     <section class="section">
       <div class="container">
-          <div class="giving-options">
-            <div class="section-header-center">
-              <h2>Ways to Support</h2>
+        <div class="giving-options">
+          <div class="section-header-center">
+            <h2>Ways to Support</h2>
+          </div>
+          <div class="giving-grid">
+            <!-- Church Projects -->
+            <div class="giving-card">
+              <h3>Church Projects</h3>
+              <p>
+                Supporting our ongoing building projects, infrastructure
+                development, and community outreach initiatives.
+              </p>
+              <div class="account-box">
+                <img src="assets/Images/UBA-logo.png" class="bank-logo" />
+                <div class="account-row">
+                  <span class="account-label">Bank Name</span>
+                  <span class="account-value">United Bank for Africa</span>
+                </div>
+
+                <div class="account-row-divider"></div>
+
+                <div class="account-row">
+                  <span class="account-label">Account Number</span>
+                  <span class="account-number">2016866362</span>
+                </div>
+                <div>
+                  <button
+                    class="copy-btn"
+                    onclick="copyToClipboard('2016866362')"
+                    title="Copy"
+                  >
+                    <span>copy</span>
+                  </button>
+                </div>
+              </div>
             </div>
-            <div class="giving-grid">
-              <!-- Church Projects -->
-              <div class="giving-card">
-                <h3>Church Projects</h3>
-                <p>
-                  Supporting our ongoing building projects, infrastructure
-                  development, and community outreach initiatives.
-                </p>
-                <div class="account-box">
-                  <img src="assets/Images/UBA-logo.png" class="bank-logo">
-                  <div class="account-row">
-                    <span class="account-label">Bank Name</span>
-                    <span class="account-value">United Bank for Africa</span
-                    >
-                  </div>
-                  
-                  <div class="account-row-divider"></div>
-                  
-                  <div class="account-row">
-                    <span class="account-label">Account Number</span>
-                    <span class="account-number">2016866362</span>
-                  </div>
-                  <div>
-                    <button
-                      class="copy-btn"
-                      onclick="copyToClipboard('2016866362')"
-                      title="Copy">
-                      <span>copy</span>
-                    </button>
-                  </div>
+
+            <!-- Preacher's Support -->
+            <div class="giving-card featured">
+              <h3>Preacher's Support</h3>
+              <p>
+                Monthly support and quarterly contributions to sustain our
+                minister and visiting preachers.
+              </p>
+              <div class="account-box light">
+                <img src="assets/Images/UBA-logo.png" class="bank-logo" />
+                <div class="account-row">
+                  <span class="account-label">Bank Name</span>
+                  <span class="account-value">United Bank for Africa</span>
+                </div>
+
+                <div class="account-row-divider"></div>
+
+                <div class="account-row">
+                  <span class="account-label">Account Number</span>
+                  <span class="account-number-white">2081538913</span>
+                </div>
+                <div>
+                  <button
+                    class="copy-btn accent"
+                    onclick="copyToClipboard('2081538913')"
+                    title="Copy"
+                  >
+                    <span>copy</span>
+                  </button>
                 </div>
               </div>
+            </div>
 
-              <!-- Preacher's Support -->
-              <div class="giving-card featured">
-                <h3>Preacher's Support</h3>
-                <p>
-                  Monthly support and quarterly contributions to sustain our
-                  minister and visiting preachers.
-                </p>
-                <div class="account-box light">
-                  <img src="assets/Images/UBA-logo.png" class="bank-logo">
-                  <div class="account-row">
-                    <span class="account-label">Bank Name</span>
-                    <span class="account-value"
-                      >United Bank for Africa</span
-                    >
-                  </div>
+            <!-- Evangelism & Benevolence -->
+            <div class="giving-card">
+              <h3>Gospel & Needy</h3>
+              <p>
+                Evangelism support <strong>1st Sundays</strong> and Benevolence
+                Support <strong>3rd Sundays</strong>.
+              </p>
 
-                  <div class="account-row-divider"></div>
-
-                  <div class="account-row">
-                    <span class="account-label">Account Number</span>
-                    <span class="account-number-white">2081538913</span>
-                  </div>
-                  <div>
-                    <button
-                      class="copy-btn accent"
-                      onclick="copyToClipboard('2081538913')"
-                      title="Copy">
-                      <span>copy</span>
-                    </button>
-                  </div>
+              <div class="account-box">
+                <img src="assets/Images/UBA-logo.png" class="bank-logo" />
+                <div class="account-row">
+                  <span class="account-label">Bank Name</span>
+                  <span class="account-value">United Bank for Africa</span>
                 </div>
-              </div>
 
-              <!-- Evangelism & Benevolence -->
-              <div class="giving-card">
-                <h3>Gospel & Needy</h3>
-                <p>
-                  Evangelism support <strong>1st Sundays</strong> and Benevolence Support <strong>3rd Sundays</strong>.
-                </p>
-                
-                <div class="account-box">
-                  <img src="assets/Images/UBA-logo.png" class="bank-logo">
-                  <div class="account-row">
-                    <span class="account-label">Bank Name</span>
-                    <span class="account-value">United Bank for Africa</span
-                    >
-                  </div>
-                  
-                  <div class="account-row-divider"></div>
-                  
-                  <div class="account-row">
-                    <span class="account-label">Account Number</span>
-                    <span class="account-number">2016866362</span>
-                  </div>
-                  <div>
-                    <button
-                      class="copy-btn"
-                      onclick="copyToClipboard('2016866362')"
-                      title="Copy">
-                      <span>copy</span>
-                    </button>
-                  </div>
+                <div class="account-row-divider"></div>
+
+                <div class="account-row">
+                  <span class="account-label">Account Number</span>
+                  <span class="account-number">2016866362</span>
+                </div>
+                <div>
+                  <button
+                    class="copy-btn"
+                    onclick="copyToClipboard('2016866362')"
+                    title="Copy"
+                  >
+                    <span>copy</span>
+                  </button>
                 </div>
               </div>
             </div>
           </div>
+        </div>
       </div>
     </section>
 
@@ -244,7 +255,7 @@
           <h2>Other Ways to Give</h2>
           <div class="alt-grid">
             <div class="alt-card">
-              <img src="assets/Images/mobile-transfer.png" class="bank-logo">
+              <img src="assets/Images/mobile-transfer.png" class="bank-logo" />
               <h4>Mobile Transfer</h4>
               <p>
                 Use your banking app to transfer to any of the account numbers
@@ -252,7 +263,7 @@
               </p>
             </div>
             <div class="alt-card">
-              <img src="assets/Images/cash-envelope.png" class="bank-logo">
+              <img src="assets/Images/cash-envelope.png" class="bank-logo" />
               <h4>Cash Envelope</h4>
               <p>
                 Place cash in offering envelopes available at the usher's stand
@@ -260,10 +271,11 @@
               </p>
             </div>
             <div class="alt-card">
-              <img src="assets/Images/benevolence-box.png" class="bank-logo">
+              <img src="assets/Images/benevolence-box.png" class="bank-logo" />
               <h4>Benevolence Box</h4>
               <p>
-                Place cash in benevolence boxes available at the entrance of the church hall anyday and anytime.
+                Place cash in benevolence boxes available at the entrance of the
+                church hall anyday and anytime.
               </p>
             </div>
           </div>
@@ -455,7 +467,45 @@
 
       function toggleDropdown(element) {
         if (window.innerWidth <= 768) {
+          // Check if the click target is a dropdown item link
+          const target = event.target;
+          if (
+            target.classList.contains("dropdown-item") ||
+            target.closest(".dropdown-item")
+          ) {
+            // Allow the link to navigate, don't toggle
+            return;
+          }
           element.classList.toggle("active");
+        }
+      }
+
+      function setActiveNav() {
+        const path = window.location.pathname;
+        const filename = path.split("/").pop();
+        const navLinks = document.querySelectorAll(".nav-link");
+        navLinks.forEach((link) => {
+          if (link.getAttribute("href") === filename) {
+            link.classList.add("active");
+          }
+        });
+        // Special handling for dropdown parents
+        if (path.includes("/about-")) {
+          const aboutLink = document.querySelector(".nav-link.dropdown-toggle");
+          if (aboutLink && aboutLink.textContent.includes("About Us")) {
+            aboutLink.classList.add("active");
+          }
+        }
+        if (path.includes("/ministries-")) {
+          const ministriesLink = document.querySelectorAll(
+            ".nav-link.dropdown-toggle",
+          )[1];
+          if (
+            ministriesLink &&
+            ministriesLink.textContent.includes("Ministries")
+          ) {
+            ministriesLink.classList.add("active");
+          }
         }
       }
 
@@ -479,11 +529,12 @@
           "Thank you! We will respond shortly.";
         document.getElementById("formMessage").style.display = "block";
       }
-      const navToggle = document.getElementById ('navToggle')
-      navToggle.addEventListener('click', () =>{
-        navToggle.classList.toggle ('active');
-      })
+
+      setActiveNav();
+      const navToggle = document.getElementById("navToggle");
+      navToggle.addEventListener("click", () => {
+        navToggle.classList.toggle("active");
+      });
     </script>
   </body>
 </html>
-

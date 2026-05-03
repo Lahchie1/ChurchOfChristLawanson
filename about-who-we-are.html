@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Who We Are | Church of Christ, Lawanson</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
-    <link rel="stylesheet" href="about-who-we-are.css">
+    <link rel="stylesheet" href="about-who-we-are.css" />
   </head>
   <body>
     <!-- Navigation -->
@@ -22,7 +22,8 @@
           />
         </a>
         <button
-          class="nav-toggle" id="navToggle"
+          class="nav-toggle"
+          id="navToggle"
           aria-label="Toggle navigation"
           onclick="toggleNav()"
         >
@@ -32,8 +33,8 @@
         </button>
         <ul class="nav-menu" id="navMenu">
           <li class="nav-item dropdown" onclick="toggleDropdown(this)">
-            <div class="nav-link dropdown-toggle active"
-              >About Us<img
+            <div class="nav-link dropdown-toggle active">
+              About Us<img
                 src="assets/svgs/icons/chevron-down.svg"
                 class="dropdown-toggle-icon active"
               />
@@ -56,9 +57,16 @@
             <a href="worship.html" class="nav-link">Worship & Services</a>
           </li>
           <li class="nav-item dropdown" onclick="toggleDropdown(this)">
-            <div class="nav-link dropdown-toggle">Ministries<img src="assets/svgs/icons/chevron-down.svg" class="dropdown-toggle-icon"></div>
+            <div class="nav-link dropdown-toggle">
+              Ministries<img
+                src="assets/svgs/icons/chevron-down.svg"
+                class="dropdown-toggle-icon"
+              />
+            </div>
             <div class="dropdown-menu">
-              <a href="ministries-all.html" class="dropdown-item">All Ministries</a>
+              <a href="ministries-all.html" class="dropdown-item"
+                >All Ministries</a
+              >
               <a href="ministries-secretariat.html" class="dropdown-item"
                 >Secretariat</a
               >
@@ -255,7 +263,7 @@
 
     <!-- Footer -->
     <footer class="footer">
-      <img src="assets/Images/footer.png" class="footer-image"/>
+      <img src="assets/Images/footer.png" class="footer-image" />
       <div class="footer-container">
         <div class="container">
           <div class="footer-grid">
@@ -309,6 +317,15 @@
 
       function toggleDropdown(element) {
         if (window.innerWidth <= 768) {
+          // Check if the click target is a dropdown item link
+          const target = event.target;
+          if (
+            target.classList.contains("dropdown-item") ||
+            target.closest(".dropdown-item")
+          ) {
+            // Allow the link to navigate, don't toggle
+            return;
+          }
           element.classList.toggle("active");
         }
       }
@@ -343,11 +360,10 @@
       }
 
       setActiveNav();
-      const navToggle = document.getElementById ('navToggle')
-      navToggle.addEventListener('click', () =>{
-        navToggle.classList.toggle ('active');
-      })
+      const navToggle = document.getElementById("navToggle");
+      navToggle.addEventListener("click", () => {
+        navToggle.classList.toggle("active");
+      });
     </script>
   </body>
 </html>
-

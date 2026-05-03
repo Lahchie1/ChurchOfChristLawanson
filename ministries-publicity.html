@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Publicity Ministry | Church of Christ, Lawanson</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
-    <link rel="stylesheet" href="ministries-publicity.css">
+    <link rel="stylesheet" href="ministries-publicity.css" />
   </head>
   <body>
     <!-- Navigation -->
@@ -22,7 +22,8 @@
           />
         </a>
         <button
-          class="nav-toggle" id="navToggle"
+          class="nav-toggle"
+          id="navToggle"
           aria-label="Toggle navigation"
           onclick="toggleNav()"
         >
@@ -32,7 +33,12 @@
         </button>
         <ul class="nav-menu" id="navMenu">
           <li class="nav-item dropdown" onclick="toggleDropdown(this)">
-            <div class="nav-link dropdown-toggle">About Us<img src="assets/svgs/icons/chevron-down.svg" class="dropdown-toggle-icon"></div>
+            <div class="nav-link dropdown-toggle">
+              About Us<img
+                src="assets/svgs/icons/chevron-down.svg"
+                class="dropdown-toggle-icon"
+              />
+            </div>
             <div class="dropdown-menu">
               <a href="about-who-we-are.html" class="dropdown-item"
                 >Who We Are</a
@@ -51,13 +57,20 @@
             <a href="worship.html" class="nav-link">Worship & Services</a>
           </li>
           <li class="nav-item dropdown" onclick="toggleDropdown(this)">
-            <div class="nav-link dropdown-toggle">Ministries<img src="assets/svgs/icons/chevron-down.svg" class="dropdown-toggle-icon"></div>
+            <div class="nav-link dropdown-toggle active">
+              Ministries<img
+                src="assets/svgs/icons/chevron-down.svg"
+                class="dropdown-toggle-icon active"
+              />
+            </div>
             <div class="dropdown-menu">
-              <a href="ministries-all.html" class="dropdown-item">All Ministries</a>
+              <a href="ministries-all.html" class="dropdown-item"
+                >All Ministries</a
+              >
               <a href="ministries-secretariat.html" class="dropdown-item"
                 >Secretariat</a
               >
-              <a href="ministries-finance.html" class="dropdown-item"
+              <a href="ministries-finance.html" class="dropdown-item active"
                 >Finance</a
               >
               <a href="ministries-infrastructure.html" class="dropdown-item"
@@ -105,7 +118,7 @@
 
     <!-- Page Hero -->
     <section class="page-hero">
-      <img src="assets/Images/publicity.png" class="page-hero-image">
+      <img src="assets/Images/publicity.png" class="page-hero-image" />
       <div class="page-hero-content">
         <h1>Publicity Ministry</h1>
         <p class="page-tagline">
@@ -125,12 +138,13 @@
               <h2>Our Media Services</h2>
             </div>
             <div class="description-schedule">
-              <p class="section-subtitle-span">We leverage modern technology to ensure the message of Christ
-              reaches every corner of the digital world with excellence.
+              <p class="section-subtitle-span">
+                We leverage modern technology to ensure the message of Christ
+                reaches every corner of the digital world with excellence.
               </p>
             </div>
           </div>
-          
+
           <div class="summaries-grid">
             <!-- Live Broadcast -->
             <div class="summary-card summary-card--wide">
@@ -141,11 +155,11 @@
               />
               <div class="summary-card-content summary-card-content--large">
                 <div class="card-header-column">
-                    <h3>Live Broadcast</h3>
-                    <p>
-                      Multi-camera HD streaming of every service to YouTube,
-                      Facebook, and our website, reaching hundreds globally.
-                    </p>
+                  <h3>Live Broadcast</h3>
+                  <p>
+                    Multi-camera HD streaming of every service to YouTube,
+                    Facebook, and our website, reaching hundreds globally.
+                  </p>
                 </div>
               </div>
             </div>
@@ -195,7 +209,6 @@
                   Crafting the visual narrative of Lawanson Church through
                   professional branding, print media, and screen graphics.
                 </p>
-                
               </div>
             </div>
           </div>
@@ -228,8 +241,8 @@
                 </div>
                 <h3>Upgraded & Relocated Projection Infrastructure</h3>
                 <p>
-                  We've replaced some HDMI cables and also moved the front splitters
-                  to the office to ensure ordelinessin worship.
+                  We've replaced some HDMI cables and also moved the front
+                  splitters to the office to ensure ordelinessin worship.
                 </p>
                 <a href="#" class="summary-link">Read More →</a>
               </div>
@@ -249,7 +262,8 @@
                 </div>
                 <h3>Tripod Projection Stand Upgrade</h3>
                 <p>
-                  We acquired a new tripod stand which aids the use of phones & camera, has a detachable mount pad for hand use.
+                  We acquired a new tripod stand which aids the use of phones &
+                  camera, has a detachable mount pad for hand use.
                 </p>
                 <a href="#" class="summary-link">Read More →</a>
               </div>
@@ -283,7 +297,7 @@
     <!-- Recruitment Section -->
     <section class="section">
       <div class="container">
-        <div class="recruitment-panel">   
+        <div class="recruitment-panel">
           <div class="recruitment-copy">
             <h2 class="recruitment-title">Your Talents Have a Home Here</h2>
             <p class="recruitment-text">
@@ -320,7 +334,7 @@
                 />
                 <div class="form-group form-group--no-margin">
                   <select class="">
-                     <option>Area of Interest</option>
+                    <option>Area of Interest</option>
                     <option>Video Production</option>
                     <option>Social Media</option>
                     <option>Graphic Design</option>
@@ -465,17 +479,28 @@
 
     <!-- Connect CTA -->
     <section class="section">
-    <div class="container">
+      <div class="container">
         <div class="connect">
           <div class="connect-info">
             <h2>Connect With Us Online</h2>
             <p>
               Follow our social media channels for daily inspiration, live
-              updates, and behind-the-scenes content from the Publicity Ministry.
+              updates, and behind-the-scenes content from the Publicity
+              Ministry.
             </p>
             <div class="connect-btn">
-              <a href="#" class="btn btn-light"><img src="assets/svgs/icons/youtube.svg" class="connect-icons-white">YouTube Channel</a>
-              <a href="#" class="btn btn-accent"><img src="assets/svgs/icons/facebook.svg" class="connect-icons-primary">Facebook Page</a>
+              <a href="#" class="btn btn-light"
+                ><img
+                  src="assets/svgs/icons/youtube.svg"
+                  class="connect-icons-white"
+                />YouTube Channel</a
+              >
+              <a href="#" class="btn btn-accent"
+                ><img
+                  src="assets/svgs/icons/facebook.svg"
+                  class="connect-icons-primary"
+                />Facebook Page</a
+              >
             </div>
           </div>
         </div>
@@ -484,7 +509,7 @@
 
     <!-- Footer -->
     <footer class="footer">
-      <img src="assets/Images/footer.png" class="footer-image">
+      <img src="assets/Images/footer.png" class="footer-image" />
       <div class="footer-container">
         <div class="container">
           <div class="footer-grid">
@@ -533,19 +558,61 @@
 
     <script>
       function toggleNav() {
-        document.getElementById("navMenu").classList.toggle("active");
-      }
+                document.getElementById("navMenu").classList.toggle("active");
+            }
 
-      function toggleDropdown(element) {
-        if (window.innerWidth <= 768) {
-          element.classList.toggle("active");
-        }
-      }
-      const navToggle = document.getElementById ('navToggle')
-      navToggle.addEventListener('click', () =>{
-        navToggle.classList.toggle ('active');
-      })
+            function toggleDropdown(element) {
+                if (window.innerWidth <= 768) {
+                  // Check if the click target is a dropdown item link
+                  const target = event.target;
+                  if (target.classList.contains("dropdown-item") || target.closest(".dropdown-item")) {
+                    // Allow the link to navigate, don't toggle
+                    return;
+                  }
+                  element.classList.toggle("active");
+                }
+            }
+
+            function setActiveNav() {
+                const path = window.location.pathname;
+                const navLinks = document.querySelectorAll('.nav-link');
+                navLinks.forEach(link => {
+                if (link.href && link.href.endsWith(path)) {
+                    link.classList.add('active');
+                }
+                });
+                // Special handling for dropdown parents
+                if (path.includes('/about-')) {
+                const aboutLink = document.querySelector('.nav-link.dropdown-toggle');
+                if (aboutLink && aboutLink.textContent.includes('About Us')) {
+                    aboutLink.classList.add('active');
+                }
+                }
+                if (path.includes('/ministries-')) {
+                const ministriesLink = document.querySelectorAll('.nav-link.dropdown-toggle')[1];
+                if (ministriesLink && ministriesLink.textContent.includes('Ministries')) {
+                    ministriesLink.classList.add('active');
+                }
+                }
+            }
+
+                // Smooth scroll for ministry nav links
+                document.querySelectorAll('.ministry-nav-link').forEach(link => {
+                    link.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        const target = document.querySelector(this.getAttribute('href'));
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    });
+                });
+
+            setActiveNav();
+            
+            const navToggle = document.getElementById ('navToggle')
+            navToggle.addEventListener('click', () =>{
+                navToggle.classList.toggle ('active');
+            })
     </script>
   </body>
 </html>
-

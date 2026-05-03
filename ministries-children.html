@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Children's Ministry | Church of Christ, Lawanson</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
-    <link rel="stylesheet" href="ministries-children.css">
+    <link rel="stylesheet" href="ministries-children.css" />
   </head>
   <body>
     <!-- Navigation -->
@@ -22,7 +22,8 @@
           />
         </a>
         <button
-          class="nav-toggle" id="navToggle"
+          class="nav-toggle"
+          id="navToggle"
           aria-label="Toggle navigation"
           onclick="toggleNav()"
         >
@@ -32,7 +33,12 @@
         </button>
         <ul class="nav-menu" id="navMenu">
           <li class="nav-item dropdown" onclick="toggleDropdown(this)">
-            <div class="nav-link dropdown-toggle">About Us<img src="assets/svgs/icons/chevron-down.svg" class="dropdown-toggle-icon"></div>
+            <div class="nav-link dropdown-toggle">
+              About Us<img
+                src="assets/svgs/icons/chevron-down.svg"
+                class="dropdown-toggle-icon"
+              />
+            </div>
             <div class="dropdown-menu">
               <a href="about-who-we-are.html" class="dropdown-item"
                 >Who We Are</a
@@ -51,13 +57,20 @@
             <a href="worship.html" class="nav-link">Worship & Services</a>
           </li>
           <li class="nav-item dropdown" onclick="toggleDropdown(this)">
-            <div class="nav-link dropdown-toggle active">Ministries<img src="assets/svgs/icons/chevron-down.svg" class="dropdown-toggle-icon active"></div>
+            <div class="nav-link dropdown-toggle active">
+              Ministries<img
+                src="assets/svgs/icons/chevron-down.svg"
+                class="dropdown-toggle-icon active"
+              />
+            </div>
             <div class="dropdown-menu">
-              <a href="ministries-all.html" class="dropdown-item">All Ministries</a>
+              <a href="ministries-all.html" class="dropdown-item"
+                >All Ministries</a
+              >
               <a href="ministries-secretariat.html" class="dropdown-item"
                 >Secretariat</a
               >
-              <a href="ministries-finance.html" class="dropdown-item"
+              <a href="ministries-finance.html" class="dropdown-item active"
                 >Finance</a
               >
               <a href="ministries-infrastructure.html" class="dropdown-item"
@@ -67,7 +80,7 @@
                 >Evangelism</a
               >
               <a href="ministries-health.html" class="dropdown-item">Health</a>
-              <a href="ministries-publicity.html" class="dropdown-item active"
+              <a href="ministries-publicity.html" class="dropdown-item"
                 >Publicity</a
               >
               <a href="ministries-sisters.html" class="dropdown-item"
@@ -77,7 +90,9 @@
               <a href="ministries-children.html" class="dropdown-item"
                 >Children</a
               >
-              <a href="ministries-singles.html" class="dropdown-item">Singles</a>
+              <a href="ministries-singles.html" class="dropdown-item"
+                >Singles</a
+              >
             </div>
           </li>
           <li class="nav-item">
@@ -103,7 +118,7 @@
 
     <!-- Page Hero -->
     <section class="page-hero">
-      <img src="assets/Images/children.png" class="page-hero-image">
+      <img src="assets/Images/children.png" class="page-hero-image" />
       <div class="page-hero-content">
         <h1>Children Ministry</h1>
         <p class="page-tagline">
@@ -147,9 +162,7 @@
 
             <div class="year-schedule">
               <h3>March - April 2026</h3>
-              <div class="schedule">
-                9:00 PM - 9:50 AM
-              </div>
+              <div class="schedule">9:00 PM - 9:50 AM</div>
             </div>
           </div>
 
@@ -183,8 +196,8 @@
                 <h3>Class 2</h3>
                 <span class="summary-age-label class-2">Ages 6 – 9</span>
                 <p class="summary-description">
-                  Building core knowledge of scripture through dramatized stories,
-                  memory verses, and community-focused crafts.
+                  Building core knowledge of scripture through dramatized
+                  stories, memory verses, and community-focused crafts.
                 </p>
 
                 <div class="summary-detail-list">
@@ -324,7 +337,9 @@
             </div>
           </div>
           <div class="connect-btn">
-            <a href="https://goldtechsolutions.pixieset.com/coclawnsonyouthweek2025/" class="btn btn-light"
+            <a
+              href="https://goldtechsolutions.pixieset.com/coclawnsonyouthweek2025/"
+              class="btn btn-light"
               >See More</a
             >
           </div>
@@ -419,9 +434,9 @@
           <div class="connect-info">
             <h2>Every Child Matters</h2>
             <p>
-              We believe in nurturing the faith of our youngest members in a safe,
-              fun, and spiritually enriching environment. Bring your children to
-              experience the love of God tailored just for them.
+              We believe in nurturing the faith of our youngest members in a
+              safe, fun, and spiritually enriching environment. Bring your
+              children to experience the love of God tailored just for them.
             </p>
             <div class="connect-btn">
               <a href="#enroll" class="btn btn-accent">Register Your Child</a>
@@ -436,7 +451,7 @@
 
     <!-- Footer -->
     <footer class="footer">
-      <img src="assets/Images/footer.png" class="footer-image">
+      <img src="assets/Images/footer.png" class="footer-image" />
       <div class="footer-container">
         <div class="container">
           <div class="footer-grid">
@@ -485,19 +500,61 @@
 
     <script>
       function toggleNav() {
-        document.getElementById("navMenu").classList.toggle("active");
+          document.getElementById("navMenu").classList.toggle("active");
       }
 
       function toggleDropdown(element) {
-        if (window.innerWidth <= 768) {
-          element.classList.toggle("active");
-        }
+          if (window.innerWidth <= 768) {
+            // Check if the click target is a dropdown item link
+            const target = event.target;
+            if (target.classList.contains("dropdown-item") || target.closest(".dropdown-item")) {
+              // Allow the link to navigate, don't toggle
+              return;
+            }
+            element.classList.toggle("active");
+          }
       }
+
+      function setActiveNav() {
+          const path = window.location.pathname;
+          const navLinks = document.querySelectorAll('.nav-link');
+          navLinks.forEach(link => {
+          if (link.href && link.href.endsWith(path)) {
+              link.classList.add('active');
+          }
+          });
+          // Special handling for dropdown parents
+          if (path.includes('/about-')) {
+          const aboutLink = document.querySelector('.nav-link.dropdown-toggle');
+          if (aboutLink && aboutLink.textContent.includes('About Us')) {
+              aboutLink.classList.add('active');
+          }
+          }
+          if (path.includes('/ministries-')) {
+          const ministriesLink = document.querySelectorAll('.nav-link.dropdown-toggle')[1];
+          if (ministriesLink && ministriesLink.textContent.includes('Ministries')) {
+              ministriesLink.classList.add('active');
+          }
+          }
+      }
+
+          // Smooth scroll for ministry nav links
+          document.querySelectorAll('.ministry-nav-link').forEach(link => {
+              link.addEventListener('click', function(e) {
+                  e.preventDefault();
+                  const target = document.querySelector(this.getAttribute('href'));
+                  if (target) {
+                      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }
+              });
+          });
+
+      setActiveNav();
+      
       const navToggle = document.getElementById ('navToggle')
       navToggle.addEventListener('click', () =>{
-        navToggle.classList.toggle ('active');
+          navToggle.classList.toggle ('active');
       })
     </script>
   </body>
 </html>
-
